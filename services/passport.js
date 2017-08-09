@@ -1,6 +1,6 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
-const LinkedInStrategy = require('passport-linkedin').Strategy;
+const FacebookStrategy = require('passport-facebook').Strategy;
 const mongoose = require('mongoose');
 const keys = require('../config/keys');
 
@@ -50,4 +50,37 @@ passport.use(
 	)
 );
 
-passport.use(new LinkedInStrategy());
+// facebook
+passport.use(
+	new FacebookStrategy(
+		{
+			clientID: keys.facebookClientID,
+			clientSecret: keys.facebookClientSecret,
+			callbackURL: '/auth/facebook/callback'
+		},
+		accessToken => {
+			console.log(accessToken);
+		}
+		// function(accessToken, refreshToken, profile, done) {
+		//   User.findOrCreate(..., function(err, user) {
+		//     if (err) { return done(err); }
+		//     done(null, user);
+		//   });
+		// }
+	)
+);
+// linkedin
+// passport.use(
+// 	new LinkedInStrategy(
+// 		{
+// 			clientID: keys.linkedinClientID,
+// 			clientSecret: keys.linkedinClientSecret,
+// 			callbackURL: '/auth/linkedin/callback'
+// 		},
+// 		function(token, tokenSecret, profile, done) {
+// 			User.findOrCreate({ linkedinId: profile.id }, function(err, user) {
+// 				return done(err, user);
+// 			});
+// 		}
+// 	)
+// );
