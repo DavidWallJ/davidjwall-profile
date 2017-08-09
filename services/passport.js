@@ -21,6 +21,7 @@ passport.deserializeUser((id, done) => {
 	});
 });
 
+// Google
 passport.use(
 	new GoogleStrategy(
 		{
@@ -50,23 +51,22 @@ passport.use(
 	)
 );
 
-// facebook
+// Facebook
 passport.use(
 	new FacebookStrategy(
 		{
 			clientID: keys.facebookClientID,
 			clientSecret: keys.facebookClientSecret,
-			callbackURL: '/auth/facebook/callback'
+			callbackURL: '/auth/facebook/callback',
+			profileFields: ['id', 'displayName', 'photos', 'email']
 		},
-		accessToken => {
-			console.log(accessToken);
+		function(accessToken, refreshToken, profile, cb) {
+			// User.findOrCreate({ facebookId: profile.id }, function(err, user) {
+			// 	return cb(err, user);
+			// });
+			console.log('AccessToken: ', accessToken);
+			console.log('Profile: ', profile);
 		}
-		// function(accessToken, refreshToken, profile, done) {
-		//   User.findOrCreate(..., function(err, user) {
-		//     if (err) { return done(err); }
-		//     done(null, user);
-		//   });
-		// }
 	)
 );
 // linkedin
