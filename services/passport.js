@@ -31,17 +31,16 @@ passport.use(
 		},
 		// this is the callback function that we're directed to with '/auth/google/callback'
 		(accessToken, refreshToken, profile, done) => {
-			// console.log('Refresh Token: ', refreshToken);
-			// console.log('Access Token: ', accessToken);
 			// console.log('Profile info: ', profile);
+			const { id, displayName, emails } = profile;
 			User.findOne({ googleId: profile.id }).then(existingUser => {
 				if (existingUser) {
 					done(null, existingUser);
 				} else {
 					new User({
-						googleId: profile.id,
-						displayName: profile.displayName,
-						emails: profile.emails
+						googleId: id,
+						googleDisplayName: displayName,
+						googleEmail: emails[0].value
 					})
 						.save()
 						.then(user => done(null, user));
@@ -61,26 +60,21 @@ passport.use(
 			profileFields: ['id', 'displayName', 'photos', 'email']
 		},
 		function(accessToken, refreshToken, profile, cb) {
-			// User.findOrCreate({ facebookId: profile.id }, function(err, user) {
-			// 	return cb(err, user);
-			// });
-			console.log('AccessToken: ', accessToken);
-			console.log('Profile: ', profile);
+			// console.log('Profile: ', profile._json);
+			const { id, name, email } = profile._json;
+			User.findOne({ facebookId: id }).then(existingUser => {
+				if (existingUser) {
+					return cb(null, existingUser);
+				} else {
+					new User({
+						facebookId: id,
+						facebookDisplayName: name,
+						facebookEmail: email
+					})
+						.save()
+						.then(user => cb(null, user));
+				}
+			});
 		}
 	)
 );
-// linkedin
-// passport.use(
-// 	new LinkedInStrategy(
-// 		{
-// 			clientID: keys.linkedinClientID,
-// 			clientSecret: keys.linkedinClientSecret,
-// 			callbackURL: '/auth/linkedin/callback'
-// 		},
-// 		function(token, tokenSecret, profile, done) {
-// 			User.findOrCreate({ linkedinId: profile.id }, function(err, user) {
-// 				return done(err, user);
-// 			});
-// 		}
-// 	)
-// );

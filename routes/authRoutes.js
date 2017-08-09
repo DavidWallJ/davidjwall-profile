@@ -19,14 +19,7 @@ module.exports = app => {
 		})
 	);
 
-	app.get(
-		'/auth/facebook/callback',
-		passport.authenticate('facebook', { failureRedirect: '/' }),
-		function(req, res) {
-			// Successful authentication, redirect home.
-			res.redirect('/');
-		}
-	);
+	app.get('/auth/facebook/callback', passport.authenticate('facebook'));
 
 	// app.get('/auth/facebook', passport.authenticate('facebook'));
 	//
@@ -45,6 +38,12 @@ module.exports = app => {
 	// 	})
 	// );
 
+	// Logout
+	app.get('/api/logout', (req, res) => {
+		req.logout();
+		res.send(req.user);
+	});
+	// Get current user
 	// req.user comes from the deserializeUser function
 	app.get('/api/current_user', (req, res) => {
 		res.send(req.user);
