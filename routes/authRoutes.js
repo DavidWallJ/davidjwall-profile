@@ -21,22 +21,15 @@ module.exports = app => {
 
 	app.get('/auth/facebook/callback', passport.authenticate('facebook'));
 
-	// app.get('/auth/facebook', passport.authenticate('facebook'));
-	//
-	// app.get(
-	// 	'/auth/facebook/callback',
-	// 	passport.authenticate('facebook', {
-	// 		successRedirect: '/api/thanks',
-	// 		failureRedirect: '/'
-	// 	})
-	// );
 	// Linkedin
-	// app.get(
-	// 	'/auth/linkedin',
-	// 	passport.authenticate('linkedin', {
-	// 		scope: ['r_basicprofile', 'r_emailaddress']
-	// 	})
-	// );
+	app.get(
+		'/auth/linkedin',
+		passport.authenticate('linkedin', {
+			scope: ['r_basicprofile', 'r_emailaddress']
+		})
+	);
+
+	app.get('/auth/linkedin/callback', passport.authenticate('linkedin'));
 
 	// Logout
 	app.get('/api/logout', (req, res) => {
