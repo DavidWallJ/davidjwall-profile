@@ -1,11 +1,7 @@
-// react app generation
-// time to go back and add linkedin
-
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const FacebookStrategy = require('passport-facebook').Strategy;
 const LinkedinStrategy = require('passport-linkedin').Strategy;
-// const passportStrategies = require('./strategyFields');
 const mongoose = require('mongoose');
 const keys = require('../config/keys');
 
@@ -50,7 +46,7 @@ passport.use(
 			const user = await new User({
 				googleId: id,
 				googleDisplayName: displayName,
-				googleEmail: emails
+				googleEmail: email
 			}).save();
 			done(null, user);
 		}
@@ -67,24 +63,23 @@ passport.use(
 			proxy: true,
 			profileFields: ['id', 'displayName', 'photos', 'email']
 		},
-		function(accessToken, refreshToken, profile, done) {
-			// console.log('Profile: ', profile._json);
+		async (accessToken, refreshToken, profile, done) => {
+			// console.log('Profile info: ', profile);
 			const { id, email } = profile._json;
 			const displayName = profile._json.name;
 
-			User.findOne({ facebookId: id }).then(existingUser => {
-				if (existingUser) {
-					return done(null, existingUser);
-				} else {
-					new User({
-						facebookId: id,
-						facebookDisplayName: displayName,
-						facebookEmail: email
-					})
-						.save()
-						.then(user => done(null, user));
-				}
-			});
+			const existingUser = await User.findOne({ facebookId: profile.id });
+
+			if (existingUser) {
+				return done(null, existingUser);
+			}
+
+			const user = await new User({
+				facebookId: id,
+				facebookDisplayName: displayName,
+				facebookEmail: email
+			}).save();
+			done(null, user);
 		}
 	)
 );
@@ -98,25 +93,24 @@ passport.use(
 			proxy: true,
 			profileFields: ['id', 'first-name', 'last-name', 'email-address']
 		},
-		function(token, tokenSecret, profile, done) {
-			console.log('Profile: ', profile._json);
+		async (accessToken, refreshToken, profile, done) => {
+			// console.log('Profile info: ', profile);
 			const { id } = profile._json;
 			const displayName = profile._json.firstName;
 			const email = profile._json.emailAddress;
 
-			User.findOne({ linkedinId: id }).then(existingUser => {
-				if (existingUser) {
-					return done(null, existingUser);
-				} else {
-					new User({
-						linkedinId: id,
-						linkedinDisplayName: displayName,
-						linkedinEmail: email
-					})
-						.save()
-						.then(user => done(null, user));
-				}
-			});
+			const existingUser = await User.findOne({ linkedinId: profile.id });
+
+			if (existingUser) {
+				return done(null, existingUser);
+			}
+
+			const user = await new User({
+				linkedinId: id,
+				linkedinDisplayName: displayName,
+				linkedinEmail: email
+			}).save();
+			done(null, user);
 		}
 	)
 );
