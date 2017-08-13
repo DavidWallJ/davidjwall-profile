@@ -21,8 +21,6 @@ class App extends Component {
 					<div>
 						<Header />
 						<Route exact path="/" component={Landing} />
-						<Route exact path="/profile" component={Profile} />
-						<Route path="/profile/options" component={Options} />
 					</div>
 				</BrowserRouter>
 			</div>

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
+const OptionsSchema = require('./Options');
 
 const userSchema = new Schema({
 	googleId: String,
@@ -10,7 +11,9 @@ const userSchema = new Schema({
 	facebookEmail: String,
 	linkedinId: String,
 	linkedinDisplayName: String,
-	linkedinEmail: String
+	linkedinEmail: String,
+	dateCreated: Date,
+	options: [OptionsSchema]
 });
 
 mongoose.model('users', userSchema);

@@ -27,6 +27,7 @@ app.use(passport.session());
 // require authRoutes file and immediately call the contained functions
 // app is passed into the function
 require('./routes/authRoutes')(app);
+require('./routes/optionsRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
 	// express will serve up production assets like our main.js files
