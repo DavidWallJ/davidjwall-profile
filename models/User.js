@@ -7,10 +7,7 @@ const userSchema = new Schema({
 	googleEmail: String,
 	facebookId: String,
 	facebookDisplayName: String,
-	facebookEmail: String,
-	linkedinId: String,
-	linkedinDisplayName: String,
-	linkedinEmail: String
+	facebookEmail: String
 });
 
 mongoose.model('users', userSchema);

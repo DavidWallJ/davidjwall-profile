@@ -1,10 +1,6 @@
-// react app generation
-// time to go back and add linkedin
-
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const FacebookStrategy = require('passport-facebook').Strategy;
-const LinkedinStrategy = require('passport-linkedin').Strategy;
 const mongoose = require('mongoose');
 const keys = require('../config/keys');
 
@@ -79,35 +75,6 @@ passport.use(
 					})
 						.save()
 						.then(user => cb(null, user));
-				}
-			});
-		}
-	)
-);
-
-passport.use(
-	new LinkedinStrategy(
-		{
-			consumerKey: keys.linkedinClientID,
-			consumerSecret: keys.linkedinClientSecret,
-			callbackURL: '/auth/linkedin/callback',
-			proxy: true,
-			profileFields: ['id', 'first-name', 'last-name', 'email-address']
-		},
-		function(token, tokenSecret, profile, done) {
-			console.log('Profile: ', profile._json);
-			const { id, firstName, emailAddress } = profile._json;
-			User.findOne({ linkedinId: id }).then(existingUser => {
-				if (existingUser) {
-					return done(null, existingUser);
-				} else {
-					new User({
-						linkedinId: id,
-						linkedinDisplayName: firstName,
-						linkedinEmail: emailAddress
-					})
-						.save()
-						.then(user => done(null, user));
 				}
 			});
 		}
