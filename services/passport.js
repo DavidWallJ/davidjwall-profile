@@ -5,7 +5,6 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const FacebookStrategy = require('passport-facebook').Strategy;
 const LinkedinStrategy = require('passport-linkedin').Strategy;
-// const passportStrategies = require('./strategyFields');
 const mongoose = require('mongoose');
 const keys = require('../config/keys');
 
@@ -36,23 +35,22 @@ passport.use(
 			proxy: true
 		},
 		// this is the callback function that we're directed to with '/auth/google/callback'
-		async (accessToken, refreshToken, profile, done) => {
+		(accessToken, refreshToken, profile, done) => {
 			// console.log('Profile info: ', profile);
-			const { id, displayName } = profile;
-			const email = profile.emails[0].value;
-
-			const existingUser = await User.findOne({ googleId: profile.id });
-
-			if (existingUser) {
-				return done(null, existingUser);
-			}
-
-			const user = await new User({
-				googleId: id,
-				googleDisplayName: displayName,
-				googleEmail: emails
-			}).save();
-			done(null, user);
+			const { id, displayName, emails } = profile;
+			User.findOne({ googleId: profile.id }).then(existingUser => {
+				if (existingUser) {
+					done(null, existingUser);
+				} else {
+					new User({
+						googleId: id,
+						googleDisplayName: displayName,
+						googleEmail: emails[0].value
+					})
+						.save()
+						.then(user => done(null, user));
+				}
+			});
 		}
 	)
 );
@@ -67,22 +65,20 @@ passport.use(
 			proxy: true,
 			profileFields: ['id', 'displayName', 'photos', 'email']
 		},
-		function(accessToken, refreshToken, profile, done) {
+		function(accessToken, refreshToken, profile, cb) {
 			// console.log('Profile: ', profile._json);
-			const { id, email } = profile._json;
-			const displayName = profile._json.name;
-
+			const { id, name, email } = profile._json;
 			User.findOne({ facebookId: id }).then(existingUser => {
 				if (existingUser) {
-					return done(null, existingUser);
+					return cb(null, existingUser);
 				} else {
 					new User({
 						facebookId: id,
-						facebookDisplayName: displayName,
+						facebookDisplayName: name,
 						facebookEmail: email
 					})
 						.save()
-						.then(user => done(null, user));
+						.then(user => cb(null, user));
 				}
 			});
 		}
@@ -100,18 +96,15 @@ passport.use(
 		},
 		function(token, tokenSecret, profile, done) {
 			console.log('Profile: ', profile._json);
-			const { id } = profile._json;
-			const displayName = profile._json.firstName;
-			const email = profile._json.emailAddress;
-
+			const { id, firstName, emailAddress } = profile._json;
 			User.findOne({ linkedinId: id }).then(existingUser => {
 				if (existingUser) {
 					return done(null, existingUser);
 				} else {
 					new User({
 						linkedinId: id,
-						linkedinDisplayName: displayName,
-						linkedinEmail: email
+						linkedinDisplayName: firstName,
+						linkedinEmail: emailAddress
 					})
 						.save()
 						.then(user => done(null, user));
