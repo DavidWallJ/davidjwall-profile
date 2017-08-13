@@ -10,9 +10,15 @@ class Login extends Component {
 							<h1>Welcome</h1>
 							<p>Please login with...</p>
 						</li>
-						<li className="collection-item">Linkedin</li>
-						<li className="collection-item">Google</li>
-						<li className="collection-item">Facebook</li>
+						<li className="collection-item">
+							<a href="/auth/linkedin">Linkedin</a>
+						</li>
+						<li className="collection-item">
+							<a href="/auth/google">Google</a>
+						</li>
+						<li className="collection-item">
+							<a href="/auth/facebook">Facebook</a>
+						</li>
 						<li className="collection-item">Anonymous</li>
 					</ul>
 				</div>

@@ -7,7 +7,7 @@ class Landing extends Component {
 	renderContent() {
 		switch (this.props.auth) {
 			case null:
-				return 'Loading...';
+				return;
 			case false:
 				return <Login />;
 			default:
@@ -24,7 +24,6 @@ class Landing extends Component {
 	}
 
 	render() {
-		console.log('Props: ', this.props);
 		return (
 			<div>
 				{this.renderContent()}

@@ -9,7 +9,13 @@ module.exports = app => {
 		})
 	);
 
-	app.get('/auth/google/callback', passport.authenticate('google'));
+	app.get(
+		'/auth/google/callback',
+		passport.authenticate('google'),
+		(req, res) => {
+			res.redirect('/');
+		}
+	);
 
 	// Facebook
 	app.get(
@@ -19,7 +25,13 @@ module.exports = app => {
 		})
 	);
 
-	app.get('/auth/facebook/callback', passport.authenticate('facebook'));
+	app.get(
+		'/auth/facebook/callback',
+		passport.authenticate('facebook'),
+		(req, res) => {
+			res.redirect('/');
+		}
+	);
 
 	// Linkedin
 	app.get(
@@ -29,12 +41,18 @@ module.exports = app => {
 		})
 	);
 
-	app.get('/auth/linkedin/callback', passport.authenticate('linkedin'));
+	app.get(
+		'/auth/linkedin/callback',
+		passport.authenticate('linkedin'),
+		(req, res) => {
+			res.redirect('/');
+		}
+	);
 
 	// Logout
 	app.get('/api/logout', (req, res) => {
 		req.logout();
-		res.send(req.user);
+		res.redirect('/');
 	});
 	// Get current user
 	// req.user comes from the deserializeUser function
