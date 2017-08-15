@@ -5,9 +5,7 @@ import * as actions from '../actions';
 
 import Header from './Header';
 import Landing from './Landing';
-import Profile from './Profile';
-
-const Options = () => <h2>Options</h2>;
+// import Options from './Options';
 
 class App extends Component {
 	componentDidMount() {
@@ -21,6 +19,7 @@ class App extends Component {
 					<div>
 						<Header />
 						<Route exact path="/" component={Landing} />
+						{/* <Route path="/options" component={Options} /> */}
 					</div>
 				</BrowserRouter>
 			</div>

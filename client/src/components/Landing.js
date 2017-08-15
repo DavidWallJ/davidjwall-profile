@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import OptionsForm from './options/OptionsForm';
 import Login from './Login';
 import Profile from './Profile';
 
@@ -11,15 +12,19 @@ class Landing extends Component {
 			case false:
 				return <Login />;
 			default:
-				return (
-					<Profile
-						name={
-							this.props.auth.linkedinDisplayName ||
-							this.props.auth.googleDisplayName ||
-							this.props.auth.facebookDisplayName
-						}
-					/>
-				);
+				if (!this.props.optimized) {
+					return (
+						<Profile
+							name={
+								this.props.auth.linkedinDisplayName ||
+								this.props.auth.googleDisplayName ||
+								this.props.auth.facebookDisplayName
+							}
+						/>
+					);
+				}
+
+				return <OptionsForm />;
 		}
 	}
 
