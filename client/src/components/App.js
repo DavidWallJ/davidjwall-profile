@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
@@ -14,7 +17,7 @@ class App extends Component {
 
 	render() {
 		return (
-			<div>
+			<MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
 				<BrowserRouter>
 					<div>
 						<Header />
@@ -22,7 +25,7 @@ class App extends Component {
 						{/* <Route path="/options" component={Options} /> */}
 					</div>
 				</BrowserRouter>
-			</div>
+			</MuiThemeProvider>
 		);
 	}
 }
