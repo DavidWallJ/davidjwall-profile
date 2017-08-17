@@ -6,7 +6,7 @@ import FontIcon from 'material-ui/FontIcon';
 import AppBar from 'material-ui/AppBar';
 import { Link } from 'react-router-dom';
 
-class Header extends React.Component {
+class Header extends Component {
 	render() {
 		const iconStyles = {
 			marginTop: 11,

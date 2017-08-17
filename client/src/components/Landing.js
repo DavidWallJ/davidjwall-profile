@@ -12,7 +12,7 @@ class Landing extends Component {
 			case false:
 				return <Login />;
 			default:
-				if (!this.props.optimized) {
+				if (this.props.optimized) {
 					return (
 						<Profile
 							name={

@@ -69,3 +69,24 @@ return (
 		</div>
 	</div>
 );
+
+
+<form
+	onSubmit={this.props.handleSubmit(values => console.log(values))}
+	style={{
+		display: 'flex',
+		flexWrap: 'wrap',
+		alignItems: 'center',
+		justifyContent: 'center',
+		justifyContent: 'space-around'
+	}}
+>
+	<Field name="theme" component={renderRadioGroup}>
+		<RadioButtonGroup name="theme" component={renderRadioGroup}>
+			<RadioButton value="darkTheme" label="Dark" />
+			<RadioButton value="lightTheme" label="Light" />
+		</RadioButtonGroup>
+	</Field>
+	{/* <button type="submit">Submit</button> */}
+	<RaisedButton type="submit" label="Submit" primary={true} />
+</form>
