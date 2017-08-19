@@ -51,6 +51,6 @@ class OptionsForm extends Component {
 
 export default muiThemeable()(
 	reduxForm({
-		form: 'optionsForm'
+		form: 'wizard'
 	})(OptionsForm)
 );
