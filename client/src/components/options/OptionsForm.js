@@ -1,58 +1,53 @@
-import './OptionsForm.css';
 import React, { Component } from 'react';
 import muiThemeable from 'material-ui/styles/muiThemeable';
-import { Card, CardActions, CardTitle } from 'material-ui/Card';
-import RaisedButton from 'material-ui/RaisedButton';
-import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
-import { renderRadioGroup, renderCheckbox } from './RenderRadioGroup';
 
-import { reduxForm, Field } from 'redux-form';
+import OptionsFormFirstPage from './OptionsFormFirstPage';
+import OptionsFormSecondPage from './OptionsFormSecondPage';
+import OptionsFormThirdPage from './OptionsFormThirdPage';
+
+import { reduxForm } from 'redux-form';
 
 class OptionsForm extends Component {
+	constructor(props) {
+		super(props);
+		this.nextPage = this.nextPage.bind(this);
+		this.previousPage = this.previousPage.bind(this);
+		this.state = {
+			page: 1
+		};
+	}
+	nextPage() {
+		this.setState({ page: this.state.page + 1 });
+	}
+
+	previousPage() {
+		this.setState({ page: this.state.page - 1 });
+	}
+
 	render() {
-		const radioButtonStyles = {
-			// fill: this.props.muiTheme.palette.alternateTextColor
-		};
-		const labelStyle = {
-			// color: this.props.muiTheme.palette.alternateTextColor
-		};
-
-		const cardStyle = {
-			marginTop: 12,
-			paddingTop: 50,
-			paddingBottom: 65
-		};
-
+		const { onSubmit } = this.props;
+		const { page } = this.state;
 		return (
-			<div className="row">
-				<Card className="col s12 m6 offset-m3" style={cardStyle}>
-					<div className="col s4">
-						<CardTitle title="Options" subtitle="Theme" />
-					</div>
-					<div className="col s8" style={{ paddingTop: 23 }}>
-						<form
-							onSubmit={this.props.handleSubmit(values => console.log(values))}
-							style={{
-								display: 'flex',
-								flexWrap: 'wrap',
-								alignItems: 'center',
-								justifyContent: 'center',
-								justifyContent: 'space-around'
-							}}
-						>
-							<Field name="sex" component={renderRadioGroup}>
-								<RadioButton value="darkTheme" label="Dark" />
-								<RadioButton value="lightTheme" label="Light" />
-							</Field>
-							{/* <button type="submit">Submit</button> */}
-							<RaisedButton type="submit" label="Submit" primary={true} />
-						</form>
-					</div>
-				</Card>
+			<div>
+				{page === 1 && <OptionsFormFirstPage onSubmit={this.nextPage} />}
+				{page === 2 &&
+					<OptionsFormSecondPage
+						previousPage={this.previousPage}
+						onSubmit={this.nextPage}
+					/>}
+				{page === 3 &&
+					<OptionsFormThirdPage
+						previousPage={this.previousPage}
+						onSubmit={onSubmit}
+					/>}
 			</div>
 		);
 	}
 }
+
+// OptionsForm.propTypes = {
+// 	onSubmit: PropTypes.func.isRequired
+// };
 
 export default muiThemeable()(
 	reduxForm({

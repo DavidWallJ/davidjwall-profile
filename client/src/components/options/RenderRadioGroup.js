@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
-import Checkbox from 'material-ui/Checkbox';
+import React from 'react';
+import { RadioButtonGroup } from 'material-ui/RadioButton';
+// import Checkbox from 'material-ui/Checkbox';
 
 export const renderRadioGroup = ({ input, ...rest }) =>
 	<RadioButtonGroup
@@ -10,9 +10,9 @@ export const renderRadioGroup = ({ input, ...rest }) =>
 		onChange={(event, value) => input.onChange(value)}
 	/>;
 
-export const renderCheckbox = ({ input, label }) =>
-	<Checkbox
-		label={label}
-		checked={input.value ? true : false}
-		onCheck={input.onChange}
-	/>;
+// export const renderCheckbox = ({ input, label }) =>
+// 	<Checkbox
+// 		label={label}
+// 		checked={input.value ? true : false}
+// 		onCheck={input.onChange}
+// 	/>;
