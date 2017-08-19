@@ -7,35 +7,48 @@ import { RadioButton } from 'material-ui/RadioButton';
 import { renderRadioGroup } from './RenderRadioGroup';
 
 const OptionsFormSecondPage = props => {
-	const { handleSubmit } = props;
+	const { handleSubmit, previousPage } = props;
 	const cardStyle = {
 		marginTop: 12,
 		paddingTop: 50,
 		paddingBottom: 65
 	};
+	const buttonStyle = {
+		marginBottom: 5
+	};
 	return (
 		<div className="row">
-			<Card className="col s12 m6 offset-m3" style={cardStyle}>
-				<div className="col s4">
+			<Card className="col s8 m6 offset-s2 offset-m3" style={cardStyle}>
+				<div className="col m16 l4">
 					<CardTitle title="Options" subtitle="Theme" />
 				</div>
-				<div className="col s8" style={{ paddingTop: 23 }}>
-					<form
-						onSubmit={handleSubmit}
-						style={{
-							display: 'flex',
-							flexWrap: 'wrap',
-							alignItems: 'center',
-							justifyContent: 'center',
-							justifyContent: 'space-around'
-						}}
-					>
-						<Field name="theme" component={renderRadioGroup}>
-							<RadioButton value="darkTheme" label="Dark" />
-							<RadioButton value="lightTheme" label="Light" />
-						</Field>
-						{/* <button type="submit">Submit</button> */}
-						<RaisedButton type="submit" label="Submit" primary={true} />
+				<div className="col m12 l8" style={{ paddingTop: 23 }}>
+					<form onSubmit={handleSubmit}>
+						<div className="col s5">
+							<Field name="theme" component={renderRadioGroup}>
+								<RadioButton value="darkTheme" label="Dark" />
+								<RadioButton value="lightTheme" label="Light" />
+							</Field>
+						</div>
+						<div className="col s7 center-align">
+							<div className="col s12 ">
+								<RaisedButton
+									type="submit"
+									primary={true}
+									fullWidth={true}
+									style={buttonStyle}
+									icon={<i className="material-icons">keyboard_arrow_right</i>}
+								/>
+								<RaisedButton
+									type="button"
+									secondary={true}
+									fullWidth={true}
+									onClick={previousPage}
+									style={buttonStyle}
+									icon={<i className="material-icons">keyboard_arrow_left</i>}
+								/>
+							</div>
+						</div>
 					</form>
 				</div>
 			</Card>

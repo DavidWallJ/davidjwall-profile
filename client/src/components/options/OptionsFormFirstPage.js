@@ -7,49 +7,47 @@ import { RadioButton } from 'material-ui/RadioButton';
 import { renderRadioGroup } from './RenderRadioGroup';
 
 const OptionsFormFirstPage = props => {
-	const { handleSubmit } = props;
+	const { handleSubmit, previousPage } = props;
 	const cardStyle = {
 		marginTop: 12,
 		paddingTop: 50,
 		paddingBottom: 65
 	};
-
-	const labelStyle = {
-		writingMode: 'vertical-rl',
-		display: 'inline-table',
-		marginTop: 7,
-		right: 7
+	const buttonStyle = {
+		marginBottom: 5
 	};
+
 	return (
 		<div className="row">
-			<Card className="col s12 m6 offset-m3" style={cardStyle}>
-				<div className="col s4">
-					<CardTitle title="Options" subtitle="Language" />
+			<Card className="col s8 m6 offset-s2 offset-m3" style={cardStyle}>
+				<div className="col m16 l4">
+					<CardTitle title="Options" subtitle="Theme" />
 				</div>
-				<div className="col s8" style={{ paddingTop: 23 }}>
-					<form
-						onSubmit={handleSubmit}
-						style={{
-							display: 'flex',
-							flexWrap: 'wrap',
-							alignItems: 'center',
-							justifyContent: 'center',
-							justifyContent: 'space-around'
-						}}
-					>
-						<Field name="language" component={renderRadioGroup}>
-							<RadioButton value="chinese" label="中文" labelStyle={labelStyle} />
-							<RadioButton value="english" label="English" />
-						</Field>
-						{/* <button type="submit">Submit</button> */}
-						<RaisedButton type="submit" label="Submit" primary={true} />
+				<div className="col m12 l8" style={{ paddingTop: 23 }}>
+					<form onSubmit={handleSubmit}>
+						<div className="col s5">
+							<Field name="language" component={renderRadioGroup}>
+								<RadioButton value="chinese" label="中文" />
+								<RadioButton value="english" label="English" />
+							</Field>
+						</div>
+						<div className="col s7 center-align">
+							<div className="col s12 ">
+								<RaisedButton
+									type="submit"
+									primary={true}
+									fullWidth={true}
+									style={buttonStyle}
+									icon={<i className="material-icons">keyboard_arrow_right</i>}
+								/>
+							</div>
+						</div>
 					</form>
 				</div>
 			</Card>
 		</div>
 	);
 };
-
 export default reduxForm({
 	form: 'wizard', // <------ same form name
 	destroyOnUnmount: false, // <------ preserve form data
