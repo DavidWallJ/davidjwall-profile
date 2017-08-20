@@ -5,13 +5,11 @@ import { Card, CardTitle, CardActions } from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
 import { RadioButton } from 'material-ui/RadioButton';
 import { renderRadioGroup } from './RenderRadioGroup';
+import { renderError } from './RenderError';
 
-const renderError = ({ meta: { touched, error } }) =>
-	touched && error
-		? <span>
-				{error}
-			</span>
-		: false;
+{
+	renderError;
+}
 
 const OptionsFormFirstPage = props => {
 	const { handleSubmit } = props;
@@ -32,7 +30,10 @@ const OptionsFormFirstPage = props => {
 				</div>
 				<div className="col s12 m12 l8" style={{ paddingTop: 23 }}>
 					<form onSubmit={handleSubmit}>
-						<div className="col s12 m5" style={{ paddingBottom: 18 }}>
+						<div
+							className="col s12 m5"
+							style={{ paddingBottom: 18 }}
+						>
 							<Field name="language" component={renderRadioGroup}>
 								<RadioButton value="chinese" label="中文" />
 								<RadioButton value="english" label="English" />
@@ -45,7 +46,11 @@ const OptionsFormFirstPage = props => {
 									primary={true}
 									fullWidth={true}
 									style={buttonStyle}
-									icon={<i className="material-icons">keyboard_arrow_right</i>}
+									icon={
+										<i className="material-icons">
+											keyboard_arrow_right
+										</i>
+									}
 								/>
 							</div>
 						</div>

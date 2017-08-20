@@ -1,16 +1,12 @@
+import _ from 'lodash';
 const validate = values => {
 	const errors = {};
-	if (!values.language) {
-		errors.language = 'Please choose a language.';
-	}
-
-	if (!values.theme) {
-		errors.theme = 'Please choose a theme.';
-	}
-
-	if (!values.genre) {
-		errors.genre = 'Please choose a genre.';
-	}
+	const FIELDS = ['language', 'theme', 'genre'];
+	_.forEach(FIELDS, field => {
+		if (!values[field]) {
+			errors[field] = `Please choose a ${field}`;
+		}
+	});
 
 	return errors;
 };

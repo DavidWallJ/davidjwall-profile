@@ -1,5 +1,3 @@
-// you're here trying to get mulitheme working via Material UI
-import './Header.css';
 import React, { Component } from 'react';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import FontIcon from 'material-ui/FontIcon';

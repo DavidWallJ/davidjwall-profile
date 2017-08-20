@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import muiThemeable from 'material-ui/styles/muiThemeable';
+import { connect } from 'react-redux';
+import * as actions from '../../actions';
 
 import OptionsFormFirstPage from './OptionsFormFirstPage';
 import OptionsFormSecondPage from './OptionsFormSecondPage';
@@ -25,7 +27,6 @@ class OptionsForm extends Component {
 	}
 
 	render() {
-		const { onSubmit } = this.props;
 		const { page } = this.state;
 		return (
 			<div>
@@ -38,7 +39,7 @@ class OptionsForm extends Component {
 				{page === 3 &&
 					<OptionsFormThirdPage
 						previousPage={this.previousPage}
-						onSubmit={onSubmit}
+						onSubmit={values => this.props.saveOptions(values)}
 					/>}
 			</div>
 		);
@@ -49,8 +50,6 @@ class OptionsForm extends Component {
 // 	onSubmit: PropTypes.func.isRequired
 // };
 
-export default muiThemeable()(
-	reduxForm({
-		form: 'wizard'
-	})(OptionsForm)
+export default connect(null, actions)(
+	muiThemeable()(reduxForm({ form: 'wizard' })(OptionsForm))
 );
