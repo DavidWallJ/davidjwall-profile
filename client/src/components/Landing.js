@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import OptionsForm from './options/OptionsForm';
 import Login from './Login';
 import Profile from './Profile';
-
+// you are here.  soemthing is wrong with the order of events
 class Landing extends Component {
 	renderContent() {
 		switch (this.props.auth) {
@@ -12,7 +12,7 @@ class Landing extends Component {
 			case false:
 				return <Login />;
 			default:
-				if (this.props.optimized) {
+				if (!this.props.auth.options) {
 					return (
 						<Profile
 							name={
