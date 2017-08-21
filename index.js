@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
+const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 // IMPORTANT: mongoose models must be loaded prior to passport
 // we require like this because there is nothing being retuned from these files
@@ -12,6 +13,7 @@ mongoose.connect(keys.mongoURI);
 
 const app = express();
 
+app.use(bodyParser.json());
 // we must tell passport that we want to use cookies; to use the serialize and deserialize funcitons
 app.use(
 	cookieSession({

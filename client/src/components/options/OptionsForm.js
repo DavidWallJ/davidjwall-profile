@@ -39,6 +39,7 @@ class OptionsForm extends Component {
 				{page === 3 &&
 					<OptionsFormThirdPage
 						previousPage={this.previousPage}
+						// onSubmit={values => console.log(values)}
 						onSubmit={values => this.props.saveOptions(values)}
 					/>}
 			</div>
