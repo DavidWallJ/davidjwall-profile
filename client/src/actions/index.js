@@ -7,5 +7,5 @@ export const fetchUser = () => async dispatch => {
 
 export const saveOptions = values => async dispatch => {
 	const res = await axios.post('/api/options', values);
-	dispatch({ type: 'fetchUser', payload: res.data });
+	dispatch({ type: 'saveOptions', payload: true });
 };

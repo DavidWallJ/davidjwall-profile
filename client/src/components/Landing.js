@@ -1,29 +1,39 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import * as actions from '../actions';
 import OptionsForm from './options/OptionsForm';
 import Login from './Login';
 import Profile from './Profile';
-// you are here.  soemthing is wrong with the order of events
+
 class Landing extends Component {
 	renderContent() {
+		console.log('AUTH: ', this.props.auth);
 		switch (this.props.auth) {
 			case null:
 				return;
 			case false:
 				return <Login />;
 			default:
-				if (!this.props.auth.options) {
-					return (
-						<Profile
-							name={
-								this.props.auth.linkedinDisplayName ||
-								this.props.auth.googleDisplayName ||
-								this.props.auth.facebookDisplayName
-							}
-						/>
-					);
-				}
+				return (
+					<Profile
+						name={
+							this.props.auth.linkedinDisplayName ||
+							this.props.auth.googleDisplayName ||
+							this.props.auth.facebookDisplayName
+						}
+					/>
+				);
+		}
+	}
 
+	renderOptions() {
+		console.log('OPTIONS: ', this.props.options);
+		switch (this.props.options) {
+			case null:
+				return;
+			case true:
+				return;
+			default:
 				return <OptionsForm />;
 		}
 	}
@@ -32,13 +42,14 @@ class Landing extends Component {
 		return (
 			<div>
 				{this.renderContent()}
+				{this.renderOptions()}
 			</div>
 		);
 	}
 }
 
-function mapStateToProps({ auth }) {
-	return { auth };
+function mapStateToProps({ auth, options }) {
+	return { auth, options };
 }
 
-export default connect(mapStateToProps)(Landing);
+export default connect(mapStateToProps, actions)(Landing);

@@ -8,7 +8,6 @@ import * as actions from '../actions';
 
 import Header from './Header';
 import Landing from './Landing';
-// import Options from './Options';
 
 class App extends Component {
 	componentDidMount() {
