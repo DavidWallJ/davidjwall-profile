@@ -6,6 +6,8 @@ export const fetchUser = () => async dispatch => {
 };
 
 export const saveOptions = values => async dispatch => {
-	const res = await axios.post('/api/options', values);
-	dispatch({ type: 'saveOptions', payload: true });
+	await axios.post('/api/options', values);
+	// dispatch({ type: 'optionsTrue', payload: true });
+	const res = await axios.get('/api/current_user');
+	dispatch({ type: 'fetchUser', payload: res.data });
 };

@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
 import { reducer as reduxForm } from 'redux-form';
 import authReducer from './authReducer';
-import optionsReducer from './optionsReducer';
 
 export default combineReducers({
 	auth: authReducer,
-	form: reduxForm,
-	options: optionsReducer
+	form: reduxForm
 });

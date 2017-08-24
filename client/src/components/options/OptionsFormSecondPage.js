@@ -30,10 +30,7 @@ const OptionsFormSecondPage = props => {
 				</div>
 				<div className="col s12 m12 l8" style={{ paddingTop: 23 }}>
 					<form onSubmit={handleSubmit}>
-						<div
-							className="col s12 m5"
-							style={{ paddingBottom: 18 }}
-						>
+						<div className="col s12 m5" style={{ paddingBottom: 18 }}>
 							<Field name="theme" component={renderRadioGroup}>
 								<RadioButton value="darkTheme" label="Dark" />
 								<RadioButton value="lightTheme" label="Light" />
@@ -46,11 +43,7 @@ const OptionsFormSecondPage = props => {
 									primary={true}
 									fullWidth={true}
 									style={buttonStyle}
-									icon={
-										<i className="material-icons">
-											keyboard_arrow_right
-										</i>
-									}
+									icon={<i className="material-icons">keyboard_arrow_right</i>}
 								/>
 								<RaisedButton
 									type="button"
@@ -58,11 +51,7 @@ const OptionsFormSecondPage = props => {
 									fullWidth={true}
 									onClick={previousPage}
 									style={buttonStyle}
-									icon={
-										<i className="material-icons">
-											keyboard_arrow_left
-										</i>
-									}
+									icon={<i className="material-icons">keyboard_arrow_left</i>}
 								/>
 							</div>
 						</div>

@@ -21,7 +21,6 @@ class App extends Component {
 					<div>
 						<Header />
 						<Route exact path="/" component={Landing} />
-						{/* <Route path="/options" component={Options} /> */}
 					</div>
 				</BrowserRouter>
 			</MuiThemeProvider>
