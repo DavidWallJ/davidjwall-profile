@@ -1,26 +1,33 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import muiThemeable from 'material-ui/styles/muiThemeable';
 import * as actions from '../actions';
 import OptionsForm from './options/OptionsForm';
 import Login from './Login';
 import Profile from './Profile';
 
 class Landing extends Component {
+	onChangeForm(form) {}
+
 	renderOptions() {
 		if (this.props.auth) {
-			switch (this.props.auth.options.length > 0) {
+			const {
+				options,
+				linkedinDisplayName,
+				googleDisplayName,
+				facebookDisplayName
+			} = this.props.auth;
+			switch (options.length > 0) {
 				case true:
 					return (
 						<Profile
 							name={
-								this.props.auth.linkedinDisplayName ||
-								this.props.auth.googleDisplayName ||
-								this.props.auth.facebookDisplayName
+								linkedinDisplayName || googleDisplayName || facebookDisplayName
 							}
 						/>
 					);
 				default:
-					return <OptionsForm />;
+					return <OptionsForm onChange={this.onChangeForm.bind(this)} />;
 			}
 		}
 
@@ -36,8 +43,8 @@ class Landing extends Component {
 	}
 }
 
-function mapStateToProps({ auth }) {
-	return { auth };
+function mapStateToProps({ auth, form }) {
+	return { auth, form };
 }
 
-export default connect(mapStateToProps, actions)(Landing);
+export default connect(mapStateToProps, actions)(muiThemeable()(Landing));

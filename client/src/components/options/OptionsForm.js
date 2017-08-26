@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import muiThemeable from 'material-ui/styles/muiThemeable';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 
@@ -52,5 +51,5 @@ class OptionsForm extends Component {
 // };
 
 export default connect(null, actions)(
-	muiThemeable()(reduxForm({ form: 'wizard' })(OptionsForm))
+	reduxForm({ form: 'wizard' })(OptionsForm)
 );

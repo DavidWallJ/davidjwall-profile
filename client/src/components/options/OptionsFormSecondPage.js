@@ -1,4 +1,5 @@
 import React from 'react';
+import muiThemeable from 'material-ui/styles/muiThemeable';
 import { Field, reduxForm } from 'redux-form';
 import validate from './validateOptions';
 import { Card, CardTitle, CardActions } from 'material-ui/Card';
@@ -32,8 +33,8 @@ const OptionsFormSecondPage = props => {
 					<form onSubmit={handleSubmit}>
 						<div className="col s12 m5" style={{ paddingBottom: 18 }}>
 							<Field name="theme" component={renderRadioGroup}>
-								<RadioButton value="darkTheme" label="Dark" />
 								<RadioButton value="lightTheme" label="Light" />
+								<RadioButton value="darkTheme" label="Dark" />
 							</Field>
 						</div>
 						<div className="col s12 m7 center-align">
@@ -67,9 +68,11 @@ const OptionsFormSecondPage = props => {
 	);
 };
 
-export default reduxForm({
-	form: 'wizard', // <------ same form name
-	destroyOnUnmount: false, // <------ preserve form data
-	forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
-	validate
-})(OptionsFormSecondPage);
+export default muiThemeable()(
+	reduxForm({
+		form: 'wizard', // <------ same form name
+		destroyOnUnmount: false, // <------ preserve form data
+		forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
+		validate
+	})(OptionsFormSecondPage)
+);

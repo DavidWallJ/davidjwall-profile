@@ -11,3 +11,10 @@ export const saveOptions = values => async dispatch => {
 	const res = await axios.get('/api/current_user');
 	dispatch({ type: 'fetchUser', payload: res.data });
 };
+
+export function setState(theme) {
+	return {
+		type: 'setState',
+		payload: theme
+	};
+}
