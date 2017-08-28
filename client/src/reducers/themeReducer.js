@@ -1,7 +1,7 @@
 export default (state = 'lightTheme', action) => {
 	// console.log(action);
 	switch (action.type) {
-		case 'setState':
+		case 'setTheme':
 			return action.payload;
 		default:
 			return state;

@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
 class Profile extends Component {
+	// componentDidMount() {
+	// 	const { theme } = this.props.auth.options[0];
+	// 	this.props.setTheme({ theme });
+	// }
 	render() {
 		return (
 			<div style={{ textAlign: 'center' }}>
@@ -14,4 +20,7 @@ class Profile extends Component {
 	}
 }
 
-export default Profile;
+function mapStateToProps({ auth }) {
+	return { auth };
+}
+export default connect(mapStateToProps, actions)(Profile);

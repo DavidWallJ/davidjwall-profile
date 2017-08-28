@@ -68,13 +68,6 @@ class App extends Component {
 		this.props.fetchUser();
 	}
 
-	componentWillUpdate(nextProps, nextState) {
-		const { values } = nextProps.form.wizard;
-		if (values) {
-			this.props.setState(values.theme);
-		}
-	}
-
 	render() {
 		switch (this.props.theme) {
 			case 'lightTheme':
@@ -116,7 +109,7 @@ class App extends Component {
 	}
 }
 
-function mapStateToProps({ form, theme }) {
-	return { form, theme };
+function mapStateToProps({ form, theme, auth }) {
+	return { form, theme, auth };
 }
 export default connect(mapStateToProps, actions)(App);

@@ -7,7 +7,9 @@ import Login from './Login';
 import Profile from './Profile';
 
 class Landing extends Component {
-	onChangeForm(form) {}
+	onChangeForm({ theme }) {
+		this.props.setTheme(theme);
+	}
 
 	renderOptions() {
 		if (this.props.auth) {
@@ -44,7 +46,7 @@ class Landing extends Component {
 }
 
 function mapStateToProps({ auth, form }) {
-	return { auth, form };
+	return { auth, theme: form.theme };
 }
 
 export default connect(mapStateToProps, actions)(muiThemeable()(Landing));

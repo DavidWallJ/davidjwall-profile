@@ -39,7 +39,10 @@ class OptionsForm extends Component {
 					<OptionsFormThirdPage
 						previousPage={this.previousPage}
 						// onSubmit={values => console.log(values)}
-						onSubmit={values => this.props.saveOptions(values)}
+						onSubmit={values => {
+							this.props.saveOptions(values);
+							this.props.setTheme({ theme: values.theme });
+						}}
 					/>}
 			</div>
 		);
@@ -50,6 +53,10 @@ class OptionsForm extends Component {
 // 	onSubmit: PropTypes.func.isRequired
 // };
 
-export default connect(null, actions)(
+function mapStateToProps({ theme }) {
+	return { theme };
+}
+
+export default connect(mapStateToProps, actions)(
 	reduxForm({ form: 'wizard' })(OptionsForm)
 );

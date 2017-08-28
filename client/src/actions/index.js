@@ -12,9 +12,6 @@ export const saveOptions = values => async dispatch => {
 	dispatch({ type: 'fetchUser', payload: res.data });
 };
 
-export function setState(theme) {
-	return {
-		type: 'setState',
-		payload: theme
-	};
-}
+export const setTheme = theme => dispatch => {
+	dispatch({ type: 'setTheme', payload: theme });
+};
