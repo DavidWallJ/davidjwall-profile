@@ -3,10 +3,6 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 class Profile extends Component {
-	// componentDidMount() {
-	// 	const { theme } = this.props.auth.options[0];
-	// 	this.props.setTheme({ theme });
-	// }
 	render() {
 		return (
 			<div style={{ textAlign: 'center' }}>

@@ -6,5 +6,5 @@ import themeReducer from './themeReducer';
 export default combineReducers({
 	auth: authReducer,
 	form: reduxForm,
-	theme: themeReducer
+	muiTheme: themeReducer
 });

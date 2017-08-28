@@ -40,6 +40,7 @@ class OptionsForm extends Component {
 						previousPage={this.previousPage}
 						// onSubmit={values => console.log(values)}
 						onSubmit={values => {
+							console.log('values: ', values);
 							this.props.saveOptions(values);
 							this.props.setTheme({ theme: values.theme });
 						}}
@@ -53,8 +54,8 @@ class OptionsForm extends Component {
 // 	onSubmit: PropTypes.func.isRequired
 // };
 
-function mapStateToProps({ theme }) {
-	return { theme };
+function mapStateToProps({ muiTheme }) {
+	return { muiTheme };
 }
 
 export default connect(mapStateToProps, actions)(

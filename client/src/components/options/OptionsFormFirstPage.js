@@ -62,6 +62,6 @@ export default reduxForm({
 	form: 'wizard', // <------ same form name
 	destroyOnUnmount: false, // <------ preserve form data
 	forceUnregisterOnUnmount: true, // <------ unregister fields on unmount
-	initialValues: { theme: 'lightTheme' },
+	// initialValues: { theme: 'lightTheme' },
 	validate
 })(OptionsFormFirstPage);

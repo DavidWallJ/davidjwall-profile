@@ -69,7 +69,7 @@ class App extends Component {
 	}
 
 	render() {
-		switch (this.props.theme) {
+		switch (this.props.muiTheme.theme) {
 			case 'lightTheme':
 				return (
 					<MuiThemeProvider muiTheme={muiThemeLight}>
@@ -109,7 +109,7 @@ class App extends Component {
 	}
 }
 
-function mapStateToProps({ form, theme, auth }) {
-	return { form, theme, auth };
+function mapStateToProps({ form, muiTheme, auth }) {
+	return { form, muiTheme, auth };
 }
 export default connect(mapStateToProps, actions)(App);

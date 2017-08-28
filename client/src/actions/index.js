@@ -6,8 +6,9 @@ export const fetchUser = () => async dispatch => {
 };
 
 export const saveOptions = values => async dispatch => {
+	// dispatch({ type: 'setTheme', payload: values.theme });
 	await axios.post('/api/options', values);
-	// dispatch({ type: 'optionsTrue', payload: true });
+	// await dispatch({ type: 'optionsTrue', payload: true });
 	const res = await axios.get('/api/current_user');
 	dispatch({ type: 'fetchUser', payload: res.data });
 };

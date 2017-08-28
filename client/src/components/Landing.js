@@ -8,7 +8,15 @@ import Profile from './Profile';
 
 class Landing extends Component {
 	onChangeForm({ theme }) {
-		this.props.setTheme(theme);
+		this.props.setTheme({ theme });
+	}
+
+	async componentDidMount() {
+		await this.props.fetchUser();
+		if (this.props.auth && this.props.auth.options.length > 0) {
+			const { theme } = this.props.auth.options[0];
+			this.props.setTheme({ theme });
+		}
 	}
 
 	renderOptions() {
@@ -45,8 +53,8 @@ class Landing extends Component {
 	}
 }
 
-function mapStateToProps({ auth, form }) {
-	return { auth, theme: form.theme };
+function mapStateToProps({ auth }) {
+	return { auth };
 }
 
 export default connect(mapStateToProps, actions)(muiThemeable()(Landing));
