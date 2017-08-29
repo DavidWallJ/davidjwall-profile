@@ -69,43 +69,18 @@ class App extends Component {
 	}
 
 	render() {
-		switch (this.props.muiTheme.theme) {
-			case 'lightTheme':
-				return (
-					<MuiThemeProvider muiTheme={muiThemeLight}>
-						<BrowserRouter>
-							<div>
-								<Header />
-								<Route exact path="/" component={Landing} />
-							</div>
-						</BrowserRouter>
-					</MuiThemeProvider>
-				);
-				break;
-			case 'darkTheme':
-				return (
-					<MuiThemeProvider muiTheme={muiThemeDark}>
-						<BrowserRouter>
-							<div>
-								<Header />
-								<Route exact path="/" component={Landing} />
-							</div>
-						</BrowserRouter>
-					</MuiThemeProvider>
-				);
-				break;
-			default:
-				return (
-					<MuiThemeProvider muiTheme={muiThemeLight}>
-						<BrowserRouter>
-							<div>
-								<Header />
-								<Route exact path="/" component={Landing} />
-							</div>
-						</BrowserRouter>
-					</MuiThemeProvider>
-				);
-		}
+		const theme =
+			this.props.muiTheme.theme === 'darkTheme' ? muiThemeDark : muiThemeLight;
+		return (
+			<MuiThemeProvider muiTheme={theme}>
+				<BrowserRouter>
+					<div>
+						<Header />
+						<Route exact path="/" component={Landing} />
+					</div>
+				</BrowserRouter>
+			</MuiThemeProvider>
+		);
 	}
 }
 

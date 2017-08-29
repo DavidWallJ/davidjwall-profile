@@ -16,3 +16,7 @@ export const saveOptions = values => async dispatch => {
 export const setTheme = theme => dispatch => {
 	dispatch({ type: 'setTheme', payload: theme });
 };
+
+export const setAudio = audioOptions => dispatch => {
+	dispatch({ type: 'setAudio', payload: audioOptions });
+};
