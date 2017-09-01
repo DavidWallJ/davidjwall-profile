@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
+import * as actions from '../actions';
+import { connect } from 'react-redux';
+
 import { Card, CardActions, CardTitle } from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
 
 class Login extends Component {
+	anonymousHandler() {
+		this.props.setAnonymous({ anonymous: null, options: [] });
+	}
+
 	render() {
 		const buttonStyle = {
 			marginBottom: 12,
@@ -42,6 +49,13 @@ class Login extends Component {
 								style={buttonStyle}
 							/>
 						</a>
+						<RaisedButton
+							onClick={this.anonymousHandler.bind(this)}
+							label="Anonymous"
+							primary={true}
+							fullWidth={true}
+							style={buttonStyle}
+						/>
 					</CardActions>
 				</Card>
 			</div>
@@ -49,4 +63,8 @@ class Login extends Component {
 	}
 }
 
-export default Login;
+function mapStateToProps({ auth, form }) {
+	return { auth, form };
+}
+
+export default connect(mapStateToProps, actions)(Login);

@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Sound from 'react-sound';
-import { connect } from 'react-redux';
-import muiThemeable from 'material-ui/styles/muiThemeable';
+import { Audio } from 'redux-audio';
 import * as actions from '../actions';
+import { connect } from 'react-redux';
+
+import muiThemeable from 'material-ui/styles/muiThemeable';
 import OptionsForm from './options/OptionsForm';
 import Login from './Login';
 import Profile from './Profile';
@@ -38,12 +40,15 @@ class Landing extends Component {
 				googleDisplayName,
 				facebookDisplayName
 			} = this.props.auth;
-			switch (options.length > 0) {
+			switch (options.length > 0 || this.props.anonymous.anonymous === true) {
 				case true:
 					return (
 						<Profile
 							name={
-								linkedinDisplayName || googleDisplayName || facebookDisplayName
+								linkedinDisplayName ||
+								googleDisplayName ||
+								facebookDisplayName ||
+								'Anonymous'
 							}
 						/>
 					);
@@ -55,14 +60,13 @@ class Landing extends Component {
 		return <Login />;
 	}
 
-	// you are here
-	// can you access mp3s from dropbox?
 	renderAudio() {
 		let audioURL = '';
 		let playStatus = '';
 		switch (this.props.audioOptions.genre) {
 			case 'dance':
-				audioURL = 'https://db.tt/tU9KbBeFdT';
+				audioURL =
+					'https://s3-ap-northeast-1.amazonaws.com/profileaudio/drumnbass.mp3';
 				break;
 			case 'rock':
 				audioURL = 'http://www.nihilus.net/soundtracks/Static%20Memories.mp3';
@@ -71,7 +75,8 @@ class Landing extends Component {
 				audioURL = 'http://www.nihilus.net/soundtracks/Static%20Memories.mp3';
 				break;
 			case 'classical':
-				audioURL = 'http://www.nihilus.net/soundtracks/Static%20Memories.mp3';
+				audioURL =
+					'http://www.mfiles.co.uk/mp3-downloads/brahms-cello-sonata-Em-1.mp3';
 				break;
 			default:
 				audioURL = '';
@@ -104,8 +109,8 @@ class Landing extends Component {
 	}
 }
 
-function mapStateToProps({ auth, audioOptions }) {
-	return { auth, audioOptions };
+function mapStateToProps({ auth, audioOptions, anonymous }) {
+	return { auth, audioOptions, anonymous };
 }
 
 export default connect(mapStateToProps, actions)(muiThemeable()(Landing));

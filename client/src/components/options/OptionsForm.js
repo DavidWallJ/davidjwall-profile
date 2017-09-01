@@ -40,8 +40,11 @@ class OptionsForm extends Component {
 						previousPage={this.previousPage}
 						// onSubmit={values => console.log(values)}
 						onSubmit={values => {
-							console.log('values: ', values);
-							this.props.saveOptions(values);
+							if (this.props.anonymous.anonymous !== null) {
+								this.props.saveOptions(values);
+							} else {
+								this.props.setAnonymous({ anonymous: true, options: [] });
+							}
 							this.props.setTheme({ theme: values.theme });
 						}}
 					/>}
@@ -54,8 +57,8 @@ class OptionsForm extends Component {
 // 	onSubmit: PropTypes.func.isRequired
 // };
 
-function mapStateToProps({ muiTheme }) {
-	return { muiTheme };
+function mapStateToProps({ muiTheme, auth, anonymous }) {
+	return { muiTheme, auth, anonymous };
 }
 
 export default connect(mapStateToProps, actions)(

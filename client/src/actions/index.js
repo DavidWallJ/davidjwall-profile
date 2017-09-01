@@ -20,3 +20,8 @@ export const setTheme = theme => dispatch => {
 export const setAudio = audioOptions => dispatch => {
 	dispatch({ type: 'setAudio', payload: audioOptions });
 };
+
+export const setAnonymous = user => dispatch => {
+	console.log('at action creator: ', user);
+	dispatch({ type: 'setAnonymous', payload: user });
+};
