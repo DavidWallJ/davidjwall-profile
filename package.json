@@ -26,8 +26,6 @@
 		"passport-anonymous": "^1.0.1",
 		"passport-facebook": "^2.1.1",
 		"passport-google-oauth20": "^1.0.0",
-		"passport-linkedin": "^1.0.0",
-		"react-sound": "^0.8.0",
-		"redux-audio": "^1.0.0"
+		"passport-linkedin": "^1.0.0"
 	}
 }

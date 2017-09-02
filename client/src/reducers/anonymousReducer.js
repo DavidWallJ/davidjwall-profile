@@ -1,4 +1,4 @@
-export default (state = { anonymous: false }, action) => {
+export default (state = { auth: null }, action) => {
 	switch (action.type) {
 		case 'setAnonymous':
 			return action.payload;

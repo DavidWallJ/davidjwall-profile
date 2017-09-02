@@ -7,7 +7,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 class Login extends Component {
 	anonymousHandler() {
-		this.props.setAnonymous({ anonymous: null, options: [] });
+		this.props.setAnonymous({ auth: false, options: [] });
 	}
 
 	render() {

@@ -22,6 +22,5 @@ export const setAudio = audioOptions => dispatch => {
 };
 
 export const setAnonymous = user => dispatch => {
-	console.log('at action creator: ', user);
 	dispatch({ type: 'setAnonymous', payload: user });
 };

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import * as actions from '../actions';
 import {
 	pinkA100,
 	pinkA200,
@@ -20,7 +21,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
-import * as actions from '../actions';
 
 import Header from './Header';
 import Landing from './Landing';
@@ -75,7 +75,6 @@ class App extends Component {
 			<MuiThemeProvider muiTheme={theme}>
 				<BrowserRouter>
 					<div>
-						<Header />
 						<Route exact path="/" component={Landing} />
 					</div>
 				</BrowserRouter>

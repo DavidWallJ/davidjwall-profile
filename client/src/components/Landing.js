@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import Sound from 'react-sound';
-import { Audio } from 'redux-audio';
+import muiThemeable from 'material-ui/styles/muiThemeable';
+import scrollToComponent from 'react-scroll-to-component';
 import * as actions from '../actions';
 import { connect } from 'react-redux';
 
-import muiThemeable from 'material-ui/styles/muiThemeable';
 import OptionsForm from './options/OptionsForm';
+import Header from './Header';
 import Login from './Login';
-import Profile from './Profile';
+import Welcome from './Welcome';
+import Frontend from './Frontend';
+import Backend from './Backend';
+import WithCare from './WithCare';
+import Projects from './Projects';
+import Contact from './Contact';
 
 class Landing extends Component {
 	onChangeForm({ theme, genre }) {
@@ -32,6 +38,10 @@ class Landing extends Component {
 		}
 	}
 
+	scrollCallbackHandler = ref => {
+		scrollToComponent(this.refs[ref]);
+	};
+
 	renderOptions() {
 		if (this.props.auth) {
 			const {
@@ -40,17 +50,25 @@ class Landing extends Component {
 				googleDisplayName,
 				facebookDisplayName
 			} = this.props.auth;
-			switch (options.length > 0 || this.props.anonymous.anonymous === true) {
+			switch (options.length > 0 || this.props.anonymous.auth === true) {
 				case true:
 					return (
-						<Profile
-							name={
-								linkedinDisplayName ||
-								googleDisplayName ||
-								facebookDisplayName ||
-								'Anonymous'
-							}
-						/>
+						<div>
+							<Header scrollCallback={this.scrollCallbackHandler} />
+							<Welcome
+								name={
+									linkedinDisplayName ||
+									googleDisplayName ||
+									facebookDisplayName ||
+									'Anonymous'
+								}
+							/>
+							<Frontend ref="frontend" />
+							<Backend ref="backend" />
+							<WithCare ref="withCare" />
+							<Projects ref="projects" />
+							<Contact ref="contact" />
+						</div>
 					);
 				default:
 					return <OptionsForm onChange={this.onChangeForm.bind(this)} />;

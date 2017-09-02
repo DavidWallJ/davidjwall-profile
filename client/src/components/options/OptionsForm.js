@@ -38,12 +38,11 @@ class OptionsForm extends Component {
 				{page === 3 &&
 					<OptionsFormThirdPage
 						previousPage={this.previousPage}
-						// onSubmit={values => console.log(values)}
 						onSubmit={values => {
-							if (this.props.anonymous.anonymous !== null) {
+							if (this.props.anonymous.auth !== false) {
 								this.props.saveOptions(values);
 							} else {
-								this.props.setAnonymous({ anonymous: true, options: [] });
+								this.props.setAnonymous({ auth: true, options: [] });
 							}
 							this.props.setTheme({ theme: values.theme });
 						}}
