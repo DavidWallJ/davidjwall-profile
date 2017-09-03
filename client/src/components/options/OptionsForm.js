@@ -56,8 +56,8 @@ class OptionsForm extends Component {
 // 	onSubmit: PropTypes.func.isRequired
 // };
 
-function mapStateToProps({ muiTheme, auth, anonymous }) {
-	return { muiTheme, auth, anonymous };
+function mapStateToProps({ auth, anonymous }) {
+	return { auth, anonymous };
 }
 
 export default connect(mapStateToProps, actions)(

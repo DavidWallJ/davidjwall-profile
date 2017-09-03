@@ -34,7 +34,7 @@ const OptionsFormFirstPage = props => {
 							<Field name="genre" component={renderRadioGroup}>
 								<RadioButton value="dance" label="Dance" />
 								<RadioButton value="rock" label="Rock" />
-								<RadioButton value="folk" label="Folk" />
+								<RadioButton value="hipHop" label="Hip Hop" />
 								<RadioButton value="classical" label="Classical" />
 								<RadioButton value="silence" label="Silence" />
 							</Field>

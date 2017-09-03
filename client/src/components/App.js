@@ -70,7 +70,9 @@ class App extends Component {
 
 	render() {
 		const theme =
-			this.props.muiTheme.theme === 'darkTheme' ? muiThemeDark : muiThemeLight;
+			this.props.currentTheme.theme === 'darkTheme'
+				? muiThemeDark
+				: muiThemeLight;
 		return (
 			<MuiThemeProvider muiTheme={theme}>
 				<BrowserRouter>
@@ -83,7 +85,7 @@ class App extends Component {
 	}
 }
 
-function mapStateToProps({ form, muiTheme, auth }) {
-	return { form, muiTheme, auth };
+function mapStateToProps({ form, currentTheme, auth }) {
+	return { form, currentTheme, auth };
 }
 export default connect(mapStateToProps, actions)(App);

@@ -10,7 +10,7 @@ export default combineReducers({
 	auth: authReducer,
 	anonymous: anonymousReducer,
 	form: reduxForm,
-	muiTheme: themeReducer,
+	currentTheme: themeReducer,
 	audioOptions,
 	audio
 });

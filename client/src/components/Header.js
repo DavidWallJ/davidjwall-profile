@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import FontIcon from 'material-ui/FontIcon';
 import AppBar from 'material-ui/AppBar';
-import { Link } from 'react-router-dom';
 
 class Header extends Component {
 	render() {
@@ -11,53 +10,30 @@ class Header extends Component {
 			marginRight: 24,
 			color: this.props.muiTheme.palette.alternateTextColor
 		};
+
+		const iconFields = [
+			{ icon: 'important_devices', component: 'frontend' },
+			{ icon: 'dns', component: 'backend' },
+			{ icon: 'favorite', component: 'withCare' },
+			{ icon: 'code', component: 'projects' },
+			{ icon: 'face', component: 'contact' }
+		];
+
 		const rightIcons = (
 			<div>
-				<a href="#">
-					<FontIcon
-						className="material-icons"
-						style={iconStyles}
-						onClick={() => this.props.scrollCallback('frontend')}
-					>
-						important_devices
-					</FontIcon>
-				</a>
-				<a href="#">
-					<FontIcon
-						className="material-icons"
-						style={iconStyles}
-						onClick={() => this.props.scrollCallback('backend')}
-					>
-						dns
-					</FontIcon>
-				</a>
-				<a href="#">
-					<FontIcon
-						className="material-icons"
-						style={iconStyles}
-						onClick={() => this.props.scrollCallback('withCare')}
-					>
-						favorite
-					</FontIcon>
-				</a>
-				<a href="#">
-					<FontIcon
-						className="material-icons"
-						style={iconStyles}
-						onClick={() => this.props.scrollCallback('projects')}
-					>
-						code
-					</FontIcon>
-				</a>
-				<a href="#">
-					<FontIcon
-						className="material-icons"
-						style={iconStyles}
-						onClick={() => this.props.scrollCallback('contact')}
-					>
-						face
-					</FontIcon>
-				</a>
+				{iconFields.map((icon, i) => {
+					return (
+						<a href="#" key={i}>
+							<FontIcon
+								className="material-icons"
+								style={iconStyles}
+								onClick={() => this.props.scrollCallback(icon.component)}
+							>
+								{icon.icon}
+							</FontIcon>
+						</a>
+					);
+				})}
 			</div>
 		);
 		return (

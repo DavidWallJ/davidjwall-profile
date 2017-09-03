@@ -16,6 +16,21 @@ import Projects from './Projects';
 import Contact from './Contact';
 
 class Landing extends Component {
+	constructor(props) {
+		super(props);
+		this.state = { position: 0 };
+		this.handlePlaying = this.handlePlaying.bind(this);
+		this.handleFinishedPlaying = this.handleFinishedPlaying.bind(this);
+	}
+
+	handlePlaying(ev) {
+		this.setState({ position: ev.position });
+	}
+
+	handleFinishedPlaying() {
+		this.setState({ position: 0 });
+	}
+
 	onChangeForm({ theme, genre }) {
 		this.props.setTheme({ theme });
 		if (genre === 'silence') {
@@ -39,7 +54,9 @@ class Landing extends Component {
 	}
 
 	scrollCallbackHandler = ref => {
-		scrollToComponent(this.refs[ref]);
+		scrollToComponent(this.refs[ref], {
+			align: 'bottom'
+		});
 	};
 
 	renderOptions() {
@@ -84,13 +101,15 @@ class Landing extends Component {
 		switch (this.props.audioOptions.genre) {
 			case 'dance':
 				audioURL =
-					'https://s3-ap-northeast-1.amazonaws.com/profileaudio/drumnbass.mp3';
+					'https://s3-ap-northeast-1.amazonaws.com/profileaudio/dance.mp3';
 				break;
 			case 'rock':
-				audioURL = 'http://www.nihilus.net/soundtracks/Static%20Memories.mp3';
+				audioURL =
+					'https://s3-ap-northeast-1.amazonaws.com/profileaudio/rock.mp3';
 				break;
-			case 'folk':
-				audioURL = 'http://www.nihilus.net/soundtracks/Static%20Memories.mp3';
+			case 'hipHop':
+				audioURL =
+					'https://s3-ap-northeast-1.amazonaws.com/profileaudio/hiphop.mp3';
 				break;
 			case 'classical':
 				audioURL =
@@ -108,6 +127,9 @@ class Landing extends Component {
 				<Sound
 					url={audioURL}
 					playStatus={playStatus}
+					position={this.state.position}
+					onPlaying={this.handlePlaying}
+					onFinishedPlaying={this.handleFinishedPlaying}
 					// playFromPosition={300 /* in milliseconds */}
 					// onLoading={this.handleSongLoading}
 					// onPlaying={this.handleSongPlaying}
