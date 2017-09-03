@@ -113,7 +113,7 @@ class Landing extends Component {
 				break;
 			case 'classical':
 				audioURL =
-					'http://www.mfiles.co.uk/mp3-downloads/brahms-cello-sonata-Em-1.mp3';
+					'https://s3-ap-northeast-1.amazonaws.com/profileaudio/classical.mp3';
 				break;
 			default:
 				audioURL = '';

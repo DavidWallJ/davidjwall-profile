@@ -8,18 +8,34 @@ import { Card } from 'material-ui/Card';
 // material uis own flexbox layout beta version
 class Frontend extends Component {
 	render() {
+		const { color, textColor } = this.props.muiTheme.appBar;
 		console.log(this.props.muiTheme);
 		return (
-			<div className="row center-xs middle-xs" style={{ height: '100vh' }}>
-				<Card className="col s12">
-					<div className="col s6 center-align">
-						<FontIcon style={{ fontSize: 96 }} className="material-icons">
+			<div className="row">
+				<Card className="col s12" style={{ padding: 0 }}>
+					<div
+						className="col s12 m6"
+						style={{
+							display: 'flex',
+							alignItems: 'center',
+							justifyContent: 'center',
+							minHeight: 500,
+							backgroundColor: color
+						}}
+					>
+						<FontIcon
+							style={{
+								fontSize: 144,
+								color: textColor
+							}}
+							className="material-icons"
+						>
 							important_devices
 						</FontIcon>
 					</div>
 					<div
-						className="col s6"
-						style={{ backgroundColor: 'white', height: '100vh' }}
+						className="col s12 m6"
+						style={{ backgroundColor: 'white', minHeight: 500 }}
 					>
 						List
 					</div>

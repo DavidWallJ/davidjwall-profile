@@ -15,7 +15,7 @@ class Welcome extends Component {
 				break;
 			default:
 				currentBackgroundURL =
-					'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/marc-mueller-210523.jpg';
+					'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/goran-ivos-246271.jpg';
 		}
 	}
 	render() {
@@ -27,8 +27,11 @@ class Welcome extends Component {
 					color: 'white',
 					backgroundSize: 'cover',
 					backgroundPosition: 'center',
-					textAlign: 'center',
-					height: 600
+					height: 600,
+					display: 'flex',
+					alignItems: 'center',
+					justifyContent: 'center',
+					flexDirection: 'column'
 				}}
 			>
 				<h2>
