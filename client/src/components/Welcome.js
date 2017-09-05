@@ -6,24 +6,31 @@ import { connect } from 'react-redux';
 let currentBackgroundURL = '';
 
 class Welcome extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			currentBackgroundURL:
+				'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/goran-ivos-246271.jpg'
+		};
+	}
+
 	componentWillMount() {
-		console.log('componentWillMount: ', this.props);
 		switch (this.props.currentTheme.theme) {
 			case 'darkTheme':
-				currentBackgroundURL =
-					'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/caspar-rubin-224229.jpg';
+				this.setState({
+					currentBackgroundURL:
+						'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/caspar-rubin-224229.jpg'
+				});
 				break;
 			default:
-				currentBackgroundURL =
-					'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/goran-ivos-246271.jpg';
+				return;
 		}
 	}
 	render() {
-		console.log('currentBackgroundURL: ', currentBackgroundURL);
 		return (
 			<div
 				style={{
-					backgroundImage: `url(${currentBackgroundURL})`,
+					backgroundImage: `url(${this.state.currentBackgroundURL})`,
 					color: 'white',
 					backgroundSize: 'cover',
 					backgroundPosition: 'center',
@@ -37,7 +44,7 @@ class Welcome extends Component {
 				<h2>
 					Hello {this.props.name}
 				</h2>
-				<h5>Welcome to my Welcome Page</h5>
+				<h5>Welcome to my Profile Page</h5>
 				<a href="/api/logout">( Logout )</a>
 			</div>
 		);
