@@ -45,7 +45,12 @@ class Welcome extends Component {
 					Hello {this.props.name}
 				</h2>
 				<h5>Welcome to my Profile Page</h5>
-				<a href="/api/logout">( Logout )</a>
+				<a
+					href="/api/logout"
+					style={{ color: '#ff80ab', textDecoration: 'none' }}
+				>
+					( Logout )
+				</a>
 			</div>
 		);
 	}

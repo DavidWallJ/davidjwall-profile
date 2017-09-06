@@ -11,6 +11,8 @@ class Login extends Component {
 	}
 
 	render() {
+		const windowHeight = window.innerHeight;
+
 		const buttonStyle = {
 			marginBottom: 12,
 			textColor: 'white'
@@ -21,7 +23,7 @@ class Login extends Component {
 		};
 
 		return (
-			<div className="row">
+			<div className="row" style={{ height: windowHeight }}>
 				<Card className="col s12 m6 offset-m3 center-align" style={cardStyle}>
 					<CardTitle title="Welcome" subtitle="Please login in with..." />
 					<CardActions>

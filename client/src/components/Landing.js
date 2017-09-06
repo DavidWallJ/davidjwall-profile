@@ -55,7 +55,7 @@ class Landing extends Component {
 
 	scrollCallbackHandler = ref => {
 		scrollToComponent(this.refs[ref], {
-			align: 'bottom'
+			align: 'middle'
 		});
 	};
 
@@ -130,18 +130,15 @@ class Landing extends Component {
 					position={this.state.position}
 					onPlaying={this.handlePlaying}
 					onFinishedPlaying={this.handleFinishedPlaying}
-					// playFromPosition={300 /* in milliseconds */}
-					// onLoading={this.handleSongLoading}
-					// onPlaying={this.handleSongPlaying}
-					// onFinishedPlaying={this.handleSongFinishedPlaying}
 				/>
 			);
 		}
 	}
 
 	render() {
+		const altColor = this.props.muiTheme.slider.trackColorSelected;
 		return (
-			<div>
+			<div style={{ backgroundColor: altColor, height: window.innerHeight }}>
 				{this.renderAudio()}
 				{this.renderOptions()}
 			</div>

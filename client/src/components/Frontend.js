@@ -9,17 +9,17 @@ class Frontend extends Component {
 	render() {
 		const { color, textColor } = this.props.muiTheme.appBar;
 		return (
-			<div className="row">
-				<Card className="col s12" style={{ padding: 0 }}>
-					<IconPanel iconName="important_devices" />
+			<Card className="row" style={{ margin: 0 }}>
+				<div className="col s12" style={{ padding: 0 }}>
+					<IconPanel iconName="important_devices" panelTitle="Frontend" />
 					<div
 						className="col s12 m6"
 						style={{ backgroundColor: textColor, minHeight: 500 }}
 					>
 						List
 					</div>
-				</Card>
-			</div>
+				</div>
+			</Card>
 		);
 	}
 }
