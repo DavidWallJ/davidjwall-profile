@@ -85,7 +85,7 @@ class Projects extends Component {
 					}}
 				>
 					<h5>Technologies</h5>
-					<TechnologiesForm />
+					<TechnologiesForm color={color} textColor={textColor} />
 				</div>
 				<div
 					className="col s12 m6"

@@ -4,7 +4,7 @@ import validate from './validateOptions';
 import { Card, CardTitle, CardActions } from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
 import { RadioButton } from 'material-ui/RadioButton';
-import { renderRadioGroup } from './renderMaterialUIComponent';
+import { renderRadioGroup } from '../common/renderMaterialUIComponent';
 import { renderError } from './RenderError';
 
 {

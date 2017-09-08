@@ -1,23 +1,63 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import { renderCheckbox } from './options/renderMaterialUIComponent';
+import { renderCheckbox } from './common/renderMaterialUIComponent';
 import Checkbox from 'material-ui/Checkbox';
 
-const styles = {
-	block: {
-		maxWidth: 250
-	},
-	checkbox: {
-		marginBottom: 16
-	}
-};
+const technologies = [
+	{ name: 'react', label: 'React' },
+	{ name: 'reactNative', label: 'React Native' },
+	{ name: 'redux', label: 'Redux' },
+	{ name: 'jQuery', label: 'jQuery' },
+	{ name: 'javascript', label: 'JavaScript' },
+	{ name: 'css', label: 'CSS' },
+	{ name: 'html', label: 'HTML' },
+	{ name: 'mongoDB', label: 'MongoDB' },
+	{ name: 'nodejs', label: 'NodeJS' },
+	{ name: 'passport', label: 'Passport' },
+	{ name: 'oAuth', label: 'OAuth' },
+	{ name: 'firebase', label: 'Firebase' },
+	{ name: 'express', label: 'Express' },
+	{ name: 'axios', label: 'Axios' },
+	{ name: 'mocha', label: 'Mocha' },
+	{ name: 'chai', label: 'Chai' }
+];
 
 const TechnologiesForm = props => {
 	const { handleSubmit, pristine, reset, submitting } = props;
 	return (
-		<form onSubmit={handleSubmit}>
-			<div>
-				<Field name="react" component={renderCheckbox} label="React" />
+		<form
+			onSubmit={handleSubmit}
+			style={{
+				paddingBottom: 50
+				// display: 'flex'
+				// flexDirection: 'column'
+			}}
+		>
+			<div className="col s12 m6">
+				{technologies.slice(0, 8).map((technology, i) => {
+					return (
+						<Field
+							key={i}
+							name={technology.name}
+							component={renderCheckbox}
+							label={technology.label}
+							color={props.textColor}
+						/>
+					);
+				})}
+			</div>
+			<div className="col s12 m6">
+				{technologies.slice(8, 16).map((technology, i) => {
+					return (
+						<Field
+							key={i}
+							name={technology.name}
+							component={renderCheckbox}
+							label={technology.label}
+							color={props.textColor}
+						/>
+					);
+				})}
 			</div>
 		</form>
 	);
