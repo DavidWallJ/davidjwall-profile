@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { Card } from 'material-ui/Card';
 import FontIcon from 'material-ui/FontIcon';
 
+import TechnologiesForm from './TechnologiesForm';
+
 class Projects extends Component {
 	render() {
 		const { color, textColor } = this.props.muiTheme.appBar;
@@ -27,17 +29,19 @@ class Projects extends Component {
 			}
 		];
 
-		// you are here
-		// you can figure this out
-
 		// const winners = projects.filter(project => {
 		// 	// return project.technologies.indexOf('a') > -1;
 		// 	const checkFor = ['a', 'b'];
-		// 	const checkIn = project.technologies;
-		// 	checkIn.every(val => checkFor.includes(val));
+		// 	return checkFor.every(function(val) {
+		// 		return project.technologies.indexOf(val) !== -1;
+		// 	});
 		// });
+		let selectedTechs = ['a', 'b']; //selected techs
+		let arr = projects.filter(
+			item => item.technologies.filter(x => selectedTechs.includes(x)).length
+		);
 
-		console.log('winners: ', winners);
+		console.log(arr); //returns the 1st and 3rd project object.
 		return (
 			<Card
 				className="row"
@@ -76,10 +80,12 @@ class Projects extends Component {
 						display: 'flex',
 						alignItems: 'center',
 						justifyContent: 'center',
-						color: textColor
+						color: textColor,
+						flexDirection: 'column'
 					}}
 				>
 					<h5>Technologies</h5>
+					<TechnologiesForm />
 				</div>
 				<div
 					className="col s12 m6"
