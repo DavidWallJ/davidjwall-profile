@@ -7,19 +7,19 @@ const technologies = [
 	{ name: 'react', label: 'React' },
 	{ name: 'reactNative', label: 'React Native' },
 	{ name: 'redux', label: 'Redux' },
-	{ name: 'jQuery', label: 'jQuery' },
+	{ name: 'jquery', label: 'jQuery' },
 	{ name: 'javascript', label: 'JavaScript' },
 	{ name: 'css', label: 'CSS' },
 	{ name: 'html', label: 'HTML' },
 	{ name: 'mongoDB', label: 'MongoDB' },
+	{ name: 'heroku', label: 'Heroku' },
 	{ name: 'nodejs', label: 'NodeJS' },
 	{ name: 'passport', label: 'Passport' },
-	{ name: 'oAuth', label: 'OAuth' },
+	{ name: 'oauth', label: 'OAuth' },
 	{ name: 'firebase', label: 'Firebase' },
 	{ name: 'express', label: 'Express' },
 	{ name: 'axios', label: 'Axios' },
-	{ name: 'mocha', label: 'Mocha' },
-	{ name: 'chai', label: 'Chai' }
+	{ name: 'mocha', label: 'Mocha' }
 ];
 
 const TechnologiesForm = props => {

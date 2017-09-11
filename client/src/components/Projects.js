@@ -4,44 +4,14 @@ import { connect } from 'react-redux';
 import { Card } from 'material-ui/Card';
 import FontIcon from 'material-ui/FontIcon';
 
-import TechnologiesForm from './TechnologiesForm';
+import TechnologiesForm from './ProjectsTechnologiesForm';
+import LinkList from './ProjectsLinkList';
 
 class Projects extends Component {
 	render() {
 		const { color, textColor } = this.props.muiTheme.appBar;
 		const altColor = this.props.muiTheme.slider.trackColorSelected;
 
-		const projects = [
-			{
-				name: 'projecta',
-				technologies: ['a', 'b', 'f'],
-				link: 'www.example.com'
-			},
-			{
-				name: 'projectb',
-				technologies: ['c', 'd', 'e'],
-				link: 'www.example.com'
-			},
-			{
-				name: 'projectc',
-				technologies: ['a', 'b', 'c', 'd', 'e'],
-				link: 'www.example.com'
-			}
-		];
-
-		// const winners = projects.filter(project => {
-		// 	// return project.technologies.indexOf('a') > -1;
-		// 	const checkFor = ['a', 'b'];
-		// 	return checkFor.every(function(val) {
-		// 		return project.technologies.indexOf(val) !== -1;
-		// 	});
-		// });
-		let selectedTechs = ['a', 'b']; //selected techs
-		let arr = projects.filter(
-			item => item.technologies.filter(x => selectedTechs.includes(x)).length
-		);
-
-		console.log(arr); //returns the 1st and 3rd project object.
 		return (
 			<Card
 				className="row"
@@ -93,10 +63,12 @@ class Projects extends Component {
 						display: 'flex',
 						alignItems: 'center',
 						justifyContent: 'center',
-						color: textColor
+						color: textColor,
+						flexDirection: 'column'
 					}}
 				>
 					<h5>Links</h5>
+					<LinkList />
 				</div>
 			</Card>
 		);
