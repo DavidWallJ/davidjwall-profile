@@ -68,7 +68,7 @@ class Projects extends Component {
 					}}
 				>
 					<h5>Links</h5>
-					<LinkList />
+					<LinkList color={color} textColor={textColor} />
 				</div>
 			</Card>
 		);

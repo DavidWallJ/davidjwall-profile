@@ -5,13 +5,13 @@ import Checkbox from 'material-ui/Checkbox';
 
 const technologies = [
 	{ name: 'react', label: 'React' },
-	{ name: 'reactNative', label: 'React Native' },
+	{ name: 'reactnative', label: 'React Native' },
 	{ name: 'redux', label: 'Redux' },
 	{ name: 'jquery', label: 'jQuery' },
 	{ name: 'javascript', label: 'JavaScript' },
 	{ name: 'css', label: 'CSS' },
 	{ name: 'html', label: 'HTML' },
-	{ name: 'mongoDB', label: 'MongoDB' },
+	{ name: 'mongodb', label: 'MongoDB' },
 	{ name: 'heroku', label: 'Heroku' },
 	{ name: 'nodejs', label: 'NodeJS' },
 	{ name: 'passport', label: 'Passport' },
