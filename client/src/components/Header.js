@@ -16,6 +16,7 @@ class Header extends Component {
 			{ icon: 'dns', component: 'backend' },
 			{ icon: 'favorite', component: 'withCare' },
 			{ icon: 'code', component: 'projects' },
+			{ icon: 'school', component: 'education' },
 			{ icon: 'face', component: 'contact' }
 		];
 

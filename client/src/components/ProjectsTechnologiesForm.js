@@ -19,7 +19,8 @@ const technologies = [
 	{ name: 'firebase', label: 'Firebase' },
 	{ name: 'express', label: 'Express' },
 	{ name: 'axios', label: 'Axios' },
-	{ name: 'mocha', label: 'Mocha' }
+	{ name: 'mocha', label: 'Mocha' },
+	{ name: 'featured', label: 'Featured' }
 ];
 
 const TechnologiesForm = props => {
@@ -47,7 +48,7 @@ const TechnologiesForm = props => {
 				})}
 			</div>
 			<div className="col s12 m6">
-				{technologies.slice(8, 16).map((technology, i) => {
+				{technologies.slice(8, 17).map((technology, i) => {
 					return (
 						<Field
 							key={i}

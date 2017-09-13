@@ -1,47 +1,26 @@
-{
-	/* <a href="#">
-  <FontIcon
-    className="material-icons"
-    style={iconStyles}
-    onClick={() => this.props.scrollCallback('frontend')}
-  >
-    important_devices
-  </FontIcon>
-</a>
-<a href="#">
-  <FontIcon
-    className="material-icons"
-    style={iconStyles}
-    onClick={() => this.props.scrollCallback('backend')}
-  >
-    dns
-  </FontIcon>
-</a>
-<a href="#">
-  <FontIcon
-    className="material-icons"
-    style={iconStyles}
-    onClick={() => this.props.scrollCallback('withCare')}
-  >
-    favorite
-  </FontIcon>
-</a>
-<a href="#">
-  <FontIcon
-    className="material-icons"
-    style={iconStyles}
-    onClick={() => this.props.scrollCallback('projects')}
-  >
-    code
-  </FontIcon>
-</a>
-<a href="#">
-  <FontIcon
-    className="material-icons"
-    style={iconStyles}
-    onClick={() => this.props.scrollCallback('contact')}
-  >
-    face
-  </FontIcon>
-</a> */
-}
+<List>
+	{results.map((result, i) => {
+		return (
+			<a href={result.link} key={i}>
+				{/* <li
+          style={{
+            color: this.props.textColor,
+            fontSize: 25,
+            fontWeight: 400
+          }}
+        >
+          {result.name}
+        </li> */}
+				<ListItem
+					primaryText={result.name}
+					style={{
+						color: this.props.textColor,
+						fontSize: 20,
+						fontWeight: 400,
+						maxHeight: '100%'
+					}}
+				/>
+			</a>
+		);
+	})}
+</List>;

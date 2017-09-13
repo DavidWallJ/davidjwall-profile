@@ -21,7 +21,7 @@ export default [
 		githubLink: 'https://github.com/DavidWallJ/davidjwall-profile'
 	},
 	{
-		name: 'React & NodeJS Fullstack Feedback Collection App',
+		name: 'React Fullstack Feedback Collection App',
 		technologies: [
 			'html',
 			'css',
@@ -117,7 +117,7 @@ export default [
 		githubLink: 'https://github.com/DavidWallJ/udemy-adv-react-auth-clientside'
 	},
 	{
-		name: 'React Fullstack Authentication Microservice (Frontend)',
+		name: 'React Fullstack Authentication App (Frontend)',
 		technologies: [
 			'html',
 			'css',
@@ -132,7 +132,7 @@ export default [
 		githubLink: 'https://github.com/DavidWallJ/udemy-adv-react-auth-clientside'
 	},
 	{
-		name: 'React Fullstack Authentication Microservice (Backend)',
+		name: 'React Fullstack Authentication App (Backend)',
 		technologies: [
 			'html',
 			'css',

@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { List, ListItem } from 'material-ui/List';
+import Paper from 'material-ui/Paper';
 import projects from './projectsData';
+import ShadowScrollbars from './ShadowScrollbars';
 
 // you are here.  you still need to add some of your graphql projects
 class ProjectsLinkList extends Component {
@@ -17,25 +20,28 @@ class ProjectsLinkList extends Component {
 		});
 
 		return (
-			<div>
-				<ul>
+			<ShadowScrollbars style={{ height: '380', width: '90%' }}>
+				<List>
 					{results.map((result, i) => {
 						return (
-							<a href={result.link} key={i}>
-								<li
-									style={{
-										color: this.props.textColor,
-										fontSize: 25,
-										fontWeight: 400
-									}}
-								>
-									{result.name}
-								</li>
-							</a>
+							<ListItem innerDivStyle={{ padding: 1, marginLeft: 11 }}>
+								<a href={result.link} key={i}>
+									<p
+										style={{
+											color: this.props.textColor,
+											fontSize: 21,
+											fontWeight: 300,
+											lineHeight: 0
+										}}
+									>
+										{result.name}
+									</p>
+								</a>
+							</ListItem>
 						);
 					})}
-				</ul>
-			</div>
+				</List>
+			</ShadowScrollbars>
 		);
 	}
 }

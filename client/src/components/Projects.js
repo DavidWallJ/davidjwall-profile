@@ -19,7 +19,8 @@ class Projects extends Component {
 					margin: 0,
 					backgroundColor: altColor,
 					minHeight: 500,
-					paddingTop: 52
+					paddingTop: 50,
+					paddingBottom: 50
 				}}
 			>
 				<div
@@ -45,7 +46,7 @@ class Projects extends Component {
 				</div>
 
 				<div
-					className="col s12 m6"
+					className="col s12 l6"
 					style={{
 						display: 'flex',
 						alignItems: 'center',
@@ -58,7 +59,7 @@ class Projects extends Component {
 					<TechnologiesForm color={color} textColor={textColor} />
 				</div>
 				<div
-					className="col s12 m6"
+					className="col s12 l6"
 					style={{
 						display: 'flex',
 						alignItems: 'center',

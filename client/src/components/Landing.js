@@ -13,6 +13,7 @@ import Frontend from './Frontend';
 import Backend from './Backend';
 import WithCare from './WithCare';
 import Projects from './Projects';
+import Education from './Education';
 import Contact from './Contact';
 
 class Landing extends Component {
@@ -84,6 +85,7 @@ class Landing extends Component {
 							<Backend ref="backend" />
 							<WithCare ref="withCare" />
 							<Projects ref="projects" />
+							<Education ref="education" />
 							<Contact ref="contact" />
 						</div>
 					);
