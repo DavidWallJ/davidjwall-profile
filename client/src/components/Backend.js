@@ -27,7 +27,7 @@ class Backend extends Component {
 			<Card className="row" style={{ margin: 0 }}>
 				<div className="col s12" style={{ padding: 0 }}>
 					{this.contentPanelLeft()}
-					<IconPanel iconName="dns" panelTitle="Backend" />
+					<IconPanel iconName="dns" panelTitle="Back End" />
 					{this.contentPanelRight()}
 				</div>
 			</Card>

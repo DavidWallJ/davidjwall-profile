@@ -20,12 +20,12 @@ class ProjectsLinkList extends Component {
 		});
 
 		return (
-			<ShadowScrollbars style={{ height: '380', width: '90%' }}>
+			<ShadowScrollbars style={{ height: 380, width: '90%' }}>
 				<List>
 					{results.map((result, i) => {
 						return (
-							<ListItem innerDivStyle={{ padding: 1, marginLeft: 11 }}>
-								<a href={result.link} key={i}>
+							<ListItem innerDivStyle={{ padding: 1, marginLeft: 11 }} key={i}>
+								<a href={result.link}>
 									<p
 										style={{
 											color: this.props.textColor,

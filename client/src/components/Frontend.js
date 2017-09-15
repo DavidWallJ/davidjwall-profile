@@ -11,7 +11,7 @@ class Frontend extends Component {
 		return (
 			<Card className="row" style={{ margin: 0 }}>
 				<div className="col s12" style={{ padding: 0 }}>
-					<IconPanel iconName="important_devices" panelTitle="Frontend" />
+					<IconPanel iconName="important_devices" panelTitle="Front End" />
 					<div
 						className="col s12 m6"
 						style={{ backgroundColor: textColor, minHeight: 500 }}

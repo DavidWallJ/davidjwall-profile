@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import certificates from './educationData';
 import Slider from 'react-slick';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import { connect } from 'react-redux';
@@ -8,11 +9,8 @@ import FontIcon from 'material-ui/FontIcon';
 class Education extends Component {
 	render() {
 		const settings = {
-			dots: true,
-			infinite: true,
-			speed: 500,
-			slidesToShow: 4,
-			slidesToScroll: 4
+			slidesToShow: 3,
+			slidesToScroll: 3
 		};
 		const { color, textColor } = this.props.muiTheme.appBar;
 		const altColor = this.props.muiTheme.slider.trackColorSelected;
@@ -51,82 +49,26 @@ class Education extends Component {
 				</div>
 				<div className="col s12">
 					<Slider {...settings}>
-						<div>
-							<img
-								src={'http://placehold.it/400x20&text=slide1'}
-								alt="boohoo"
-								className="img-responsive"
-							/>
-						</div>
-						<div>
-							<h3>2</h3>
-						</div>
-						<div>
-							<h3>3</h3>
-						</div>
-						<div>
-							<h3>4</h3>
-						</div>
-						<div>
-							<h3>5</h3>
-						</div>
-						<div>
-							<h3>6</h3>
-						</div>
-						<div>
-							<h3>1</h3>
-						</div>
-						<div>
-							<h3>2</h3>
-						</div>
-						<div>
-							<h3>3</h3>
-						</div>
-						<div>
-							<h3>4</h3>
-						</div>
-						<div>
-							<h3>5</h3>
-						</div>
-						<div>
-							<h3>6</h3>
-						</div>
-						<div>
-							<h3>1</h3>
-						</div>
-						<div>
-							<h3>2</h3>
-						</div>
-						<div>
-							<h3>3</h3>
-						</div>
-						<div>
-							<h3>4</h3>
-						</div>
-						<div>
-							<h3>5</h3>
-						</div>
-						<div>
-							<h3>6</h3>
-						</div>
-						<div>
-							<h3>1</h3>
-						</div>
-						<div>
-							<h3>2</h3>
-						</div>
-						<div>
-							<h3>3</h3>
-						</div>
-						<div>
-							<h3>4</h3>
-						</div>
-						<div>
-							<h3>5</h3>
-						</div>
-						<div>
-							<h3>6</h3>
-						</div>
+						{certificates.map((certificate, i) => {
+							return (
+								<div key={i}>
+									<img
+										src={certificate.URL}
+										alt={certificate.name}
+										className="img-responsive"
+									/>
+									<p
+										style={{
+											textAlign: 'center',
+											fontSize: 25,
+											fontWeight: 400
+										}}
+									>
+										{certificate.name}
+									</p>
+								</div>
+							);
+						})}
 					</Slider>
 				</div>
 			</Card>
