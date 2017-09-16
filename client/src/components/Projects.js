@@ -3,7 +3,6 @@ import styles from './componentsStyles';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import { connect } from 'react-redux';
 import { Card } from 'material-ui/Card';
-import FontIcon from 'material-ui/FontIcon';
 
 import TechnologiesForm from './ProjectsTechnologiesForm';
 import LinkList from './ProjectsLinkList';

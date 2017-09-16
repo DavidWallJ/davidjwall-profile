@@ -3,8 +3,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-let currentBackgroundURL = '';
-
 class Welcome extends Component {
 	constructor(props) {
 		super(props);
@@ -55,10 +53,6 @@ class Welcome extends Component {
 		);
 	}
 }
-
-const styles = {
-	welcome: {}
-};
 
 function mapStateToProps({ auth, currentTheme }) {
 	return { auth, currentTheme };

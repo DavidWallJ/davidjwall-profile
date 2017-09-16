@@ -4,7 +4,6 @@ import Slider from 'react-slick';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import { connect } from 'react-redux';
 import { Card } from 'material-ui/Card';
-import FontIcon from 'material-ui/FontIcon';
 
 import certificates from './educationData';
 import IconFullPanel from './common/IconFullPanel';
@@ -15,7 +14,7 @@ class Education extends Component {
 			slidesToScroll: 3
 		};
 		const { color, textColor } = this.props.muiTheme.appBar;
-		const altColor = this.props.muiTheme.slider.trackColorSelected;
+
 		return (
 			<Card
 				className="row"

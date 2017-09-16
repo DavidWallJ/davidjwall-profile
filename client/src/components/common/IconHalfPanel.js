@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
 import styles from '../componentsStyles';
+
+import React, { Component } from 'react';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import FontIcon from 'material-ui/FontIcon';
 

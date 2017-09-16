@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import muiThemeable from 'material-ui/styles/muiThemeable';
-import FontIcon from 'material-ui/FontIcon';
 import { Card } from 'material-ui/Card';
 import IconHalfPanel from './common/IconHalfPanel';
 
@@ -9,7 +8,7 @@ import IconHalfPanel from './common/IconHalfPanel';
 // material uis own flexbox layout beta version
 class WithCare extends Component {
 	render() {
-		const { color, textColor } = this.props.muiTheme.appBar;
+		const { textColor } = this.props.muiTheme.appBar;
 
 		return (
 			<Card className="row" style={{ margin: 0 }}>

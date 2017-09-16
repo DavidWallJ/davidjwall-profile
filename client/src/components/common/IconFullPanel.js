@@ -1,3 +1,5 @@
+import styles from '../componentsStyles';
+
 import React, { Component } from 'react';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import FontIcon from 'material-ui/FontIcon';
@@ -9,10 +11,7 @@ class iconFullPanel extends Component {
 			<div
 				className="col s12"
 				style={{
-					display: 'flex',
-					alignItems: 'center',
-					justifyContent: 'center',
-					flexDirection: 'column',
+					...styles.flexCenterColumn,
 					color: color
 				}}
 			>
@@ -25,7 +24,7 @@ class iconFullPanel extends Component {
 				>
 					{iconName}
 				</FontIcon>
-				<h2>
+				<h2 style={{ paddingBottom: 25 }}>
 					{panelTitle}
 				</h2>
 			</div>

@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import styles from '../componentsStyles';
+import React from 'react';
 import FontIcon from 'material-ui/FontIcon';
 
 const ContactPanel = props => {

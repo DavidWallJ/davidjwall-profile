@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { List, ListItem } from 'material-ui/List';
-import Paper from 'material-ui/Paper';
 import projects from './projectsData';
 import ShadowScrollbars from './ShadowScrollbars';
 

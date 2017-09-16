@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
+import { reduxForm } from 'redux-form';
 
 import OptionsFormFirstPage from './OptionsFormFirstPage';
 import OptionsFormSecondPage from './OptionsFormSecondPage';
 import OptionsFormThirdPage from './OptionsFormThirdPage';
-
-import { reduxForm } from 'redux-form';
 
 class OptionsForm extends Component {
 	constructor(props) {

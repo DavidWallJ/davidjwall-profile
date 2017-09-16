@@ -1,7 +1,6 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { renderCheckbox } from './common/renderMaterialUIComponent';
-import Checkbox from 'material-ui/Checkbox';
 
 const technologies = [
 	{ name: 'react', label: 'React' },
@@ -24,7 +23,7 @@ const technologies = [
 ];
 
 const TechnologiesForm = props => {
-	const { handleSubmit, pristine, reset, submitting } = props;
+	const { handleSubmit } = props;
 	return (
 		<form
 			onSubmit={handleSubmit}

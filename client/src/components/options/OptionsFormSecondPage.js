@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import { Field, reduxForm } from 'redux-form';
 import validate from './validateOptions';
@@ -8,10 +7,6 @@ import RaisedButton from 'material-ui/RaisedButton';
 import { RadioButton } from 'material-ui/RadioButton';
 import { renderRadioGroup } from '../common/renderMaterialUIComponent';
 import { renderError } from './RenderError';
-
-{
-	renderError;
-}
 
 const OptionsFormSecondPage = props => {
 	const { handleSubmit, previousPage } = props;

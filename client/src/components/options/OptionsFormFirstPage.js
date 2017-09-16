@@ -7,10 +7,6 @@ import { RadioButton } from 'material-ui/RadioButton';
 import { renderRadioGroup } from '../common/renderMaterialUIComponent';
 import { renderError } from './RenderError';
 
-{
-	renderError;
-}
-
 const OptionsFormFirstPage = props => {
 	const { handleSubmit } = props;
 	const cardStyle = {
