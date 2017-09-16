@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import certificates from './educationData';
+import styles from './componentsStyles';
 import Slider from 'react-slick';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import { connect } from 'react-redux';
 import { Card } from 'material-ui/Card';
 import FontIcon from 'material-ui/FontIcon';
 
+import certificates from './educationData';
+import IconFullPanel from './common/IconFullPanel';
 class Education extends Component {
 	render() {
 		const settings = {
@@ -18,35 +20,17 @@ class Education extends Component {
 			<Card
 				className="row"
 				style={{
-					margin: 0,
-					minHeight: 500,
-					paddingTop: 52,
+					...styles.fullPanelCard,
 					backgroundColor: color,
-					color: textColor,
-					padding: 18
+					color: textColor
 				}}
 			>
-				<div
-					className="col s12"
-					style={{
-						display: 'flex',
-						alignItems: 'center',
-						justifyContent: 'center',
-						flexDirection: 'column',
-						color: textColor
-					}}
-				>
-					<FontIcon
-						style={{
-							fontSize: 120,
-							color: textColor
-						}}
-						className="material-icons"
-					>
-						school
-					</FontIcon>
-					<h2>Education</h2>
-				</div>
+				<IconFullPanel
+					iconName="school"
+					panelTitle="Education"
+					color={textColor}
+				/>
+
 				<div className="col s12">
 					<Slider {...settings}>
 						{certificates.map((certificate, i) => {

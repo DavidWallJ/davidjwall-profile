@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './componentsStyles';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import { connect } from 'react-redux';
 import { Card } from 'material-ui/Card';
@@ -6,6 +7,7 @@ import FontIcon from 'material-ui/FontIcon';
 
 import TechnologiesForm from './ProjectsTechnologiesForm';
 import LinkList from './ProjectsLinkList';
+import IconFullPanel from './common/IconFullPanel';
 
 class Projects extends Component {
 	render() {
@@ -16,43 +18,21 @@ class Projects extends Component {
 			<Card
 				className="row"
 				style={{
-					margin: 0,
-					backgroundColor: altColor,
-					minHeight: 500,
-					paddingTop: 50,
-					paddingBottom: 50
+					...styles.fullPanelCard,
+					backgroundColor: altColor
 				}}
 			>
-				<div
-					className="col s12"
-					style={{
-						display: 'flex',
-						alignItems: 'center',
-						justifyContent: 'center',
-						flexDirection: 'column',
-						color: textColor
-					}}
-				>
-					<FontIcon
-						style={{
-							fontSize: 120,
-							color: textColor
-						}}
-						className="material-icons"
-					>
-						code
-					</FontIcon>
-					<h2>Projects</h2>
-				</div>
+				<IconFullPanel
+					iconName="code"
+					panelTitle="Projects"
+					color={textColor}
+				/>
 
 				<div
 					className="col s12 l6"
 					style={{
-						display: 'flex',
-						alignItems: 'center',
-						justifyContent: 'center',
-						color: textColor,
-						flexDirection: 'column'
+						...styles.flexCenterColumn,
+						color: textColor
 					}}
 				>
 					<h5>Technologies</h5>
@@ -61,11 +41,8 @@ class Projects extends Component {
 				<div
 					className="col s12 l6"
 					style={{
-						display: 'flex',
-						alignItems: 'center',
-						justifyContent: 'center',
-						color: textColor,
-						flexDirection: 'column'
+						...styles.flexCenterColumn,
+						color: textColor
 					}}
 				>
 					<h5>Links</h5>

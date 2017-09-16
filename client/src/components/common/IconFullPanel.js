@@ -2,27 +2,24 @@ import React, { Component } from 'react';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import FontIcon from 'material-ui/FontIcon';
 
-class iconPanel extends Component {
+class iconFullPanel extends Component {
 	render() {
-		const { color, textColor } = this.props.muiTheme.appBar;
-		const { iconName, panelTitle } = this.props;
+		const { iconName, panelTitle, color } = this.props;
 		return (
 			<div
-				className="col s12 m6"
+				className="col s12"
 				style={{
 					display: 'flex',
 					alignItems: 'center',
 					justifyContent: 'center',
-					minHeight: 500,
-					backgroundColor: color,
 					flexDirection: 'column',
-					color: textColor
+					color: color
 				}}
 			>
 				<FontIcon
 					style={{
-						fontSize: 144,
-						color: textColor
+						fontSize: 120,
+						color: color
 					}}
 					className="material-icons"
 				>
@@ -36,4 +33,4 @@ class iconPanel extends Component {
 	}
 }
 
-export default muiThemeable()(iconPanel);
+export default muiThemeable()(iconFullPanel);

@@ -68,25 +68,29 @@ class Landing extends Component {
 				googleDisplayName,
 				facebookDisplayName
 			} = this.props.auth;
+
+			const name =
+				linkedinDisplayName ||
+				googleDisplayName ||
+				facebookDisplayName ||
+				'Anonymous';
+
 			switch (options.length > 0 || this.props.anonymous.auth === true) {
 				case true:
 					return (
 						<div>
 							<Header scrollCallback={this.scrollCallbackHandler} />
-							<Welcome
-								name={
-									linkedinDisplayName ||
-									googleDisplayName ||
-									facebookDisplayName ||
-									'Anonymous'
-								}
-							/>
+							<Welcome name={name} />
 							<Frontend ref="frontend" />
 							<Backend ref="backend" />
 							<WithCare ref="withCare" />
 							<Projects ref="projects" />
 							<Education ref="education" />
-							<Contact ref="contact" />
+							<Contact
+								ref="contact"
+								name={name}
+								genre={this.props.audioOptions.genre}
+							/>
 						</div>
 					);
 				default:

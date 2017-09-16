@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import { Card } from 'material-ui/Card';
-import IconPanel from './common/IconPanel';
+import IconHalfPanel from './common/IconHalfPanel';
 import BackendContentPanel from './BackendContentPanel';
 
 class Backend extends Component {
@@ -27,7 +27,7 @@ class Backend extends Component {
 			<Card className="row" style={{ margin: 0 }}>
 				<div className="col s12" style={{ padding: 0 }}>
 					{this.contentPanelLeft()}
-					<IconPanel iconName="dns" panelTitle="Back End" />
+					<IconHalfPanel iconName="dns" panelTitle="Back End" />
 					{this.contentPanelRight()}
 				</div>
 			</Card>
