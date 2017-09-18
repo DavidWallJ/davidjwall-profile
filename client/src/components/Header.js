@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import FontIcon from 'material-ui/FontIcon';
 import AppBar from 'material-ui/AppBar';
+import FlatButton from 'material-ui/FlatButton';
 
 class Header extends Component {
 	render() {
@@ -24,15 +25,16 @@ class Header extends Component {
 			<div>
 				{iconFields.map((icon, i) => {
 					return (
-						<a key={i}>
+						<FlatButton hoverColor="black" key={i}>
 							<FontIcon
+								hoverColor="pink"
 								className="material-icons"
 								style={iconStyles}
 								onClick={() => this.props.scrollCallback(icon.component)}
 							>
 								{icon.icon}
 							</FontIcon>
-						</a>
+						</FlatButton>
 					);
 				})}
 			</div>

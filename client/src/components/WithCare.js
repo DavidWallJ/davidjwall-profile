@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './componentsStyles';
 import { connect } from 'react-redux';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import { Card } from 'material-ui/Card';
@@ -11,7 +12,7 @@ class WithCare extends Component {
 		const { textColor } = this.props.muiTheme.appBar;
 
 		return (
-			<Card className="row" style={{ margin: 0 }}>
+			<Card className="row" style={{ ...styles.halfPanelCard }}>
 				<div className="col s12" style={{ padding: 0 }}>
 					<IconHalfPanel iconName="favorite" panelTitle="With Care" />
 					<div

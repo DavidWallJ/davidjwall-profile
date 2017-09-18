@@ -10,18 +10,18 @@ import ContactPanel from './common/contactPanel';
 
 class Contact extends Component {
 	renderFarewellSentence() {
-		if (this.props.genre !== 'silence') {
+		if (this.props.genre === 'silence') {
 			return (
 				<p>
-					Thank you for your time {this.props.name}. I hope you've enjoyed
-					viewing my profile and listening to some {this.props.genre} music.
+					Thank you for your time <b>{this.props.name}</b>. I hope you've
+					enjoyed viewing my profile and the serene sounds of silence.
 				</p>
 			);
 		} else {
 			return (
 				<p>
-					Thank you for your time <b>{this.props.name}</b>. I hope you've
-					enjoyed viewing my profile and the serene sounds of silence.
+					Thank you for your time {this.props.name}. I hope you've enjoyed
+					viewing my profile and listening to some {this.props.genre} music.
 				</p>
 			);
 		}
@@ -34,10 +34,7 @@ class Contact extends Component {
 			<Card className="row" style={styles.fullPanelCard}>
 				<IconFullPanel iconName="face" panelTitle="Contact" color={color} />
 
-				<div
-					className="row"
-					style={{ color: color, textAlign: 'center', fontSize: 20 }}
-				>
+				<div className="row textCenter" style={{ color: color, fontSize: 20 }}>
 					{this.renderFarewellSentence()}
 					<p>
 						Feel free to contact me by any of the methods listed below. Let's

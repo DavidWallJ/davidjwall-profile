@@ -1,14 +1,15 @@
-// import classes from './welcome.css';
-
 import React, { Component } from 'react';
+import styles from './componentsStyles';
 import { connect } from 'react-redux';
+import FontAwesome from 'react-fontawesome';
+import Typist from 'react-typist';
 
 class Welcome extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			currentBackgroundURL:
-				'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/goran-ivos-246271.jpg'
+				'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/lightthemebackgroundimage.JPG'
 		};
 	}
 
@@ -28,26 +29,34 @@ class Welcome extends Component {
 		return (
 			<div
 				style={{
-					backgroundImage: `url(${this.state.currentBackgroundURL})`,
+					...styles.flexCenterColumn,
+					background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${this
+						.state.currentBackgroundURL})`,
 					color: 'white',
 					backgroundSize: 'cover',
 					backgroundPosition: 'center',
-					height: 600,
-					display: 'flex',
-					alignItems: 'center',
-					justifyContent: 'center',
-					flexDirection: 'column'
+					height: 600
 				}}
 			>
-				<h2>
-					Hello {this.props.name}
+				<h5 style={{ textAlign: 'center' }}>Welcome</h5>
+				<h2 style={{ color: '#ff80ab', textAlign: 'center' }}>
+					{this.props.name}
 				</h2>
-				<h5>Welcome to my Profile Page</h5>
+				<Typist cursor={{ show: false }} startDelay={1500} avgTypingDelay={105}>
+					<h5 style={{ textAlign: 'center' }}>My name is David J. Wall.</h5>
+					<h4 style={{ textAlign: 'center' }}>
+						I'm a full-stack web developer who specializes in React.
+					</h4>
+					<p style={{ textAlign: 'center' }}>. . . . .</p>
+					<p style={{ textAlign: 'center' }}>What exactly do i mean by that?</p>
+				</Typist>
 				<a
 					href="/api/logout"
 					style={{ color: '#ff80ab', textDecoration: 'none' }}
 				>
-					( Logout )
+					<p>
+						Logout <i className="fa fa-sign-out" aria-hidden="true" />
+					</p>
 				</a>
 			</div>
 		);

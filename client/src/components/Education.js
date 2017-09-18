@@ -41,8 +41,8 @@ class Education extends Component {
 										className="img-responsive"
 									/>
 									<p
+										className="textCenter"
 										style={{
-											textAlign: 'center',
 											fontSize: 25,
 											fontWeight: 400
 										}}
