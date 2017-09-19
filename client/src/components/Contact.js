@@ -66,7 +66,9 @@ class Contact extends Component {
 								size="5x"
 								style={{ color: color, paddingBottom: 6, paddingTop: 2 }}
 							/>
-							<p style={{ color: color }}>David J. Wall @ Linkedin</p>
+							<p style={{ ...styles.contactIconData, color: color }}>
+								David J. Wall @ Linkedin
+							</p>
 						</a>
 					</div>
 				</div>

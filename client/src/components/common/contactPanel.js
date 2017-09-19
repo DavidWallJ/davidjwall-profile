@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../componentsStyles';
 import FontIcon from 'material-ui/FontIcon';
 
 const ContactPanel = props => {
@@ -15,7 +16,9 @@ const ContactPanel = props => {
 				>
 					{iconName}
 				</FontIcon>
-				<p style={{ color: color }}>
+				<p
+					style={{ ...styles.contactIconData, color: color, fontSize: '1.3em' }}
+				>
 					{contactData}
 				</p>
 			</a>

@@ -26,7 +26,17 @@ class Projects extends Component {
 					panelTitle="Projects"
 					color={textColor}
 				/>
-
+				<div className="col s12">
+					<p
+						style={{
+							...styles.flexCenterColumn,
+							color: textColor,
+							paddingBottom: 26
+						}}
+					>
+						* Check the 'Featured' box to view my most recent projects.
+					</p>
+				</div>
 				<div
 					className="col s12 l6"
 					style={{

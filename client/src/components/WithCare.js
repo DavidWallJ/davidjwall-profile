@@ -17,9 +17,25 @@ class WithCare extends Component {
 					<IconHalfPanel iconName="favorite" panelTitle="With Care" />
 					<div
 						className="col s12 m6"
-						style={{ backgroundColor: textColor, minHeight: 500 }}
+						style={{
+							...styles.flexCenterColumn,
+							...styles.contentContainer,
+							backgroundColor: textColor
+						}}
 					>
-						List
+						<h5>In addition to all this... </h5>
+						<h5 />
+						<h5>
+							I'm experienced with testing frameworks like Mocha and Chai. The
+							integration of which help to ensure that your project not only
+							behaves exactly as you would like it to now but also in the future
+							when it's time for your website or application to grow.
+						</h5>
+						<h5>
+							I know my way around collaboration software like GitHub. Which
+							allows for efficient, reliable and seamless individual or team web
+							development.
+						</h5>
 					</div>
 				</div>
 			</Card>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './componentsStyles';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 
 class backendContentPanel extends Component {
@@ -7,9 +8,23 @@ class backendContentPanel extends Component {
 		return (
 			<div
 				className="col s12 m6"
-				style={{ backgroundColor: textColor, minHeight: 500 }}
+				style={{
+					...styles.flexCenterColumn,
+					...styles.contentContainer,
+					backgroundColor: textColor
+				}}
 			>
-				List
+				<h5>It also means that... </h5>
+				<h5>I can create, manage and integrate your data.</h5>
+				<h5>
+					I'm proficient in server-side programming with Node.js, using back-end
+					frameworks (like Express.js) to build server-side software , and the
+					integration of API's.
+				</h5>
+				<h5>
+					Most importantly, I'm able to build agile and scalable back-ends so
+					you your website or application can easily grow to meet your needs.
+				</h5>
 			</div>
 		);
 	}

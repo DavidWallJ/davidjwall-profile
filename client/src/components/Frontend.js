@@ -11,26 +11,36 @@ class Frontend extends Component {
 		const { textColor } = this.props.muiTheme.appBar;
 		return (
 			<Card className="row" style={{ ...styles.halfPanelCard }}>
-				<div className="col s12" style={{ padding: 0 }}>
+				<div
+					className="col s12"
+					style={{
+						padding: 0
+					}}
+				>
 					<IconHalfPanel iconName="important_devices" panelTitle="Front End" />
 					<div
 						className="col s12 m6"
-						style={{ backgroundColor: textColor, minHeight: 500 }}
+						style={{
+							...styles.flexCenterColumn,
+							...styles.contentContainer,
+							backgroundColor: textColor
+						}}
 					>
-						<p>
+						<h5>Well it means that...</h5>
+						<h5>
 							I can design your front-end or take your already existing design
-							and turn it into responsive code that people will be able to
-							access from their mobile devices and desktop computers.
-						</p>
-						<p>
-							I can add or incorporate functionality and interactivity into your
+							and turn it into responsive code accessible from user's mobile
+							devices and desktop computers.
+						</h5>
+						<h5>
+							I can add or incorporate functionality and interactivity to your
 							your website or application using JavaScript based libraries such
 							as React and jQuery.
-						</p>
-						<p>
-							I'm expereinced with RESTful web services and API and can
+						</h5>
+						<h5>
+							I'm experienced with RESTful web services, APIs and can
 							incorporate the data they return into your website or application.
-						</p>
+						</h5>
 					</div>
 				</div>
 			</Card>

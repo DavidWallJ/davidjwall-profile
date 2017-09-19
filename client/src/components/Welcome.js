@@ -39,16 +39,20 @@ class Welcome extends Component {
 				}}
 			>
 				<h5 style={{ textAlign: 'center' }}>Welcome</h5>
-				<h2 style={{ color: '#ff80ab', textAlign: 'center' }}>
+				<h2
+					style={{ color: '#ff80ab', textAlign: 'center', paddingBottom: 10 }}
+				>
 					{this.props.name}
 				</h2>
-				<Typist cursor={{ show: false }} startDelay={1500} avgTypingDelay={105}>
+				<Typist cursor={{ show: false }} startDelay={1500} avgTypingDelay={100}>
 					<h5 style={{ textAlign: 'center' }}>My name is David J. Wall.</h5>
 					<h4 style={{ textAlign: 'center' }}>
-						I'm a full-stack web developer who specializes in React.
+						I'm a full-stack web developer.
 					</h4>
-					<p style={{ textAlign: 'center' }}>. . . . .</p>
-					<p style={{ textAlign: 'center' }}>What exactly do i mean by that?</p>
+					<p style={{ textAlign: 'center' }}>. . . </p>
+					<p style={{ textAlign: 'center' }}>
+						What exactly do i mean by that? Continue on to find out.
+					</p>
 				</Typist>
 				<a
 					href="/api/logout"

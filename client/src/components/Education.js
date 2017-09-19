@@ -43,8 +43,8 @@ class Education extends Component {
 									<p
 										className="textCenter"
 										style={{
-											fontSize: 25,
-											fontWeight: 400
+											fontSize: 18,
+											marginTop: -25
 										}}
 									>
 										{certificate.name}

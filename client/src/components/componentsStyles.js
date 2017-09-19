@@ -2,11 +2,21 @@ export default {
 	// Project Global
 	fullPanelCard: {
 		margin: 0,
-		paddingTop: 35,
-		paddingBottom: 35
+		paddingTop: '6%',
+		paddingBottom: '6%'
 	},
 	halfPanelCard: {
 		margin: 0
+	},
+	contentContainer: {
+		padding: '5%',
+		height: '70vh'
+	},
+	contactIconData: {
+		fontSize: '1.3em'
+	},
+	panelWriteUps: {
+		fontSize: '1em'
 	},
 	flexCenterColumn: {
 		display: 'flex',

@@ -17,7 +17,7 @@ class iconFullPanel extends Component {
 			>
 				<FontIcon
 					style={{
-						fontSize: 120,
+						fontSize: '120',
 						color: color
 					}}
 					className="material-icons"

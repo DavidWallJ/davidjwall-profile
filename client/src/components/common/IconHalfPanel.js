@@ -13,7 +13,7 @@ class iconHalfPanel extends Component {
 				className="col s12 m6"
 				style={{
 					...styles.flexCenterColumn,
-					minHeight: 550,
+					height: '70vh',
 					backgroundColor: color,
 					color: textColor
 				}}
