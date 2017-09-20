@@ -23,7 +23,7 @@ class backendContentPanel extends Component {
 				</h5>
 				<h5>
 					Most importantly, I'm able to build agile and scalable back-ends so
-					you your website or application can easily grow to meet your needs.
+					your website or application can easily grow to meet your future needs.
 				</h5>
 			</div>
 		);

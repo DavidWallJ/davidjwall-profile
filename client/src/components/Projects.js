@@ -38,7 +38,7 @@ class Projects extends Component {
 					</p>
 				</div>
 				<div
-					className="col s12 l6"
+					className="col s12 l5"
 					style={{
 						...styles.flexCenterColumn,
 						color: textColor
@@ -48,7 +48,7 @@ class Projects extends Component {
 					<TechnologiesForm color={color} textColor={textColor} />
 				</div>
 				<div
-					className="col s12 l6"
+					className="col s12 l7"
 					style={{
 						...styles.flexCenterColumn,
 						color: textColor

@@ -28,7 +28,7 @@ class ProjectsLinkList extends Component {
 									<p
 										style={{
 											color: this.props.textColor,
-											fontSize: 21,
+											fontSize: '1em',
 											fontWeight: 300,
 											lineHeight: 0
 										}}

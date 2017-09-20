@@ -5,8 +5,6 @@ import muiThemeable from 'material-ui/styles/muiThemeable';
 import { Card } from 'material-ui/Card';
 import IconHalfPanel from './common/IconHalfPanel';
 
-// you are here. you're considering using npm install material-ui@next
-// material uis own flexbox layout beta version
 class WithCare extends Component {
 	render() {
 		const { textColor } = this.props.muiTheme.appBar;
@@ -28,13 +26,16 @@ class WithCare extends Component {
 						<h5>
 							I'm experienced with testing frameworks like Mocha and Chai. The
 							integration of which help to ensure that your project not only
-							behaves exactly as you would like it to now but also in the future
-							when it's time for your website or application to grow.
+							behaves exactly as you would like it to now but also in the
+							future. Incorporating such testing frameworks make it easer for
+							future developers to make changes to your website or application
+							without creating issues that could lead to delays or even
+							downtime.
 						</h5>
 						<h5>
-							I know my way around collaboration software like GitHub. Which
-							allows for efficient, reliable and seamless individual or team web
-							development.
+							I also know my way around collaboration and version control
+							software like Git and GitHub which allow for efficient and
+							reliable individual or team web development.
 						</h5>
 					</div>
 				</div>

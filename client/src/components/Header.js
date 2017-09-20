@@ -2,16 +2,11 @@ import React, { Component } from 'react';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import FontIcon from 'material-ui/FontIcon';
 import AppBar from 'material-ui/AppBar';
-import FlatButton from 'material-ui/FlatButton';
+import IconButton from 'material-ui/IconButton';
+import { blue500, red500, greenA200 } from 'material-ui/styles/colors';
 
 class Header extends Component {
 	render() {
-		const iconStyles = {
-			marginTop: 11,
-			marginRight: 24,
-			color: this.props.muiTheme.palette.alternateTextColor
-		};
-
 		const iconFields = [
 			{ icon: 'important_devices', component: 'frontend' },
 			{ icon: 'dns', component: 'backend' },
@@ -22,30 +17,24 @@ class Header extends Component {
 		];
 
 		const rightIcons = (
-			<div>
+			<div style={{ marginTop: 0 }}>
 				{iconFields.map((icon, i) => {
 					return (
-						<FlatButton hoverColor="black" key={i}>
+						<IconButton key={i}>
 							<FontIcon
-								hoverColor="pink"
+								color={this.props.muiTheme.palette.alternateTextColor}
+								hoverColor="#ff80ab"
 								className="material-icons"
-								style={iconStyles}
 								onClick={() => this.props.scrollCallback(icon.component)}
 							>
 								{icon.icon}
 							</FontIcon>
-						</FlatButton>
+						</IconButton>
 					);
 				})}
 			</div>
 		);
-		return (
-			<AppBar
-				showMenuIconButton={false}
-				title="David J. Wall"
-				iconElementRight={rightIcons}
-			/>
-		);
+		return <AppBar showMenuIconButton={false} iconElementRight={rightIcons} />;
 	}
 }
 

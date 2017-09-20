@@ -10,7 +10,7 @@ export default {
 	},
 	contentContainer: {
 		padding: '5%',
-		height: '70vh'
+		height: '58vh'
 	},
 	contactIconData: {
 		fontSize: '1.3em'

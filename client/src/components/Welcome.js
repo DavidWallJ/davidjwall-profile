@@ -50,9 +50,7 @@ class Welcome extends Component {
 						I'm a full-stack web developer.
 					</h4>
 					<p style={{ textAlign: 'center' }}>. . . </p>
-					<p style={{ textAlign: 'center' }}>
-						What exactly do i mean by that? Continue on to find out.
-					</p>
+					<p style={{ textAlign: 'center' }}>What exactly do i mean by that?</p>
 				</Typist>
 				<a
 					href="/api/logout"

@@ -9,10 +9,18 @@ import certificates from './educationData';
 import IconFullPanel from './common/IconFullPanel';
 class Education extends Component {
 	render() {
-		const settings = {
-			slidesToShow: 3,
-			slidesToScroll: 3
-		};
+		let settings = {};
+		if (window.innerWidth > 599) {
+			settings = {
+				slidesToShow: 3,
+				slidesToScroll: 3
+			};
+		} else {
+			settings = {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			};
+		}
 		const { color, textColor } = this.props.muiTheme.appBar;
 
 		return (
@@ -43,8 +51,8 @@ class Education extends Component {
 									<p
 										className="textCenter"
 										style={{
-											fontSize: 18,
-											marginTop: -25
+											fontSize: '1.1em',
+											marginTop: -10
 										}}
 									>
 										{certificate.name}

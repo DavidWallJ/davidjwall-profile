@@ -28,9 +28,9 @@ class Frontend extends Component {
 					>
 						<h5>Well it means that...</h5>
 						<h5>
-							I can design your front-end or take your already existing design
-							and turn it into responsive code accessible from user's mobile
-							devices and desktop computers.
+							I can design your projects front-end or take your already existing
+							design and turn it into responsive code accessible from user's
+							mobile devices and desktop computers.
 						</h5>
 						<h5>
 							I can add or incorporate functionality and interactivity to your
@@ -38,8 +38,8 @@ class Frontend extends Component {
 							as React and jQuery.
 						</h5>
 						<h5>
-							I'm experienced with RESTful web services, APIs and can
-							incorporate the data they return into your website or application.
+							I can incorporate data from RESTful web services and APIs into
+							your website or application seamlessly.
 						</h5>
 					</div>
 				</div>
