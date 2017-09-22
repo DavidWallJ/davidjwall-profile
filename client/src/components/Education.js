@@ -12,13 +12,16 @@ class Education extends Component {
 		let settings = {};
 		if (window.innerWidth > 599) {
 			settings = {
+				infinite: true,
 				slidesToShow: 3,
-				slidesToScroll: 3
+				slidesToScroll: 3,
+				className: 'slides'
 			};
 		} else {
 			settings = {
 				slidesToShow: 1,
-				slidesToScroll: 1
+				slidesToScroll: 1,
+				className: 'slides'
 			};
 		}
 		const { color, textColor } = this.props.muiTheme.appBar;
@@ -38,8 +41,8 @@ class Education extends Component {
 					color={textColor}
 				/>
 
-				<div className="col s12">
-					<Slider {...settings}>
+				<div className="col s12" style={{ paddingLeft: 46, paddingRight: 46 }}>
+					<Slider {...settings} style={{ padding: '10%' }}>
 						{certificates.map((certificate, i) => {
 							return (
 								<div key={i}>

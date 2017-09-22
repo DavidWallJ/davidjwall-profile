@@ -42,7 +42,7 @@ class Contact extends Component {
 					</p>
 				</div>
 
-				<div className="row">
+				<div className="row" style={{ marginTop: 52 }}>
 					<ContactPanel
 						iconName="mail_outline"
 						contactData="davidjwall@protonmail.com"
@@ -64,7 +64,7 @@ class Contact extends Component {
 							<FontAwesome
 								name="linkedin-square"
 								size="5x"
-								style={{ color: color, paddingBottom: 6, paddingTop: 2 }}
+								style={{ color: color, paddingBottom: 6, paddingTop: 22 }}
 							/>
 							<p style={{ ...styles.contactIconData, color: color }}>
 								David J. Wall @ Linkedin

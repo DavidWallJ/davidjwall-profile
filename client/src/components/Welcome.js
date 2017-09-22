@@ -49,14 +49,15 @@ class Welcome extends Component {
 					<h4 style={{ textAlign: 'center' }}>
 						I'm a full-stack web developer.
 					</h4>
-					<p style={{ textAlign: 'center' }}>. . . </p>
 					<p style={{ textAlign: 'center' }}>What exactly do i mean by that?</p>
+					<p style={{ textAlign: 'center' }}>. . . . . . .</p>
+					<p style={{ textAlign: 'center' }}>( scroll down )</p>
 				</Typist>
 				<a
 					href="/api/logout"
 					style={{ color: '#ff80ab', textDecoration: 'none' }}
 				>
-					<p>
+					<p style={{ paddingTop: 22 }}>
 						Logout <i className="fa fa-sign-out" aria-hidden="true" />
 					</p>
 				</a>

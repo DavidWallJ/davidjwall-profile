@@ -8,7 +8,7 @@ import IconHalfPanel from './common/IconHalfPanel';
 
 class Frontend extends Component {
 	render() {
-		const { textColor } = this.props.muiTheme.appBar;
+		const { textColor, color } = this.props.muiTheme.appBar;
 		return (
 			<Card className="row" style={{ ...styles.halfPanelCard }}>
 				<div
@@ -19,28 +19,39 @@ class Frontend extends Component {
 				>
 					<IconHalfPanel iconName="important_devices" panelTitle="Front End" />
 					<div
-						className="col s12 m6"
+						className="col s12 m6 "
 						style={{
 							...styles.flexCenterColumn,
 							...styles.contentContainer,
-							backgroundColor: textColor
+							backgroundColor: textColor,
+							color: color
 						}}
 					>
 						<h5>Well it means that...</h5>
-						<h5>
-							I can design your projects front-end or take your already existing
-							design and turn it into responsive code accessible from user's
-							mobile devices and desktop computers.
-						</h5>
-						<h5>
-							I can add or incorporate functionality and interactivity to your
-							your website or application using JavaScript based libraries such
-							as React and jQuery.
-						</h5>
-						<h5>
-							I can incorporate data from RESTful web services and APIs into
-							your website or application seamlessly.
-						</h5>
+						<p>
+							I can <span className="highlight">design</span> your project or
+							take your already existing design and turn it into{' '}
+							<span className="highlight">responsive code </span>accessible from
+							your users' <span className="highlight">mobile devices </span>and{' '}
+							<span className="highlight">desktop computers</span>.
+						</p>
+						<p>
+							I can incorporate <span className="highlight">
+								functionality
+							</span>{' '}
+							and <span className="highlight">interactivity </span>
+							into your your website or application using{' '}
+							<span className="highlight">JavaScript </span>based libraries such
+							as
+							<span className="highlight"> React</span> and{' '}
+							<span className="highlight">jQuery</span>.
+						</p>
+						<p>
+							I can add data from{' '}
+							<span className="highlight">RESTful web services </span> and{' '}
+							<span className="highlight">APIs </span> into your website or
+							application seamlessly.
+						</p>
 					</div>
 				</div>
 			</Card>

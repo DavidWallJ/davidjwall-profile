@@ -10,6 +10,7 @@ const ContactPanel = props => {
 				<FontIcon
 					style={{
 						fontSize: 70,
+						paddingTop: 20,
 						color: color
 					}}
 					className="material-icons"

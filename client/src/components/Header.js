@@ -3,7 +3,6 @@ import muiThemeable from 'material-ui/styles/muiThemeable';
 import FontIcon from 'material-ui/FontIcon';
 import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
-import { blue500, red500, greenA200 } from 'material-ui/styles/colors';
 
 class Header extends Component {
 	render() {

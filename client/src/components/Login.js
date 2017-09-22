@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './componentsStyles';
 import * as actions from '../actions';
 import { connect } from 'react-redux';
 
@@ -11,28 +12,22 @@ class Login extends Component {
 	}
 
 	render() {
-		const windowHeight = window.innerHeight;
-
-		const buttonStyle = {
-			marginBottom: 12,
-			textColor: 'white'
-		};
-
-		const cardStyle = {
-			marginTop: 12
-		};
-
+		// const windowHeight = window.innerHeight;
 		return (
-			<div className="row" style={{ height: windowHeight }}>
-				<Card className="col s12 m6 offset-m3 center-align" style={cardStyle}>
-					<CardTitle title="Welcome" subtitle="Please login in with..." />
+			<div className="row">
+				<Card
+					className="col s12 m6 offset-m3 center-align"
+					style={styles.loginCardStyle}
+				>
+					<h2>Welcome</h2>
+					<h5>Please login in with...</h5>
 					<CardActions>
 						<a href="/auth/linkedin">
 							<RaisedButton
 								label="Linkedin"
 								primary={true}
 								fullWidth={true}
-								style={buttonStyle}
+								style={styles.loginButtonStyle}
 							/>
 						</a>
 						<a href="/auth/facebook">
@@ -40,7 +35,7 @@ class Login extends Component {
 								label="Facebook"
 								primary={true}
 								fullWidth={true}
-								style={buttonStyle}
+								style={styles.loginButtonStyle}
 							/>
 						</a>
 						<a href="/auth/google">
@@ -48,7 +43,7 @@ class Login extends Component {
 								label="Google"
 								primary={true}
 								fullWidth={true}
-								style={buttonStyle}
+								style={styles.loginButtonStyle}
 							/>
 						</a>
 						<RaisedButton
@@ -56,7 +51,7 @@ class Login extends Component {
 							label="Anonymous"
 							primary={true}
 							fullWidth={true}
-							style={buttonStyle}
+							style={styles.loginButtonStyle}
 						/>
 					</CardActions>
 				</Card>

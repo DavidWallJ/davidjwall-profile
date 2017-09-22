@@ -7,7 +7,7 @@ import IconHalfPanel from './common/IconHalfPanel';
 
 class WithCare extends Component {
 	render() {
-		const { textColor } = this.props.muiTheme.appBar;
+		const { textColor, color } = this.props.muiTheme.appBar;
 
 		return (
 			<Card className="row" style={{ ...styles.halfPanelCard }}>
@@ -18,25 +18,27 @@ class WithCare extends Component {
 						style={{
 							...styles.flexCenterColumn,
 							...styles.contentContainer,
-							backgroundColor: textColor
+							backgroundColor: textColor,
+							color: color
 						}}
 					>
 						<h5>In addition to all this... </h5>
-						<h5 />
-						<h5>
-							I'm experienced with testing frameworks like Mocha and Chai. The
-							integration of which help to ensure that your project not only
-							behaves exactly as you would like it to now but also in the
-							future. Incorporating such testing frameworks make it easer for
-							future developers to make changes to your website or application
-							without creating issues that could lead to delays or even
-							downtime.
-						</h5>
-						<h5>
-							I also know my way around collaboration and version control
-							software like Git and GitHub which allow for efficient and
-							reliable individual or team web development.
-						</h5>
+						<p>
+							I'm experienced with{' '}
+							<span className="highlight">testing frameworks </span> like{' '}
+							<span className="highlight">Mocha </span> and{' '}
+							<span className="highlight">Chai</span>. The integration of which
+							help to ensure that your project not only behaves exactly as you
+							would like it to now but also in the future.
+						</p>
+						<p>
+							I know my way around{' '}
+							<span className="highlight">collaboration</span> and version
+							control software like <span className="highlight">Git </span> and{' '}
+							<span className="highlight">GitHub </span> which allow for
+							efficient and reliable individual or{' '}
+							<span className="highlight">team web development</span>.
+						</p>
 					</div>
 				</div>
 			</Card>
