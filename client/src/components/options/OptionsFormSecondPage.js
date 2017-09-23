@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../componentsStyles';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import { Field, reduxForm } from 'redux-form';
 import validate from './validateOptions';
@@ -21,7 +22,10 @@ const OptionsFormSecondPage = props => {
 
 	return (
 		<div className="row">
-			<Card className="col s8 m6 offset-s2 offset-m3" style={cardStyle}>
+			<Card
+				className="col s8 m6 offset-s2 offset-m3"
+				style={styles.loginCardStyle}
+			>
 				<div className="col m12 l4">
 					<CardTitle title="Options" subtitle="Theme" />
 				</div>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styles from './componentsStyles';
 import * as actions from '../actions';
 import { connect } from 'react-redux';
+import FontAwesome from 'react-fontawesome';
 
 import { Card, CardActions, CardTitle } from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -24,35 +25,68 @@ class Login extends Component {
 					<CardActions>
 						<a href="/auth/linkedin">
 							<RaisedButton
-								label="Linkedin"
-								primary={true}
-								fullWidth={true}
+								// label="Linkedin"
+								backgroundColor="#0077b5"
 								style={styles.loginButtonStyle}
+								icon={
+									<FontAwesome
+										name="linkedin-square"
+										size="2x"
+										style={{ color: 'white' }}
+									/>
+								}
 							/>
 						</a>
 						<a href="/auth/facebook">
 							<RaisedButton
-								label="Facebook"
-								primary={true}
-								fullWidth={true}
+								// label="Facebook"
+								backgroundColor="#0077b5"
 								style={styles.loginButtonStyle}
+								icon={
+									<FontAwesome
+										name="facebook-square"
+										size="2x"
+										style={{ color: 'white' }}
+									/>
+								}
 							/>
 						</a>
 						<a href="/auth/google">
 							<RaisedButton
-								label="Google"
-								primary={true}
-								fullWidth={true}
+								// label="Google"
+								backgroundColor="#f03530"
 								style={styles.loginButtonStyle}
+								icon={
+									<FontAwesome
+										name="google"
+										size="2x"
+										style={{ color: 'white' }}
+									/>
+								}
 							/>
 						</a>
 						<RaisedButton
 							onClick={this.anonymousHandler.bind(this)}
-							label="Anonymous"
+							// label="Anonymous"
 							primary={true}
-							fullWidth={true}
 							style={styles.loginButtonStyle}
+							icon={
+								<FontAwesome
+									name="user-secret"
+									size="2x"
+									style={{ color: 'white' }}
+								/>
+							}
 						/>
+						<p>
+							If you prefer to be anonymous, choose the{' '}
+							<FontAwesome
+								name="user-secret"
+								size="1x"
+								style={{ color: '#aaa' }}
+							/>{' '}
+							option.
+						</p>
 					</CardActions>
 				</Card>
 			</div>

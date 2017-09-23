@@ -6,12 +6,17 @@ export default {
 		paddingBottom: '6%'
 	},
 	loginCardStyle: {
-		marginTop: 12,
-		color: '#aaa'
+		marginTop: '10%',
+		color: '#aaa',
+		paddingTop: '6%',
+		paddingBottom: '8%',
+		borderRadius: 36,
+		minHeight: 300
 	},
 	loginButtonStyle: {
 		marginBottom: 12,
-		textColor: 'white'
+		textColor: 'white',
+		height: 50
 	},
 	halfPanelCard: {
 		margin: 0
