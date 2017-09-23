@@ -20,12 +20,13 @@ class Login extends Component {
 					className="col s12 m6 offset-m3 center-align"
 					style={styles.loginCardStyle}
 				>
-					<h2>Welcome</h2>
+					<h3 style={{ paddingTop: '3%' }}>
+						Enter <FontAwesome name="sign-in" style={{ color: '#aaa' }} />
+					</h3>
 					<h5>Please login in with...</h5>
 					<CardActions>
-						<a href="/auth/linkedin">
+						<a href="/auth/linkedin" style={{ display: 'inline-block' }}>
 							<RaisedButton
-								// label="Linkedin"
 								backgroundColor="#0077b5"
 								style={styles.loginButtonStyle}
 								icon={
@@ -37,7 +38,7 @@ class Login extends Component {
 								}
 							/>
 						</a>
-						<a href="/auth/facebook">
+						<a href="/auth/facebook" style={{ display: 'inline-block' }}>
 							<RaisedButton
 								// label="Facebook"
 								backgroundColor="#0077b5"
@@ -51,7 +52,7 @@ class Login extends Component {
 								}
 							/>
 						</a>
-						<a href="/auth/google">
+						<a href="/auth/google" style={{ display: 'inline-block' }}>
 							<RaisedButton
 								// label="Google"
 								backgroundColor="#f03530"
@@ -65,26 +66,24 @@ class Login extends Component {
 								}
 							/>
 						</a>
-						<RaisedButton
-							onClick={this.anonymousHandler.bind(this)}
-							// label="Anonymous"
-							primary={true}
-							style={styles.loginButtonStyle}
-							icon={
-								<FontAwesome
-									name="user-secret"
-									size="2x"
-									style={{ color: 'white' }}
-								/>
-							}
-						/>
+						<div style={{ display: 'inline-block' }}>
+							<RaisedButton
+								onClick={this.anonymousHandler.bind(this)}
+								// label="Anonymous"
+								primary={true}
+								style={styles.loginButtonStyle}
+								icon={
+									<FontAwesome
+										name="user-secret"
+										size="2x"
+										style={{ color: 'white' }}
+									/>
+								}
+							/>
+						</div>
 						<p>
 							If you prefer to be anonymous, choose the{' '}
-							<FontAwesome
-								name="user-secret"
-								size="1x"
-								style={{ color: '#aaa' }}
-							/>{' '}
+							<FontAwesome name="user-secret" style={{ color: '#aaa' }} />{' '}
 							option.
 						</p>
 					</CardActions>

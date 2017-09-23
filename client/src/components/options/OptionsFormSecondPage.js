@@ -26,42 +26,47 @@ const OptionsFormSecondPage = props => {
 				className="col s8 m6 offset-s2 offset-m3"
 				style={styles.loginCardStyle}
 			>
-				<div className="col m12 l4">
-					<CardTitle title="Options" subtitle="Theme" />
-				</div>
-				<div className="col s12 m12 l8" style={{ paddingTop: 23 }}>
-					<form onSubmit={handleSubmit}>
-						<div className="col s12 m5" style={{ paddingBottom: 18 }}>
-							<Field name="theme" component={renderRadioGroup}>
-								<RadioButton value="lightTheme" label="Light" />
-								<RadioButton value="darkTheme" label="Dark" />
-							</Field>
-						</div>
-						<div className="col s12 m7 center-align">
-							<div className="col s12 ">
-								<RaisedButton
-									type="submit"
-									primary={true}
-									fullWidth={true}
-									style={buttonStyle}
-									icon={<i className="material-icons">keyboard_arrow_right</i>}
-								/>
-								<RaisedButton
-									type="button"
-									secondary={true}
-									fullWidth={true}
-									onClick={previousPage}
-									style={buttonStyle}
-									icon={<i className="material-icons">keyboard_arrow_left</i>}
-								/>
+				<div style={styles.loginCardContainerStyle}>
+					<div className="col m12 l4">
+						<h4>Options</h4>
+						<p>Theme</p>
+					</div>
+					<div className="col s12 m12 l8" style={{ paddingTop: 23 }}>
+						<form onSubmit={handleSubmit}>
+							<div className="col s12 m5" style={{ paddingBottom: 18 }}>
+								<Field name="theme" component={renderRadioGroup}>
+									<RadioButton value="lightTheme" label="Light" />
+									<RadioButton value="darkTheme" label="Dark" />
+								</Field>
 							</div>
-						</div>
-					</form>
-				</div>
-				<div>
-					<CardActions className="col s12 center-align">
-						<Field name="theme" component={renderError} />
-					</CardActions>
+							<div className="col s12 m7 center-align">
+								<div className="col s12 ">
+									<RaisedButton
+										type="submit"
+										primary={true}
+										fullWidth={true}
+										style={buttonStyle}
+										icon={
+											<i className="material-icons">keyboard_arrow_right</i>
+										}
+									/>
+									<RaisedButton
+										type="button"
+										secondary={true}
+										fullWidth={true}
+										onClick={previousPage}
+										style={buttonStyle}
+										icon={<i className="material-icons">keyboard_arrow_left</i>}
+									/>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div>
+						<CardActions className="col s12 center-align">
+							<Field name="theme" component={renderError} />
+						</CardActions>
+					</div>
 				</div>
 			</Card>
 		</div>

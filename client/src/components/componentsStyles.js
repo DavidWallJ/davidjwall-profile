@@ -5,19 +5,27 @@ export default {
 		paddingTop: '6%',
 		paddingBottom: '6%'
 	},
+	// Login and options cards
 	loginCardStyle: {
-		marginTop: '10%',
 		color: '#aaa',
-		paddingTop: '6%',
-		paddingBottom: '8%',
+		marginTop: '10%',
 		borderRadius: 36,
-		minHeight: 300
+		minHeight: 300,
+		position: 'relative'
+	},
+	loginCardContainerStyle: {
+		color: '#aaa',
+		position: 'absolute',
+		top: '50%',
+		transform: 'translateY(-50%)',
+		width: '93%'
 	},
 	loginButtonStyle: {
 		marginBottom: 12,
 		textColor: 'white',
 		height: 50
 	},
+	//
 	halfPanelCard: {
 		margin: 0
 	},
