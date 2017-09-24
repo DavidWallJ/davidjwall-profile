@@ -35,7 +35,7 @@ const OptionsFormFirstPage = props => {
 						style={{ paddingTop: 6, paddingLeft: 18 }}
 					>
 						<h4>Options</h4>
-						<p style={{ paddingLeft: 4 }}>Language</p>
+						<p style={{ paddingLeft: 3 }}>Language</p>
 					</div>
 					<div className="col s12 m12 l8">
 						<form onSubmit={handleSubmit}>

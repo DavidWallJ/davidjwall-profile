@@ -13,7 +13,24 @@ class Login extends Component {
 	}
 
 	render() {
-		// const windowHeight = window.innerHeight;
+		const loginOptionFields = [
+			{
+				href: '/auth/linkedin',
+				backgroundColor: '#4267b2',
+				fontAwesomeIconName: 'linkedin-square'
+			},
+			{
+				href: '/auth/facebook',
+				backgroundColor: '#0077b5',
+				fontAwesomeIconName: 'facebook-square'
+			},
+			{
+				href: '/auth/google',
+				backgroundColor: '#f03530',
+				fontAwesomeIconName: 'google'
+			}
+		];
+
 		return (
 			<div className="row">
 				<Card
@@ -25,66 +42,48 @@ class Login extends Component {
 					</h3>
 					<h5>Please login in with...</h5>
 					<CardActions>
-						<a href="/auth/linkedin" style={{ display: 'inline-block' }}>
-							<RaisedButton
-								backgroundColor="#0077b5"
-								style={styles.loginButtonStyle}
-								icon={
-									<FontAwesome
-										name="linkedin-square"
-										size="2x"
-										style={{ color: 'white' }}
-									/>
-								}
-							/>
-						</a>
-						<a href="/auth/facebook" style={{ display: 'inline-block' }}>
-							<RaisedButton
-								// label="Facebook"
-								backgroundColor="#0077b5"
-								style={styles.loginButtonStyle}
-								icon={
-									<FontAwesome
-										name="facebook-square"
-										size="2x"
-										style={{ color: 'white' }}
-									/>
-								}
-							/>
-						</a>
-						<a href="/auth/google" style={{ display: 'inline-block' }}>
-							<RaisedButton
-								// label="Google"
-								backgroundColor="#f03530"
-								style={styles.loginButtonStyle}
-								icon={
-									<FontAwesome
-										name="google"
-										size="2x"
-										style={{ color: 'white' }}
-									/>
-								}
-							/>
-						</a>
-						<div style={{ display: 'inline-block' }}>
-							<RaisedButton
-								onClick={this.anonymousHandler.bind(this)}
-								// label="Anonymous"
-								primary={true}
-								style={styles.loginButtonStyle}
-								icon={
-									<FontAwesome
-										name="user-secret"
-										size="2x"
-										style={{ color: 'white' }}
-									/>
-								}
-							/>
-						</div>
+						{loginOptionFields.map((icon, i) => {
+							return (
+								<RaisedButton
+									href={icon.href}
+									backgroundColor={icon.backgroundColor}
+									style={styles.loginButtonStyle}
+									icon={
+										<FontAwesome
+											name={icon.fontAwesomeIconName}
+											size="2x"
+											style={{ color: 'white' }}
+										/>
+									}
+								/>
+							);
+						})}
+						<RaisedButton
+							onClick={this.anonymousHandler.bind(this)}
+							primary={true}
+							style={styles.loginButtonStyle}
+							buttonStyle={{ top: 1 }}
+							icon={
+								<FontAwesome
+									name="user-secret"
+									size="2x"
+									style={{ color: 'white' }}
+								/>
+							}
+						/>
+
+						<p style={{ marginTop: 0 }}>
+							...your setup choices will be stored for you next visit.
+						</p>
 						<p>
-							If you prefer to be anonymous, choose the{' '}
-							<FontAwesome name="user-secret" style={{ color: '#aaa' }} />{' '}
-							option.
+							<b>
+								If you prefer to be anonymous, choose the{' '}
+								<FontAwesome
+									name="user-secret"
+									style={{ color: '#aaa' }}
+								/>{' '}
+								option.
+							</b>
 						</p>
 					</CardActions>
 				</Card>

@@ -30,6 +30,13 @@ h2 {
 	margin: 0;
 }
 
+.slick-prev:before {
+	opacity: 0.2;
+}
+.slick-next:before {
+	opacity: 0.2;
+}
+
 /*certificate slider arrows*/
 .slick-prev:before,
 .slick-next:before {

@@ -23,7 +23,8 @@ export default {
 	loginButtonStyle: {
 		marginBottom: 12,
 		textColor: 'white',
-		height: 50
+		height: 50,
+		display: 'inline-block'
 	},
 	//
 	halfPanelCard: {

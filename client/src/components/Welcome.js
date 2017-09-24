@@ -5,6 +5,18 @@ import FontAwesome from 'react-fontawesome';
 import Typist from 'react-typist';
 
 class Welcome extends Component {
+	nameRenderHelper() {
+		if (this.props.name === 'Anonymous') {
+			return (
+				<FontAwesome
+					name="user-secret"
+					style={{ color: '#ff80ab', paddingLeft: 7 }}
+				/>
+			);
+		} else {
+			return this.props.name;
+		}
+	}
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -42,7 +54,7 @@ class Welcome extends Component {
 				<h2
 					style={{ color: '#ff80ab', textAlign: 'center', paddingBottom: 10 }}
 				>
-					{this.props.name}
+					{this.nameRenderHelper()}
 				</h2>
 				<Typist cursor={{ show: false }} startDelay={1500} avgTypingDelay={100}>
 					<h5 style={{ textAlign: 'center' }}>My name is David J. Wall.</h5>
