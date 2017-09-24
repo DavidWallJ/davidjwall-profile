@@ -27,9 +27,9 @@ class iconHalfPanel extends Component {
 				>
 					{iconName}
 				</FontIcon>
-				<h2>
+				<p style={{ fontSize: '2.7em' }}>
 					{panelTitle}
-				</h2>
+				</p>
 			</div>
 		);
 	}

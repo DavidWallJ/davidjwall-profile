@@ -3,6 +3,8 @@ import styles from './componentsStyles';
 import { connect } from 'react-redux';
 import FontAwesome from 'react-fontawesome';
 import Typist from 'react-typist';
+import Popover from 'material-ui/Popover/Popover';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class Welcome extends Component {
 	nameRenderHelper() {
@@ -21,9 +23,44 @@ class Welcome extends Component {
 		super(props);
 		this.state = {
 			currentBackgroundURL:
-				'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/lightthemebackgroundimage.JPG'
+				'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/lightthemebackgroundimage.JPG',
+			open: false,
+			anchorOrigin: {
+				horizontal: 'left',
+				vertical: 'bottom'
+			},
+			targetOrigin: {
+				horizontal: 'left',
+				vertical: 'top'
+			}
 		};
 	}
+
+	// material ui Popover
+
+	handleRequestClose = () => {
+		this.setState({
+			open: false
+		});
+	};
+
+	setAnchor = (positionElement, position) => {
+		const { anchorOrigin } = this.state;
+		anchorOrigin[positionElement] = position;
+
+		this.setState({
+			anchorOrigin: anchorOrigin
+		});
+	};
+
+	setTarget = (positionElement, position) => {
+		const { targetOrigin } = this.state;
+		targetOrigin[positionElement] = position;
+
+		this.setState({
+			targetOrigin: targetOrigin
+		});
+	};
 
 	componentWillMount() {
 		switch (this.props.currentTheme.theme) {
@@ -37,6 +74,7 @@ class Welcome extends Component {
 				return;
 		}
 	}
+
 	render() {
 		return (
 			<div
@@ -69,10 +107,25 @@ class Welcome extends Component {
 					href="/api/logout"
 					style={{ color: '#ff80ab', textDecoration: 'none' }}
 				>
-					<p style={{ paddingTop: 22 }}>
+					<p
+						style={{ paddingTop: 22 }}
+						className="transformGrow
+transformGrow"
+					>
 						Logout <i className="fa fa-sign-out" aria-hidden="true" />
 					</p>
 				</a>
+
+				<RaisedButton onClick={this.handleTouchTap} label="Click me" />
+				<Popover
+					open={this.state.open}
+					anchorEl={this.state.anchorEl}
+					anchorOrigin={this.state.anchorOrigin}
+					targetOrigin={this.state.targetOrigin}
+					onRequestClose={this.handleRequestClose}
+				>
+					<p>Sup my nitta?</p>
+				</Popover>
 			</div>
 		);
 	}

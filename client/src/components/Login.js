@@ -45,6 +45,7 @@ class Login extends Component {
 						{loginOptionFields.map((icon, i) => {
 							return (
 								<RaisedButton
+									key={i}
 									href={icon.href}
 									backgroundColor={icon.backgroundColor}
 									style={styles.loginButtonStyle}

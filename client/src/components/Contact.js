@@ -1,27 +1,43 @@
 import React, { Component } from 'react';
 import styles from './componentsStyles';
 import muiThemeable from 'material-ui/styles/muiThemeable';
+import FontIcon from 'material-ui/FontIcon';
 import { connect } from 'react-redux';
 import { Card } from 'material-ui/Card';
+import IconButton from 'material-ui/IconButton';
 import FontAwesome from 'react-fontawesome';
 
 import IconFullPanel from './common/IconFullPanel';
 import ContactPanel from './common/contactPanel';
 
 class Contact extends Component {
-	renderFarewellSentence() {
+	nameRenderHelper(color) {
+		if (this.props.name === 'Anonymous') {
+			return (
+				<FontAwesome
+					name="user-secret"
+					style={{ color: { color }, paddingLeft: 7 }}
+				/>
+			);
+		} else {
+			return ` ${this.props.name}`;
+		}
+	}
+
+	renderFarewellSentence(color) {
 		if (this.props.genre === 'silence') {
 			return (
 				<p>
-					Thank you for your time <b>{this.props.name}</b>. I hope you've
-					enjoyed viewing my profile and the serene sounds of silence.
+					Thank you for your time<b>{this.nameRenderHelper(color)}</b>. I hope
+					you've enjoyed viewing my profile and the serene sounds of silence.
 				</p>
 			);
 		} else {
 			return (
 				<p>
-					Thank you for your time {this.props.name}. I hope you've enjoyed
-					viewing my profile and listening to some {this.props.genre} music.
+					Thank you for your time {this.nameRenderHelper(color)} . I hope you've
+					enjoyed viewing my profile and listening to some {this.props.genre}{' '}
+					music.
 				</p>
 			);
 		}
@@ -35,7 +51,7 @@ class Contact extends Component {
 				<IconFullPanel iconName="face" panelTitle="Contact" color={color} />
 
 				<div className="row textCenter" style={{ color: color, fontSize: 20 }}>
-					{this.renderFarewellSentence()}
+					{this.renderFarewellSentence(color)}
 					<p>
 						Feel free to contact me by any of the methods listed below. Let's
 						build something together!
@@ -69,6 +85,32 @@ class Contact extends Component {
 							<p style={{ ...styles.contactIconData, color: color }}>
 								David J. Wall @ Linkedin
 							</p>
+						</a>
+					</div>
+				</div>
+				<div className="row" style={{ paddingTop: 38 }}>
+					<div className="col s6 center-align transformGrow">
+						<a
+							onClick={() => this.props.scrollCallback('welcome')}
+							style={{
+								color: '#ff80ab',
+								textDecoration: 'none',
+								cursor: 'pointer'
+							}}
+						>
+							<FontAwesome className="home" name="home" /> Home
+						</a>
+					</div>
+
+					<div className="col s6 center-align transformGrow">
+						<a
+							href="/api/logout"
+							style={{
+								color: '#ff80ab',
+								textDecoration: 'none'
+							}}
+						>
+							Logout <FontAwesome className="sign-out" name="sign-out" />
 						</a>
 					</div>
 				</div>

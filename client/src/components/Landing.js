@@ -80,7 +80,7 @@ class Landing extends Component {
 					return (
 						<div>
 							<Header scrollCallback={this.scrollCallbackHandler} />
-							<Welcome name={name} />
+							<Welcome ref="welcome" name={name} />
 							<Frontend ref="frontend" />
 							<Backend ref="backend" />
 							<WithCare ref="withCare" />
@@ -90,6 +90,7 @@ class Landing extends Component {
 								ref="contact"
 								name={name}
 								genre={this.props.audioOptions.genre}
+								scrollCallback={this.scrollCallbackHandler}
 							/>
 						</div>
 					);

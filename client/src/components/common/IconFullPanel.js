@@ -24,9 +24,9 @@ class iconFullPanel extends Component {
 				>
 					{iconName}
 				</FontIcon>
-				<h2 style={{ paddingBottom: 25 }}>
+				<p style={{ fontSize: '3.8em', marginTop: 30, marginBottom: 40 }}>
 					{panelTitle}
-				</h2>
+				</p>
 			</div>
 		);
 	}
