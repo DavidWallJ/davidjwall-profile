@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import FontIcon from 'material-ui/FontIcon';
 
-class iconHalfPanel extends Component {
+class IconHalfPanel extends Component {
 	render() {
 		const { color, textColor } = this.props.muiTheme.appBar;
 		const { iconName, panelTitle } = this.props;
@@ -13,7 +13,7 @@ class iconHalfPanel extends Component {
 				className="col s12 m6"
 				style={{
 					...styles.flexCenterColumn,
-					height: '58vh',
+					height: '63vh',
 					backgroundColor: color,
 					color: textColor
 				}}
@@ -35,4 +35,4 @@ class iconHalfPanel extends Component {
 	}
 }
 
-export default muiThemeable()(iconHalfPanel);
+export default muiThemeable()(IconHalfPanel);

@@ -3,8 +3,11 @@ import styles from './componentsStyles';
 import { connect } from 'react-redux';
 import FontAwesome from 'react-fontawesome';
 import Typist from 'react-typist';
-import Popover from 'material-ui/Popover/Popover';
+import Dialog from 'material-ui/Dialog';
+import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
+
+import InfoModal from './common/InfoModal';
 
 class Welcome extends Component {
 	nameRenderHelper() {
@@ -24,43 +27,9 @@ class Welcome extends Component {
 		this.state = {
 			currentBackgroundURL:
 				'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/lightthemebackgroundimage.JPG',
-			open: false,
-			anchorOrigin: {
-				horizontal: 'left',
-				vertical: 'bottom'
-			},
-			targetOrigin: {
-				horizontal: 'left',
-				vertical: 'top'
-			}
+			open: false
 		};
 	}
-
-	// material ui Popover
-
-	handleRequestClose = () => {
-		this.setState({
-			open: false
-		});
-	};
-
-	setAnchor = (positionElement, position) => {
-		const { anchorOrigin } = this.state;
-		anchorOrigin[positionElement] = position;
-
-		this.setState({
-			anchorOrigin: anchorOrigin
-		});
-	};
-
-	setTarget = (positionElement, position) => {
-		const { targetOrigin } = this.state;
-		targetOrigin[positionElement] = position;
-
-		this.setState({
-			targetOrigin: targetOrigin
-		});
-	};
 
 	componentWillMount() {
 		switch (this.props.currentTheme.theme) {
@@ -79,53 +48,58 @@ class Welcome extends Component {
 		return (
 			<div
 				style={{
-					...styles.flexCenterColumn,
 					background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${this
 						.state.currentBackgroundURL})`,
 					color: 'white',
 					backgroundSize: 'cover',
-					backgroundPosition: 'center',
-					height: 600
+					backgroundPosition: 'center'
 				}}
 			>
-				<h5 style={{ textAlign: 'center' }}>Welcome</h5>
-				<h2
-					style={{ color: '#ff80ab', textAlign: 'center', paddingBottom: 10 }}
+				<div
+					style={{
+						...styles.flexCenterColumn,
+						height: 600
+					}}
 				>
-					{this.nameRenderHelper()}
-				</h2>
-				<Typist cursor={{ show: false }} startDelay={1500} avgTypingDelay={100}>
-					<h5 style={{ textAlign: 'center' }}>My name is David J. Wall.</h5>
-					<h4 style={{ textAlign: 'center' }}>
-						I'm a full-stack web developer.
-					</h4>
-					<p style={{ textAlign: 'center' }}>What exactly do i mean by that?</p>
-					<p style={{ textAlign: 'center' }}>. . . . . . .</p>
-					<p style={{ textAlign: 'center' }}>( scroll down )</p>
-				</Typist>
-				<a
-					href="/api/logout"
-					style={{ color: '#ff80ab', textDecoration: 'none' }}
-				>
-					<p
-						style={{ paddingTop: 22 }}
-						className="transformGrow
-transformGrow"
+					<h5 style={{ textAlign: 'center' }}>Welcome</h5>
+					<h2
+						style={{ color: '#ff80ab', textAlign: 'center', paddingBottom: 10 }}
 					>
-						Logout <i className="fa fa-sign-out" aria-hidden="true" />
-					</p>
-				</a>
-
-				<RaisedButton onClick={this.handleTouchTap} label="Click me" />
-				<Popover
-					open={this.state.open}
-					anchorEl={this.state.anchorEl}
-					anchorOrigin={this.state.anchorOrigin}
-					targetOrigin={this.state.targetOrigin}
-					onRequestClose={this.handleRequestClose}
-				>
-					<p>Sup my nitta?</p>
-				</Popover>
+						{this.nameRenderHelper()}
+					</h2>
+					<Typist
+						cursor={{ show: false }}
+						startDelay={1500}
+						avgTypingDelay={100}
+					>
+						<h5 style={{ textAlign: 'center' }}>My name is David J. Wall.</h5>
+						<h4 style={{ textAlign: 'center' }}>
+							I'm a full-stack web developer.
+						</h4>
+						<p style={{ textAlign: 'center' }}>
+							What exactly do i mean by that?
+						</p>
+						<p style={{ textAlign: 'center' }}>. . . . . . .</p>
+						<p style={{ textAlign: 'center' }}>( scroll down )</p>
+					</Typist>
+					<a
+						href="/api/logout"
+						style={{ color: '#ff80ab', textDecoration: 'none' }}
+					>
+						<p
+							style={{ paddingTop: 22 }}
+							className="transformGrow
+transformGrow"
+						>
+							Logout <i className="fa fa-sign-out" aria-hidden="true" />
+						</p>
+					</a>
+				</div>
+				<InfoModal
+					title="Sup Brother"
+					description="Not much."
+					textAlignObject={{ textAlign: 'left' }}
+				/>
 			</div>
 		);
 	}

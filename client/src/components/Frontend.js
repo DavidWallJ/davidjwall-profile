@@ -3,8 +3,12 @@ import styles from './componentsStyles';
 import { connect } from 'react-redux';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import { Card } from 'material-ui/Card';
+import Dialog from 'material-ui/Dialog';
+import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
 
 import IconHalfPanel from './common/IconHalfPanel';
+import InfoModal from './common/InfoModal';
 
 class Frontend extends Component {
 	render() {
@@ -53,6 +57,11 @@ class Frontend extends Component {
 							application seamlessly.
 						</p>
 					</div>
+					<InfoModal
+						title="Sup Brother"
+						description="Not much."
+						textAlignObject={{ textAlign: 'right' }}
+					/>
 				</div>
 			</Card>
 		);

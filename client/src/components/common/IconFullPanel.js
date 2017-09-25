@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import FontIcon from 'material-ui/FontIcon';
 
-class iconFullPanel extends Component {
+class IconFullPanel extends Component {
 	render() {
 		const { iconName, panelTitle, color } = this.props;
 		return (
@@ -32,4 +32,4 @@ class iconFullPanel extends Component {
 	}
 }
 
-export default muiThemeable()(iconFullPanel);
+export default muiThemeable()(IconFullPanel);
