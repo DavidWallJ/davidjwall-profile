@@ -3,9 +3,6 @@ import styles from './componentsStyles';
 import { connect } from 'react-redux';
 import FontAwesome from 'react-fontawesome';
 import Typist from 'react-typist';
-import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
 
 import InfoModal from './common/InfoModal';
 
@@ -96,9 +93,8 @@ transformGrow"
 					</a>
 				</div>
 				<InfoModal
-					title="Sup Brother"
-					description="Not much."
-					textAlignObject={{ textAlign: 'left' }}
+					title="My most recent and relevant project is this site."
+					description="This site showcases much of what I have learned as a web developer.  Aside from the libraries utilized, this website is 100% my own code. Getting you the user authenticated and to this point has already required a strong understanding of many front-end and back-end web technologies."
 				/>
 			</div>
 		);

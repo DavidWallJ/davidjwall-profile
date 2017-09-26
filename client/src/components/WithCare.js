@@ -3,6 +3,8 @@ import styles from './componentsStyles';
 import { connect } from 'react-redux';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import { Card } from 'material-ui/Card';
+
+import InfoModal from './common/InfoModal';
 import IconHalfPanel from './common/IconHalfPanel';
 
 class WithCare extends Component {
@@ -11,7 +13,7 @@ class WithCare extends Component {
 
 		return (
 			<Card className="row" style={{ ...styles.halfPanelCard }}>
-				<div className="col s12" style={{ padding: 0 }}>
+				<div className="col s12" style={{ padding: 0, position: 'relative' }}>
 					<IconHalfPanel iconName="favorite" panelTitle="With Care" />
 					<div
 						className="col s12 m6"
@@ -39,6 +41,9 @@ class WithCare extends Component {
 							efficient and reliable individual or{' '}
 							<span className="highlight">team web development</span>.
 						</p>
+					</div>
+					<div style={{ position: 'absolute', bottom: 0, right: 0 }}>
+						<InfoModal title="Sup With Care" description="Not much." />
 					</div>
 				</div>
 			</Card>

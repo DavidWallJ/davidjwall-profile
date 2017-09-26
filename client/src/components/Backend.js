@@ -27,7 +27,7 @@ class Backend extends Component {
 	render() {
 		return (
 			<Card className="row" style={{ ...styles.halfPanelCard }}>
-				<div className="col s12" style={{ padding: 0 }}>
+				<div className="col s12" style={{ padding: 0, position: 'relative' }}>
 					{this.contentPanelLeft()}
 					<IconHalfPanel iconName="dns" panelTitle="Back End" />
 					{this.contentPanelRight()}

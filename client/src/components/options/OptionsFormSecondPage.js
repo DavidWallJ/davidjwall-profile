@@ -3,7 +3,7 @@ import styles from '../componentsStyles';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import { Field, reduxForm } from 'redux-form';
 import validate from './validateOptions';
-import { Card, CardTitle, CardActions } from 'material-ui/Card';
+import { Card, CardActions } from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
 import { RadioButton } from 'material-ui/RadioButton';
 import { renderRadioGroup } from '../common/renderMaterialUIComponent';
@@ -11,11 +11,7 @@ import { renderError } from './RenderError';
 
 const OptionsFormSecondPage = props => {
 	const { handleSubmit, previousPage } = props;
-	const cardStyle = {
-		marginTop: 12,
-		paddingTop: 40,
-		minHeight: 185
-	};
+
 	const buttonStyle = {
 		marginBottom: 5
 	};

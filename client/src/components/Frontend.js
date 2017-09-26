@@ -3,9 +3,6 @@ import styles from './componentsStyles';
 import { connect } from 'react-redux';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import { Card } from 'material-ui/Card';
-import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
-import RaisedButton from 'material-ui/RaisedButton';
 
 import IconHalfPanel from './common/IconHalfPanel';
 import InfoModal from './common/InfoModal';
@@ -18,7 +15,8 @@ class Frontend extends Component {
 				<div
 					className="col s12"
 					style={{
-						padding: 0
+						padding: 0,
+						position: 'relative'
 					}}
 				>
 					<IconHalfPanel iconName="important_devices" panelTitle="Front End" />
@@ -56,12 +54,10 @@ class Frontend extends Component {
 							<span className="highlight">APIs </span> into your website or
 							application seamlessly.
 						</p>
+						<div style={{ position: 'absolute', bottom: 0, right: 0 }}>
+							<InfoModal title="Sup Front End" description="Not much." />
+						</div>
 					</div>
-					<InfoModal
-						title="Sup Brother"
-						description="Not much."
-						textAlignObject={{ textAlign: 'right' }}
-					/>
 				</div>
 			</Card>
 		);

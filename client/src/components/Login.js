@@ -4,7 +4,7 @@ import * as actions from '../actions';
 import { connect } from 'react-redux';
 import FontAwesome from 'react-fontawesome';
 
-import { Card, CardActions, CardTitle } from 'material-ui/Card';
+import { Card, CardActions } from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
 
 class Login extends Component {

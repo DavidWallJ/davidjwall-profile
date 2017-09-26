@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../componentsStyles';
 import { Field, reduxForm } from 'redux-form';
 import validate from './validateOptions';
-import { Card, CardTitle, CardActions } from 'material-ui/Card';
+import { Card, CardActions } from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
 import { RadioButton } from 'material-ui/RadioButton';
 import { renderRadioGroup } from '../common/renderMaterialUIComponent';
@@ -10,11 +10,7 @@ import { renderError } from './RenderError';
 
 const OptionsFormFirstPage = props => {
 	const { handleSubmit } = props;
-	const cardStyle = {
-		marginTop: 12,
-		paddingTop: 40,
-		minHeight: 180
-	};
+
 	const buttonStyle = {
 		marginBottom: 5
 	};

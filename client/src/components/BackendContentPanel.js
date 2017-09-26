@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styles from './componentsStyles';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 
+import InfoModal from './common/InfoModal';
+
 class backendContentPanel extends Component {
 	render() {
 		const { textColor, color } = this.props.muiTheme.appBar;
@@ -37,6 +39,9 @@ class backendContentPanel extends Component {
 					or application can easily grow to{' '}
 					<span className="highlight">meet your future needs</span>.
 				</p>
+				<div style={{ position: 'absolute', bottom: 0, left: 0 }}>
+					<InfoModal title="Sup Back End" description="Not much." />
+				</div>
 			</div>
 		);
 	}

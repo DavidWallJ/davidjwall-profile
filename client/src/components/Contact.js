@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import styles from './componentsStyles';
 import muiThemeable from 'material-ui/styles/muiThemeable';
-import FontIcon from 'material-ui/FontIcon';
 import { connect } from 'react-redux';
 import { Card } from 'material-ui/Card';
-import IconButton from 'material-ui/IconButton';
 import FontAwesome from 'react-fontawesome';
 
 import IconFullPanel from './common/IconFullPanel';
