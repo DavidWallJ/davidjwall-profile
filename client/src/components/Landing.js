@@ -19,7 +19,11 @@ import Contact from './Contact';
 class Landing extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { position: 0 };
+		this.state = {
+			position: 0,
+			currentBackgroundURL:
+				'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/maccomputer_darkened2.jpg'
+		};
 		this.handlePlaying = this.handlePlaying.bind(this);
 		this.handleFinishedPlaying = this.handleFinishedPlaying.bind(this);
 	}
@@ -45,6 +49,18 @@ class Landing extends Component {
 		await this.props.fetchUser();
 		if (this.props.auth && this.props.auth.options.length > 0) {
 			const { theme, genre } = this.props.auth.options[0];
+			// set background image var for welcome screen
+			switch (theme) {
+				case 'darkTheme':
+					this.setState({
+						currentBackgroundURL:
+							'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/caspar-rubin-224229.jpg'
+					});
+					break;
+				default:
+					return;
+			}
+
 			this.props.setTheme({ theme });
 			if (genre === 'silence') {
 				this.props.setAudio({ genre, status: 'STOPPED' });
@@ -80,7 +96,11 @@ class Landing extends Component {
 					return (
 						<div>
 							<Header scrollCallback={this.scrollCallbackHandler} />
-							<Welcome ref="welcome" name={name} />
+							<Welcome
+								ref="welcome"
+								name={name}
+								currentBackgroundURL={this.state.currentBackgroundURL}
+							/>
 							<Frontend ref="frontend" />
 							<Backend ref="backend" />
 							<WithCare ref="withCare" />

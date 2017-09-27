@@ -45,6 +45,7 @@ class InfoModal extends Component {
 					modal={false}
 					open={this.state.open}
 					onRequestClose={this.handleClose}
+					style={{ fontWeight: 400 }}
 				>
 					{this.props.description}
 				</Dialog>

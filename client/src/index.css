@@ -53,7 +53,9 @@ h2 {
 .fa-sign-out,
 .material-icons,
 .fa-user-secret,
-.fa-linkedin-square {
+.fa-linkedin-square,
+.fa-facebook-square,
+.fa-google {
 	transition: all .2s ease-in-out;
 }
 
@@ -62,6 +64,72 @@ h2 {
 .fa-linkedin-square:hover,
 .fa-home:hover,
 .fa-sign-out:hover,
-.material-icons:hover {
+.material-icons:hover,
+.fa-facebook-square:hover,
+.fa-google:hover {
 	transform: scale(1.2) translateY(-2%);
+}
+
+.fa-info {
+	display: inline-block;
+	-moz-animation: pulse 4s infinite linear;
+	-o-animation: pulse 4s infinite linear;
+	-webkit-animation: pulse 4s infinite linear;
+	animation: pulse 4s infinite linear;
+}
+
+@-webkit-keyframes pulse {
+	15% {
+		opacity: 1;
+	}
+	45% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-moz-keyframes pulse {
+	15% {
+		opacity: 1;
+	}
+	45% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-o-keyframes pulse {
+	15% {
+		opacity: 1;
+	}
+	45% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-ms-keyframes pulse {
+	15% {
+		opacity: 1;
+	}
+	45% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes pulse {
+	15% {
+		opacity: 1;
+	}
+	45% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }

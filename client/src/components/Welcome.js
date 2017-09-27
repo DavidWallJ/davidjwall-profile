@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styles from './componentsStyles';
+import * as actions from '../actions';
 import { connect } from 'react-redux';
 import FontAwesome from 'react-fontawesome';
 import Typist from 'react-typist';
@@ -7,6 +8,13 @@ import Typist from 'react-typist';
 import InfoModal from './common/InfoModal';
 
 class Welcome extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			open: false
+		};
+	}
+
 	nameRenderHelper() {
 		if (this.props.name === 'Anonymous') {
 			return (
@@ -19,34 +27,12 @@ class Welcome extends Component {
 			return this.props.name;
 		}
 	}
-	constructor(props) {
-		super(props);
-		this.state = {
-			currentBackgroundURL:
-				'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/lightthemebackgroundimage.JPG',
-			open: false
-		};
-	}
-
-	componentWillMount() {
-		switch (this.props.currentTheme.theme) {
-			case 'darkTheme':
-				this.setState({
-					currentBackgroundURL:
-						'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/caspar-rubin-224229.jpg'
-				});
-				break;
-			default:
-				return;
-		}
-	}
 
 	render() {
 		return (
 			<div
 				style={{
-					background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${this
-						.state.currentBackgroundURL})`,
+					backgroundImage: `url(${this.props.currentBackgroundURL})`,
 					color: 'white',
 					backgroundSize: 'cover',
 					backgroundPosition: 'center'
@@ -93,8 +79,9 @@ transformGrow"
 					</a>
 				</div>
 				<InfoModal
-					title="My most recent and relevant project is this site."
-					description="This site showcases much of what I have learned as a web developer.  Aside from the libraries utilized, this website is 100% my own code. Getting you the user authenticated and to this point has already required a strong understanding of many front-end and back-end web technologies."
+					title="My most recent project is this site."
+					description="This site showcases much of what I have learned as a web developer.  Aside from the libraries utilized, this website is 100% self written. Getting you the user authenticated and to this point by way of Google, Linkedin or Facebook has already required the use of many of todays most innovative front-end and back-end web technologies.  To see the code for any particular component click the <> button of the corresponding section.
+					"
 				/>
 			</div>
 		);
@@ -104,4 +91,4 @@ transformGrow"
 function mapStateToProps({ auth, currentTheme }) {
 	return { auth, currentTheme };
 }
-export default connect(mapStateToProps)(Welcome);
+export default connect(mapStateToProps, actions)(Welcome);
