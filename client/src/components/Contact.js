@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './componentsStyles';
 import muiThemeable from 'material-ui/styles/muiThemeable';
+import * as actions from '../actions';
 import { connect } from 'react-redux';
 import { Card } from 'material-ui/Card';
 import FontAwesome from 'react-fontawesome';
@@ -33,9 +34,9 @@ class Contact extends Component {
 		} else {
 			return (
 				<p>
-					Thank you for your time {this.nameRenderHelper(color)} . I hope you've
-					enjoyed viewing my profile and listening to some {this.props.genre}{' '}
-					music.
+					Thank you for your time <b>{this.nameRenderHelper(color)}</b>. I hope
+					you've enjoyed viewing my profile and listening to some{' '}
+					{this.props.genre} music.
 				</p>
 			);
 		}
@@ -86,32 +87,6 @@ class Contact extends Component {
 						</a>
 					</div>
 				</div>
-				<div className="row" style={{ paddingTop: 38 }}>
-					<div className="col s6 center-align transformGrow">
-						<a
-							onClick={() => this.props.scrollCallback('welcome')}
-							style={{
-								color: '#ff80ab',
-								textDecoration: 'none',
-								cursor: 'pointer'
-							}}
-						>
-							<FontAwesome className="home" name="home" /> Home
-						</a>
-					</div>
-
-					<div className="col s6 center-align transformGrow">
-						<a
-							href="/api/logout"
-							style={{
-								color: '#ff80ab',
-								textDecoration: 'none'
-							}}
-						>
-							Logout <FontAwesome className="sign-out" name="sign-out" />
-						</a>
-					</div>
-				</div>
 			</Card>
 		);
 	}
@@ -120,4 +95,4 @@ class Contact extends Component {
 function mapStateToProps({ auth }) {
 	return { auth };
 }
-export default connect(mapStateToProps)(muiThemeable()(Contact));
+export default connect(mapStateToProps, actions)(muiThemeable()(Contact));

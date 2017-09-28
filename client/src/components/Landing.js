@@ -15,6 +15,7 @@ import WithCare from './WithCare';
 import Projects from './Projects';
 import Education from './Education';
 import Contact from './Contact';
+import Footer from './Footer';
 
 class Landing extends Component {
 	constructor(props) {
@@ -110,8 +111,8 @@ class Landing extends Component {
 								ref="contact"
 								name={name}
 								genre={this.props.audioOptions.genre}
-								scrollCallback={this.scrollCallbackHandler}
 							/>
+							<Footer scrollCallback={this.scrollCallbackHandler} />
 						</div>
 					);
 				default:
