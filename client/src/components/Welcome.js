@@ -28,11 +28,25 @@ class Welcome extends Component {
 		}
 	}
 
+	componentDidMount() {
+		const theme = this.props.currentTheme.theme;
+		switch (theme) {
+			case 'darkTheme':
+				console.log('this ran');
+				this.props.setBackgroundURL(
+					'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/caspar-rubin-224229.jpg'
+				);
+				break;
+			default:
+				return;
+		}
+	}
+
 	render() {
 		return (
 			<div
 				style={{
-					backgroundImage: `url(${this.props.currentBackgroundURL})`,
+					backgroundImage: `url(${this.props.backgroundURL})`,
 					color: 'white',
 					backgroundSize: 'cover',
 					backgroundPosition: 'center'
@@ -80,7 +94,7 @@ transformGrow"
 				</div>
 				<InfoModal
 					title="My most recent project is this site."
-					description="This site showcases much of what I have learned as a web developer.  Aside from the libraries utilized, this website is 100% self written. Getting you the user authenticated and to this point by way of Google, Linkedin or Facebook has already required the use of many of todays most innovative front-end and back-end web technologies.  To see the code for any particular component click the <> button of the corresponding section.
+					description="This site showcases much of what I have learned as a web developer.  Aside from the libraries utilized, this website is entirely self written. Getting you the user authenticated and to this point by way of Google, Linkedin or Facebook has already required the use of many of todays most innovative front-end and back-end web technologies.  To see the code for any particular component click the <> button of the corresponding section.
 					"
 				/>
 			</div>
@@ -88,7 +102,7 @@ transformGrow"
 	}
 }
 
-function mapStateToProps({ auth, currentTheme }) {
-	return { auth, currentTheme };
+function mapStateToProps({ auth, currentTheme, backgroundURL }) {
+	return { auth, currentTheme, backgroundURL };
 }
 export default connect(mapStateToProps, actions)(Welcome);

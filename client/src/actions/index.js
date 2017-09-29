@@ -17,8 +17,8 @@ export const setTheme = theme => dispatch => {
 	dispatch({ type: 'setTheme', payload: theme });
 };
 
-export const setBackground = URL => dispatch => {
-	dispatch({ type: 'setBackground', payload: URL });
+export const setBackgroundURL = URL => dispatch => {
+	dispatch({ type: 'setBackgroundURL', payload: URL });
 };
 
 export const setAudio = audioOptions => dispatch => {

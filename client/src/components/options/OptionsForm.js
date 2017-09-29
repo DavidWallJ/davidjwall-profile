@@ -41,7 +41,10 @@ class OptionsForm extends Component {
 							if (this.props.anonymous.auth !== false) {
 								this.props.saveOptions(values);
 							} else {
-								this.props.setAnonymous({ auth: true, options: [] });
+								this.props.setAnonymous({
+									auth: true,
+									options: []
+								});
 							}
 							this.props.setTheme({ theme: values.theme });
 						}}

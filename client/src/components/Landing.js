@@ -21,9 +21,7 @@ class Landing extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			position: 0,
-			currentBackgroundURL:
-				'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/maccomputer_darkened2.jpg'
+			position: 0
 		};
 		this.handlePlaying = this.handlePlaying.bind(this);
 		this.handleFinishedPlaying = this.handleFinishedPlaying.bind(this);
@@ -53,10 +51,10 @@ class Landing extends Component {
 			// set background image var for welcome screen
 			switch (theme) {
 				case 'darkTheme':
-					this.setState({
-						currentBackgroundURL:
-							'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/caspar-rubin-224229.jpg'
-					});
+					console.log('this ran');
+					this.props.setBackgroundURL(
+						'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/caspar-rubin-224229.jpg'
+					);
 					break;
 				default:
 					return;

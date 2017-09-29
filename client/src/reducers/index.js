@@ -5,12 +5,14 @@ import authReducer from './authReducer';
 import themeReducer from './themeReducer';
 import audioOptions from './audioReducer';
 import anonymousReducer from './anonymousReducer';
+import backgroundURLReducer from './backgroundURLReducer';
 
 export default combineReducers({
 	auth: authReducer,
 	anonymous: anonymousReducer,
 	form: reduxForm,
 	currentTheme: themeReducer,
+	backgroundURL: backgroundURLReducer,
 	audioOptions,
 	audio
 });

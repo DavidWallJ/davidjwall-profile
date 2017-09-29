@@ -24,7 +24,7 @@ class Footer extends Component {
 							color: textColor
 						}}
 					>
-						<FontAwesome className="home" name="home" /> Home
+						<FontAwesome className="home" name="home" /> <b>Home</b>
 					</a>
 				</div>
 
@@ -37,7 +37,7 @@ class Footer extends Component {
 							color: textColor
 						}}
 					>
-						Logout <FontAwesome className="sign-out" name="sign-out" />
+						<b>Logout</b> <FontAwesome className="sign-out" name="sign-out" />
 					</a>
 				</div>
 			</div>
