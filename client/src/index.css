@@ -70,7 +70,8 @@ h2 {
 	transform: scale(1.2) translateY(-2%);
 }
 
-.fa-info {
+.fa-info,
+.fa-terminal {
 	display: inline-block;
 	-moz-animation: pulse 4s infinite linear;
 	-o-animation: pulse 4s infinite linear;

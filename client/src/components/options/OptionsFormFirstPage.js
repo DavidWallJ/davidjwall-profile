@@ -37,12 +37,13 @@ const OptionsFormFirstPage = props => {
 						<form onSubmit={handleSubmit}>
 							<div className="col s5 m5" style={{ paddingTop: '9%' }}>
 								<Field name="language" component={renderRadioGroup}>
+									<RadioButton value="english" label="English" />
 									<RadioButton
 										value="chinese"
 										label="中文"
 										labelStyle={{ width: '100%' }}
+										disabled={true}
 									/>
-									<RadioButton value="english" label="English" />
 								</Field>
 							</div>
 							<div className="col s7 m7" style={{ paddingTop: '9%' }}>
@@ -68,12 +69,16 @@ const OptionsFormFirstPage = props => {
 							</div>
 						</form>
 					</div>
+
 					<div>
 						<CardActions className="col s12">
 							<Field name="language" component={renderError} />
 						</CardActions>
 					</div>
 				</div>
+				<p style={{ textAlign: 'center', fontSize: 10 }}>
+					*Chinese language option coming soon.
+				</p>
 			</Card>
 		</div>
 	);

@@ -26,7 +26,7 @@ class InfoModal extends Component {
 		];
 		const { textColor } = this.props.muiTheme.appBar;
 		return (
-			<div>
+			<div style={{ display: 'inline-block' }}>
 				<RaisedButton
 					onClick={this.handleOpen}
 					labelStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.08)' }}
