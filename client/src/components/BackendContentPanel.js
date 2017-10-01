@@ -44,8 +44,11 @@ class backendContentPanel extends Component {
 					<span className="highlight">meet your future needs</span>.
 				</p>
 				<div style={{ position: 'absolute', bottom: 0, left: 0 }}>
-					<InfoModal title="Sup Back End" description="Not much." />
-					<GetCode codeURL="https://github.com/DavidWallJ/davidjwall-profile" />
+					<InfoModal
+						title="This website is powered by a handful of today's most minimal and flexible Node.js frameworks."
+						description="The back-end of this project includes an express powered web server hosted by Heroku, a Mongoose simplified database hosted by mLabs, and flexible, modular authentication thanks to Passport authentication middleware. Click the >_ icon to to see how this website uses Passport 'strategies' to handle authentication."
+					/>
+					<GetCode codeURL="https://github.com/DavidWallJ/davidjwall-profile/blob/master/services/passport.js" />
 				</div>
 			</div>
 		);

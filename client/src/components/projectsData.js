@@ -18,7 +18,8 @@ export default [
 			'featured'
 		],
 		link: 'http://herokuexample.com',
-		githubLink: 'https://github.com/DavidWallJ/davidjwall-profile'
+		githubLink: 'https://github.com/DavidWallJ/davidjwall-profile',
+		icon: 'play_arrow'
 	},
 	{
 		name: 'React Fullstack Feedback Collection App',
@@ -38,7 +39,8 @@ export default [
 			'nodejs',
 			'featured'
 		],
-		githubLink: 'https://github.com/DavidWallJ/udemy-node-react-fullstack'
+		githubLink: 'https://github.com/DavidWallJ/udemy-node-react-fullstack',
+		icon: 'code'
 	},
 	{
 		name: 'React Native Employee Manager App',
@@ -53,7 +55,8 @@ export default [
 			'nodejs',
 			'featured'
 		],
-		githubLink: 'https://github.com/DavidWallJ/udemy-redux-native-manager'
+		githubLink: 'https://github.com/DavidWallJ/udemy-redux-native-manager',
+		icon: 'code'
 	},
 	{
 		name: 'Music Albums App',
@@ -67,7 +70,8 @@ export default [
 			'nodejs'
 		],
 		githubLink:
-			'https://github.com/DavidWallJ/udemy-react-native-albums/blob/master/package.json'
+			'https://github.com/DavidWallJ/udemy-react-native-albums/blob/master/package.json',
+		icon: 'code'
 	},
 	{
 		name: 'React Authentication Service',
@@ -85,7 +89,9 @@ export default [
 			'mongodb',
 			'featured'
 		],
-		githubLink: 'https://github.com/DavidWallJ/udemy-graphql-client-and-backend'
+		githubLink:
+			'https://github.com/DavidWallJ/udemy-graphql-client-and-backend',
+		icon: 'code'
 	},
 	{
 		name: 'React Song Writing App',
@@ -101,7 +107,8 @@ export default [
 			'passport',
 			'nodejs'
 		],
-		githubLink: 'https://github.com/DavidWallJ/udemy-graphql-client'
+		githubLink: 'https://github.com/DavidWallJ/udemy-graphql-client',
+		icon: 'code'
 	},
 	{
 		name: 'Simple Backend GraphQL App',
@@ -114,7 +121,8 @@ export default [
 			'graphql',
 			'nodejs'
 		],
-		githubLink: 'https://github.com/DavidWallJ/udemy-adv-react-auth-clientside'
+		githubLink: 'https://github.com/DavidWallJ/udemy-adv-react-auth-clientside',
+		icon: 'code'
 	},
 	{
 		name: 'React Fullstack Authentication App (Frontend)',
@@ -129,7 +137,8 @@ export default [
 			'chai',
 			'nodejs'
 		],
-		githubLink: 'https://github.com/DavidWallJ/udemy-adv-react-auth-clientside'
+		githubLink: 'https://github.com/DavidWallJ/udemy-adv-react-auth-clientside',
+		icon: 'code'
 	},
 	{
 		name: 'React Fullstack Authentication App (Backend)',
@@ -146,7 +155,8 @@ export default [
 			'mongodb'
 		],
 		githubLink:
-			'https://github.com/DavidWallJ/udemy-adv-react-auth-pro/blob/master/server/index.js'
+			'https://github.com/DavidWallJ/udemy-adv-react-auth-pro/blob/master/server/index.js',
+		icon: 'code'
 	},
 	{
 		name: 'React Weather App',
@@ -162,7 +172,8 @@ export default [
 			'nodejs'
 		],
 		githubLink:
-			'https://github.com/DavidWallJ/udemy-modern-react-with-redux-davidjwall/tree/master/weather'
+			'https://github.com/DavidWallJ/udemy-modern-react-with-redux-davidjwall/tree/master/weather',
+		icon: 'code'
 	},
 	{
 		name: 'React/Redux Todo App',
@@ -180,7 +191,8 @@ export default [
 			'featured'
 		],
 		link: 'http://react-todo-app-davidjwall.herokuapp.com/#/todos?_k=0k3c1g',
-		githubLink: 'https://github.com/DavidWallJ/react-todo-app'
+		githubLink: 'https://github.com/DavidWallJ/react-todo-app',
+		icon: 'play_arrow'
 	},
 	{
 		name: 'React Timer App',
@@ -196,7 +208,8 @@ export default [
 			'nodejs'
 		],
 		link: 'http://react-timer-davidjwall.herokuapp.com/#/countdown?_k=7ksrzp',
-		githubLink: 'https://github.com/DavidWallJ/react-timer'
+		githubLink: 'https://github.com/DavidWallJ/react-timer',
+		icon: 'play_arrow'
 	},
 	{
 		name: 'React Weather App',
@@ -213,7 +226,8 @@ export default [
 			'featured'
 		],
 		link: 'http://openweathermap-react-api.herokuapp.com/#/?_k=upuizf',
-		githubLink: 'https://github.com/DavidWallJ/react-redux-graph-weather-api'
+		githubLink: 'https://github.com/DavidWallJ/react-redux-graph-weather-api',
+		icon: 'play_arrow'
 	},
 	{
 		name: 'Random Quote Generator',
@@ -231,7 +245,8 @@ export default [
 			'heroku',
 			'jquery'
 		],
-		link: 'https://codepen.io/DavidJWall/pen/BRxgew'
+		link: 'https://codepen.io/DavidJWall/pen/BRxgew',
+		icon: 'play_arrow'
 	},
 	{
 		name: 'URL Shortener Microservice',
@@ -245,7 +260,8 @@ export default [
 			'jquery',
 			'mongodb'
 		],
-		link: 'https://codepen.io/DavidJWall/pen/MmOvQE'
+		link: 'https://codepen.io/DavidJWall/pen/MmOvQE',
+		icon: 'play_arrow'
 	},
 	{
 		name: 'Request Header Parser Microservice',
@@ -258,7 +274,8 @@ export default [
 			'heroku',
 			'jquery'
 		],
-		link: 'https://codepen.io/DavidJWall/pen/ZKyyEe'
+		link: 'https://codepen.io/DavidJWall/pen/ZKyyEe',
+		icon: 'play_arrow'
 	},
 	{
 		name: 'Timestamp Microservice',
@@ -271,31 +288,37 @@ export default [
 			'heroku',
 			'jquery'
 		],
-		link: 'https://codepen.io/DavidJWall/pen/GmEgvm'
+		link: 'https://codepen.io/DavidJWall/pen/GmEgvm',
+		icon: 'play_arrow'
 	},
 	{
 		name: 'Simon Game 2.0',
 		technologies: ['html', 'css', 'javascript', 'jquery'],
-		link: 'https://codepen.io/DavidJWall/pen/aWOmKd'
+		link: 'https://codepen.io/DavidJWall/pen/aWOmKd',
+		icon: 'play_arrow'
 	},
 	{
 		name: 'Promodoro Clock',
 		technologies: ['html', 'css', 'javascript', 'jquery'],
-		link: 'https://codepen.io/DavidJWall/pen/YZbZEK'
+		link: 'https://codepen.io/DavidJWall/pen/YZbZEK',
+		icon: 'play_arrow'
 	},
 	{
 		name: 'JavaScript Calculator',
 		technologies: ['html', 'css', 'javascript', 'jquery'],
-		link: 'https://codepen.io/DavidJWall/pen/BWbxBQ'
+		link: 'https://codepen.io/DavidJWall/pen/BWbxBQ',
+		icon: 'play_arrow'
 	},
 	{
 		name: 'Wiki Quicky',
 		technologies: ['html', 'css', 'javascript', 'jquery'],
-		link: 'https://codepen.io/DavidJWall/pen/oZELdK'
+		link: 'https://codepen.io/DavidJWall/pen/oZELdK',
+		icon: 'play_arrow'
 	},
 	{
 		name: 'Tic Tac Toe for Cheaters',
 		technologies: ['html', 'css', 'javascript', 'jquery'],
-		link: 'https://codepen.io/DavidJWall/pen/VbwNGQ?editors=1010'
+		link: 'https://codepen.io/DavidJWall/pen/VbwNGQ?editors=1010',
+		icon: 'play_arrow'
 	}
 ];

@@ -45,18 +45,12 @@ class WithCare extends Component {
 						</p>
 					</div>
 					<div style={{ position: 'absolute', bottom: 0, right: 0 }}>
-						<FontAwesome
-							name="terminal"
-							size="1x"
-							style={{
-								textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)',
-								display: 'inline-block',
-								color: '#ff4081',
-								paddingLeft: 36,
-								paddingRight: 34
-							}}
+						<GetCode codeURL="https://github.com/DavidWallJ/davidjwall-profile/blob/master/client/src/components/common/IconHalfPanel.js" />
+
+						<InfoModal
+							title="This project is built with the future in mind."
+							description="Both the visible front-end components and the back-end database can easily be modified and/or expanded on. Commonly used front-end components are reusable and easily modified.  Click on the >_ icon to view an example of a reusable front-end component."
 						/>
-						<InfoModal title="Sup With Care" description="Not much." />
 					</div>
 				</div>
 			</Card>

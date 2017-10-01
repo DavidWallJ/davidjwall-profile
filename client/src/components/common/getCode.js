@@ -13,7 +13,8 @@ class GetCode extends Component {
 						display: 'inline-block',
 						color: '#ff4081',
 						paddingLeft: 36,
-						paddingRight: 34
+						paddingRight: 34,
+						fontSize: 'initial'
 					}}
 				/>
 			</a>

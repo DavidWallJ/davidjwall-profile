@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { List, ListItem } from 'material-ui/List';
 import projects from './projectsData';
 import ShadowScrollbars from './ShadowScrollbars';
+import FontIcon from 'material-ui/FontIcon';
 
 // you are here.  you still need to add some of your graphql projects
 class ProjectsLinkList extends Component {
@@ -23,18 +24,38 @@ class ProjectsLinkList extends Component {
 				<List>
 					{results.map((result, i) => {
 						return (
-							<ListItem innerDivStyle={{ padding: 1, marginLeft: 11 }} key={i}>
-								<a href={result.link}>
+							<ListItem
+								innerDivStyle={{
+									padding: 1,
+									marginLeft: 11
+								}}
+								key={i}
+							>
+								<a href={result.link} target="_blank">
 									<p
 										style={{
 											color: this.props.textColor,
 											fontSize: '1em',
 											fontWeight: 300,
-											lineHeight: 0
+											lineHeight: 0,
+											display: 'inline-block'
 										}}
 									>
 										{result.name}
 									</p>
+									<FontIcon
+										style={{
+											color: this.props.textColor,
+											fontSize: 14,
+											display: 'inline-block',
+											paddingLeft: 6,
+											position: 'absolute',
+											bottom: 10
+										}}
+										className="material-icons"
+									>
+										{result.icon}
+									</FontIcon>
 								</a>
 							</ListItem>
 						);
