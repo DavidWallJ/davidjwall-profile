@@ -6,6 +6,7 @@ import { Card } from 'material-ui/Card';
 
 import IconHalfPanel from './common/IconHalfPanel';
 import InfoModal from './common/InfoModal';
+import GetCode from './common/GetCode';
 
 class Frontend extends Component {
 	render() {
@@ -55,7 +56,11 @@ class Frontend extends Component {
 							application seamlessly.
 						</p>
 						<div style={{ position: 'absolute', bottom: 0, right: 0 }}>
-							<InfoModal title="Sup Front End" description="Not much." />
+							<GetCode codeURL="https://github.com/DavidWallJ/davidjwall-profile/tree/master/client/src/components" />
+							<InfoModal
+								title="This website is responsive, reactive, and interactive."
+								description="...thanks to the utilization of just a few currently popular front-end libraries and frameworks.  The most notable include: React, Redux, Redux Form, Axios, and Material UI."
+							/>
 						</div>
 					</div>
 				</div>

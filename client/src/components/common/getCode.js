@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import FontAwesome from 'react-fontawesome';
 
-class Testing extends Component {
+class GetCode extends Component {
 	render() {
 		return (
-			<a href="https://www.google.com" target="_blank">
+			<a href={this.props.codeURL} target="_blank">
 				<FontAwesome
 					name="terminal"
 					size="1x"
 					style={{
 						textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)',
 						display: 'inline-block',
-						color: 'white',
-						paddingLeft: 36
+						color: '#ff4081',
+						paddingLeft: 36,
+						paddingRight: 34
 					}}
 				/>
 			</a>
@@ -20,4 +21,4 @@ class Testing extends Component {
 	}
 }
 
-export default Testing;
+export default GetCode;

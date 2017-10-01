@@ -29,12 +29,12 @@ class InfoModal extends Component {
 			<div style={{ display: 'inline-block' }}>
 				<RaisedButton
 					onClick={this.handleOpen}
-					labelStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.08)' }}
 					style={{
 						boxShadow: 'none',
-						color: textColor
+						color: textColor,
+						backgroundColor: 'transparent',
+						fontSize: 'initial'
 					}}
-					backgroundColor="rgba(255, 255, 255, 0.08)"
 					secondary={true}
 				>
 					<i className="fa fa-info" aria-hidden="true" />

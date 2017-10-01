@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import styles from './componentsStyles';
 import { connect } from 'react-redux';
 import muiThemeable from 'material-ui/styles/muiThemeable';
+import FontAwesome from 'react-fontawesome';
 import { Card } from 'material-ui/Card';
 
 import InfoModal from './common/InfoModal';
 import IconHalfPanel from './common/IconHalfPanel';
+import GetCode from './common/GetCode';
 
 class WithCare extends Component {
 	render() {
@@ -43,6 +45,17 @@ class WithCare extends Component {
 						</p>
 					</div>
 					<div style={{ position: 'absolute', bottom: 0, right: 0 }}>
+						<FontAwesome
+							name="terminal"
+							size="1x"
+							style={{
+								textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)',
+								display: 'inline-block',
+								color: '#ff4081',
+								paddingLeft: 36,
+								paddingRight: 34
+							}}
+						/>
 						<InfoModal title="Sup With Care" description="Not much." />
 					</div>
 				</div>

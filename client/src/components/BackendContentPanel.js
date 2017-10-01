@@ -3,6 +3,7 @@ import styles from './componentsStyles';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 
 import InfoModal from './common/InfoModal';
+import GetCode from './common/GetCode';
 
 class backendContentPanel extends Component {
 	render() {
@@ -26,11 +27,14 @@ class backendContentPanel extends Component {
 				</p>
 				<p>
 					I'm proficient in{' '}
-					<span className="highlight">server-side programming </span> with{' '}
-					<span className="highlight">Node.js</span>, using back-end frameworks
-					like <span className="highlight">Express.js</span> to build
-					server-side software, and able to integrate{' '}
-					<span className="highlight">APIs</span>.
+					<span className="highlight">server-side programming </span> using{' '}
+					<span className="highlight">Node.js</span>. I know how to work with
+					back-end frameworks like <span className="highlight">
+						Express.js
+					</span>{' '}
+					to build server-side software. I'm also able to integrate{' '}
+					<span className="highlight">third-party APIs</span> into your existing
+					project .
 				</p>
 				<p>
 					Most importantly, I'm able to build{' '}
@@ -41,6 +45,7 @@ class backendContentPanel extends Component {
 				</p>
 				<div style={{ position: 'absolute', bottom: 0, left: 0 }}>
 					<InfoModal title="Sup Back End" description="Not much." />
+					<GetCode codeURL="https://github.com/DavidWallJ/davidjwall-profile" />
 				</div>
 			</div>
 		);

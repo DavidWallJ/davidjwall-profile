@@ -7,6 +7,8 @@ import { Card } from 'material-ui/Card';
 import TechnologiesForm from './ProjectsTechnologiesForm';
 import LinkList from './ProjectsLinkList';
 import IconFullPanel from './common/IconFullPanel';
+import InfoModal from './common/InfoModal';
+import GetCode from './common/GetCode';
 
 class Projects extends Component {
 	render() {
@@ -18,7 +20,8 @@ class Projects extends Component {
 				className="row"
 				style={{
 					...styles.fullPanelCard,
-					backgroundColor: altColor
+					backgroundColor: altColor,
+					position: 'relative'
 				}}
 			>
 				<IconFullPanel
@@ -56,6 +59,13 @@ class Projects extends Component {
 				>
 					<h5>Links</h5>
 					<LinkList color={color} textColor={textColor} />
+				</div>
+				<div style={{ position: 'absolute', bottom: 0, left: 0 }}>
+					<InfoModal
+						title="This website is responsive, reactive, and interactive."
+						description="...thanks to the utilization of just a few currently popular front-end libraries and frameworks.  The most notable include: React, Redux, Redux Form, Axios, and Material UI."
+					/>
+					<GetCode codeURL="https://github.com/DavidWallJ/davidjwall-profile/tree/master/client/src/components" />
 				</div>
 			</Card>
 		);

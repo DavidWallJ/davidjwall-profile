@@ -7,7 +7,7 @@ import IconButton from 'material-ui/IconButton';
 import Typist from 'react-typist';
 
 import InfoModal from './common/InfoModal';
-import Testing from './common/getCode';
+import GetCode from './common/GetCode';
 
 class Welcome extends Component {
 	constructor(props) {
@@ -96,11 +96,11 @@ transformGrow"
 				</div>
 				<InfoModal
 					title="My most recent project is this site."
-					description="This site showcases much of what I have learned as a web developer.  Aside from the libraries utilized, this website is entirely self written. Getting you the user authenticated and to this point by way of Google, Linkedin or Facebook has already required the use of many of todays most innovative front-end and back-end web technologies.  To see the code for any particular component click the >_ icon of the corresponding section.
+					description="This site showcases much of what of what I am capable of as a full-stack web developer.  Aside from the libraries utilized, this website is entirely self-written. Getting you the user authenticated and to this point by way of Google, Linkedin or Facebook has already required the use of many of todays most innovative front-end and back-end web technologies.  To see the relevant code for any particular component click the  >_  icon of the corresponding section.  To see the full github repository for this project click the  >_  icon for this section.
 					"
 				/>
 
-				<Testing />
+				<GetCode codeURL="https://github.com/DavidWallJ/davidjwall-profile" />
 			</div>
 		);
 	}
