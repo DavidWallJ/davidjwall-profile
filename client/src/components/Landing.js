@@ -51,13 +51,12 @@ class Landing extends Component {
 			// set background image var for welcome screen
 			switch (theme) {
 				case 'darkTheme':
-					console.log('this ran');
 					this.props.setBackgroundURL(
 						'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/caspar-rubin-224229.jpg'
 					);
 					break;
 				default:
-					return;
+					break;
 			}
 
 			this.props.setTheme({ theme });
