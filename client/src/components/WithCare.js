@@ -49,7 +49,7 @@ class WithCare extends Component {
 
 						<InfoModal
 							title="This project is built with the future in mind."
-							description="Both the visible front-end components and the back-end database can easily be modified and/or expanded on. Commonly used front-end components are reusable and easily modified.  Click on the >_ icon to view an example of a reusable front-end component."
+							description="Both the visible front-end components and the back-end database can easily be modified and/or expanded on. Instead of repeating code, commonly used components on the front-end are reusable and easily duplicated and then modified to meet each sections requirements.  Click on the >_ icon to view an example of a reusable front-end component."
 						/>
 					</div>
 				</div>

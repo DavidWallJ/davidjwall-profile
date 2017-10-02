@@ -29,8 +29,6 @@ const TechnologiesForm = props => {
 			onSubmit={handleSubmit}
 			style={{
 				paddingBottom: 50
-				// display: 'flex'
-				// flexDirection: 'column'
 			}}
 		>
 			<div className="col s12 m6">

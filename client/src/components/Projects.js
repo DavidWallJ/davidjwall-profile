@@ -63,10 +63,10 @@ class Projects extends Component {
 				</div>
 				<div style={{ position: 'absolute', bottom: 0, left: 0 }}>
 					<InfoModal
-						title="This website is responsive, reactive, and interactive."
-						description="...thanks to the utilization of just a few currently popular front-end libraries and frameworks.  The most notable include: React, Redux, Redux Form, Axios, and Material UI."
+						title="Dynamic content is made easy when using React with Redux."
+						description="This component is a basic demonstration of how React with Redux allows for nearly instantanious rerendering without having to reload the page. Click on the >_ icon to view the code for this section.  See how the use of Redux state allows for instantanious changes to occur in the 'Links' list component of the 'Projects' section when checkboxes are selected in the 'Technologies' form component."
 					/>
-					<GetCode codeURL="https://github.com/DavidWallJ/davidjwall-profile/tree/master/client/src/components" />
+					<GetCode codeURL="https://github.com/DavidWallJ/davidjwall-profile/blob/master/client/src/components/Projects.js" />
 				</div>
 			</Card>
 		);
