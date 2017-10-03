@@ -71,7 +71,8 @@ h2 {
 }
 
 .fa-info,
-.fa-terminal {
+.fa-terminal,
+.fa-address-card-o {
 	display: inline-block;
 	-moz-animation: pulse 4s infinite linear;
 	-o-animation: pulse 4s infinite linear;
@@ -132,5 +133,12 @@ h2 {
 	}
 	100% {
 		opacity: 1;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	p,
+	a {
+		font-size: 12px;
 	}
 }

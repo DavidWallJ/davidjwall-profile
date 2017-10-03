@@ -8,6 +8,8 @@ import FontAwesome from 'react-fontawesome';
 
 import IconFullPanel from './common/IconFullPanel';
 import ContactPanel from './common/contactPanel';
+import InfoModal from './common/InfoModal';
+import GetCode from './common/GetCode';
 
 class Contact extends Component {
 	nameRenderHelper(color) {
@@ -42,11 +44,28 @@ class Contact extends Component {
 		}
 	}
 
+	renderInfoModal() {
+		const description = `No need to leave your contact information.  The following email address along with the setup options you choose at login have already been stored in our database. ${this
+			.props.email}.`;
+		if (!this.props.anonymous.auth) {
+			return (
+				<InfoModal
+					title="Thank you for logging in!"
+					description={description}
+					iconName="fa fa-address-card-o"
+				/>
+			);
+		}
+	}
+
 	render() {
 		const { color } = this.props.muiTheme.appBar;
 
 		return (
-			<Card className="row" style={styles.fullPanelCard}>
+			<Card
+				className="row"
+				style={{ ...styles.fullPanelCard, position: 'relative' }}
+			>
 				<IconFullPanel iconName="face" panelTitle="Contact" color={color} />
 
 				<div className="row textCenter" style={{ color: color, fontSize: 20 }}>
@@ -87,12 +106,15 @@ class Contact extends Component {
 						</a>
 					</div>
 				</div>
+				<div style={{ position: 'absolute', bottom: 0, left: 0 }}>
+					{this.renderInfoModal()}
+				</div>
 			</Card>
 		);
 	}
 }
 
-function mapStateToProps({ auth }) {
-	return { auth };
+function mapStateToProps({ auth, anonymous }) {
+	return { auth, anonymous };
 }
 export default connect(mapStateToProps, actions)(muiThemeable()(Contact));

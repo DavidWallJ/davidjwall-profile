@@ -50,16 +50,17 @@ class Frontend extends Component {
 							<span className="highlight">jQuery</span>.
 						</p>
 						<p>
-							I can add data from{' '}
+							I can seamlessly add data from{' '}
 							<span className="highlight">RESTful web services </span> and{' '}
 							<span className="highlight">APIs </span> into your website or
-							application seamlessly.
+							application.
 						</p>
 						<div style={{ position: 'absolute', bottom: 0, right: 0 }}>
 							<GetCode codeURL="https://github.com/DavidWallJ/davidjwall-profile/tree/master/client/src/components" />
 							<InfoModal
 								title="This website is responsive, reactive, and interactive thanks to the utilization of just a few currently popular front-end libraries and frameworks."
 								description="The React components contained in this project are easily modified, repositioned and often entirely reusable. Click on the >_ icon to view the code for all of the components contained in this project."
+								iconName="fa fa-info"
 							/>
 						</div>
 					</div>

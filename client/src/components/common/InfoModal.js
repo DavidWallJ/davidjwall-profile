@@ -37,7 +37,7 @@ class InfoModal extends Component {
 					}}
 					secondary={true}
 				>
-					<i className="fa fa-info" aria-hidden="true" />
+					<i className={this.props.iconName} aria-hidden="true" />
 				</RaisedButton>
 				<Dialog
 					title={this.props.title}

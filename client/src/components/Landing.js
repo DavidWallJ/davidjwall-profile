@@ -80,7 +80,10 @@ class Landing extends Component {
 				options,
 				linkedinDisplayName,
 				googleDisplayName,
-				facebookDisplayName
+				facebookDisplayName,
+				linkedinEmail,
+				googleEmail,
+				facebookEmail
 			} = this.props.auth;
 
 			const name =
@@ -88,6 +91,8 @@ class Landing extends Component {
 				googleDisplayName ||
 				facebookDisplayName ||
 				'Anonymous';
+
+			const email = linkedinEmail || googleEmail || facebookEmail || 'unknown';
 
 			switch (options.length > 0 || this.props.anonymous.auth === true) {
 				case true:
@@ -107,6 +112,7 @@ class Landing extends Component {
 							<Contact
 								ref="contact"
 								name={name}
+								email={email}
 								genre={this.props.audioOptions.genre}
 							/>
 							<Footer scrollCallback={this.scrollCallbackHandler} />

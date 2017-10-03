@@ -28,15 +28,18 @@ class WithCare extends Component {
 					>
 						<h5>In addition to all this... </h5>
 						<p>
-							I'm experienced with{' '}
-							<span className="highlight">testing frameworks </span> like{' '}
+							Projects developed with the future in mind. On the front-end,
+							reusable, <span className="highlight">modular code </span> and on
+							the back-end
+							<span className="highlight"> testing frameworks </span> like{' '}
 							<span className="highlight">Mocha </span> and{' '}
 							<span className="highlight">Chai</span>. The integration of which
 							help to ensure that your project not only behaves exactly as you
-							would like it to now but also in the future.
+							would like it to now but also as you would like it to in the
+							future.
 						</p>
 						<p>
-							I know my way around{' '}
+							I also know my way around{' '}
 							<span className="highlight">collaboration</span> and version
 							control software like <span className="highlight">Git </span> and{' '}
 							<span className="highlight">GitHub </span> which allow for
@@ -49,7 +52,8 @@ class WithCare extends Component {
 
 						<InfoModal
 							title="This project is built with the future in mind."
-							description="Both the visible front-end components and the back-end database can easily be modified and/or expanded on. Instead of repeating code, commonly used components on the front-end are reusable and easily duplicated and then modified to meet each sections requirements.  Click on the >_ icon to view an example of a reusable front-end component."
+							description="Both the visible front-end components and the back-end database can easily be modified and/or expanded on. Future content can be added quickly by reusing code that has been designed to be modular. Click on the >_ icon to view an example of a reusable front-end component."
+							iconName="fa fa-info"
 						/>
 					</div>
 				</div>
