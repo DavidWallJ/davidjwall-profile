@@ -8,7 +8,7 @@ import { Card } from 'material-ui/Card';
 import certificates from './educationData';
 import IconFullPanel from './common/IconFullPanel';
 import InfoModal from './common/InfoModal';
-import GetCode from './common/GetCode';
+import GetCode from './common/getCode';
 
 class Education extends Component {
 	render() {
