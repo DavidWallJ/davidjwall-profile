@@ -63,7 +63,6 @@ class Login extends Component {
 							onClick={this.anonymousHandler.bind(this)}
 							primary={true}
 							style={styles.loginButtonStyle}
-							buttonStyle={{ top: 1 }}
 							icon={
 								<FontAwesome
 									name="user-secret"

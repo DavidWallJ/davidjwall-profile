@@ -46,7 +46,7 @@ class backendContentPanel extends Component {
 				<div style={{ position: 'absolute', bottom: 0, left: 0 }}>
 					<InfoModal
 						title="This website is powered by a handful of today's most minimal and flexible Node.js frameworks."
-						description="The back-end of this project includes an Express powered web server hosted by Heroku, a Mongoose managed database hosted by mLabs, and flexible, modular authentication thanks to Passport authentication middleware. Click the >_ icon to to see how this website uses Passport 'strategies' to handle authentication."
+						description="The back-end of this project includes an Express powered web server hosted by Heroku, a Mongoose managed database hosted by mLabs, and flexible, modular authentication thanks to Passport authentication middleware. Click the >_ icon to see how this website uses Passport 'strategies' to handle authentication."
 						iconName="fa fa-info"
 					/>
 					<GetCode codeURL="https://github.com/DavidWallJ/davidjwall-profile/blob/master/services/passport.js" />

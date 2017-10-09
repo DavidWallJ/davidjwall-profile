@@ -45,7 +45,7 @@ class Contact extends Component {
 	}
 
 	renderInfoModal() {
-		const description = `No need to leave your contact information.  The following email address along with the setup options you choose at login have already been stored in our database. ${this
+		const description = `No need to leave your contact information.  The following email address along with the setup options you choose at login have already been stored in our database.  Your email address: ${this
 			.props.email}.`;
 		if (!this.props.anonymous.auth) {
 			return (

@@ -137,8 +137,27 @@ h2 {
 }
 
 @media only screen and (max-width: 500px) {
-	p,
+	.linkListName,
 	a {
-		font-size: 12px;
+		font-size: 12px !important;
+	}
+
+	h3 {
+		font-size: 18px !important;
+		line-height: 24px !important;
+	}
+
+	.optionsContainer {
+		padding: 2%;
+	}
+
+	.legendIconCode {
+		left: 235px !important;
+		bottom: 0 !important;
+	}
+
+	.legendIconPlay {
+		left: 290px !important;
+		bottom: 0 !important;
 	}
 }

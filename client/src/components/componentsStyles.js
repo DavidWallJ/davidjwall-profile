@@ -5,6 +5,11 @@ export default {
 		paddingTop: '6%',
 		paddingBottom: '6%'
 	},
+
+	optionsContainerPadding: {
+		padding: '2%'
+	},
+
 	// Login and options cards
 	loginCardStyle: {
 		color: '#aaa',
@@ -18,7 +23,7 @@ export default {
 		position: 'absolute',
 		top: '50%',
 		transform: 'translateY(-50%)',
-		width: '93%'
+		width: '100%'
 	},
 	loginButtonStyle: {
 		marginBottom: 12,
@@ -26,6 +31,11 @@ export default {
 		height: 50,
 		display: 'inline-block'
 	},
+	optionsButtonStyle: {
+		paddingTop: '9%',
+		paddingRight: '10%'
+	},
+
 	//
 	halfPanelCard: {
 		margin: 0
@@ -33,7 +43,8 @@ export default {
 	contentContainer: {
 		padding: '5%',
 		height: '58vh',
-		fontSize: '1.2em'
+		fontSize: '1.2em',
+		minHeight: 600
 	},
 	contactIconData: {
 		fontSize: '1.3em'

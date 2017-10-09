@@ -20,43 +20,73 @@ class ProjectsLinkList extends Component {
 		});
 
 		return (
-			<ShadowScrollbars style={{ height: 380, width: '90%' }}>
+			<ShadowScrollbars style={{ height: 380, width: '98%', fontSize: 14 }}>
 				<List>
 					{results.map((result, i) => {
+						const demoRenderHelper = function(props) {
+							if (result.link) {
+								return (
+									<a href={result.link} target="_blank">
+										<FontIcon
+											style={{
+												color: props.textColor,
+												display: 'inline-block',
+												position: 'absolute',
+												bottom: 5,
+												left: 375
+											}}
+											className="material-icons legendIconPlay"
+										>
+											play_arrow
+										</FontIcon>
+									</a>
+								);
+							}
+						};
+
+						const codeRenderHelper = function(props) {
+							if (result.githubLink) {
+								return (
+									<a href={result.githubLink} target="_blank">
+										<FontIcon
+											style={{
+												color: props.textColor,
+												display: 'inline-block',
+												position: 'absolute',
+												bottom: 5,
+												left: 320
+											}}
+											className="material-icons legendIconCode"
+										>
+											code
+										</FontIcon>
+									</a>
+								);
+							}
+						};
 						return (
 							<ListItem
 								innerDivStyle={{
 									padding: 1,
-									marginLeft: 11
+									marginLeft: 11,
+									cursor: 'default'
 								}}
 								key={i}
 							>
-								<a href={result.link} target="_blank">
-									<p
-										style={{
-											color: this.props.textColor,
-											fontSize: '1em',
-											fontWeight: 300,
-											lineHeight: 0,
-											display: 'inline-block'
-										}}
-									>
-										{result.name}
-									</p>
-									<FontIcon
-										style={{
-											color: this.props.textColor,
-											fontSize: 14,
-											display: 'inline-block',
-											paddingLeft: 6,
-											position: 'absolute',
-											bottom: 10
-										}}
-										className="material-icons"
-									>
-										{result.icon}
-									</FontIcon>
-								</a>
+								<p
+									style={{
+										color: this.props.textColor,
+										fontSize: '1em',
+										fontWeight: 300,
+										lineHeight: 0,
+										display: 'inline-block'
+									}}
+									className="linkListName"
+								>
+									{result.name}
+								</p>
+								{codeRenderHelper(this.props)}
+								{demoRenderHelper(this.props)}
 							</ListItem>
 						);
 					})}

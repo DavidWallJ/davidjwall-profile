@@ -80,7 +80,7 @@ class Projects extends Component {
 								color: this.props.textColor,
 								fontSize: 14,
 								display: 'inline-block',
-								paddingLeft: 26,
+								paddingLeft: 126,
 								bottom: -3
 							}}
 							className="material-icons"
@@ -93,7 +93,7 @@ class Projects extends Component {
 				<div style={{ position: 'absolute', bottom: 0, left: 0 }}>
 					<InfoModal
 						title="Dynamic content is made easy when using React with Redux."
-						description="This component is a basic demonstration of how React with Redux allows for nearly instantanious rerendering without having to reload the page. Click on the >_ icon to view the code for this section.  See how the use of Redux state allows for instantanious changes to occur in the 'Links' list component of the 'Projects' section when checkboxes are selected in the 'Technologies' form component."
+						description="This component is a basic demonstration of how React with Redux allows for nearly instantaneous rerendering without having to reload the page. Click on the >_ icon to view the code for this section.  See how the use of Redux state allows for instantaneous changes to occur in the 'Links' list component of the 'Projects' section when checkboxes are selected in the 'Technologies' form component."
 						iconName="fa fa-info"
 					/>
 					<GetCode codeURL="https://github.com/DavidWallJ/davidjwall-profile/blob/master/client/src/components/Projects.js" />

@@ -16,20 +16,10 @@ const OptionsFormFirstPage = props => {
 	};
 
 	return (
-		<div className="row">
-			<Card
-				className="col s8 m6 offset-s2 offset-m3"
-				style={styles.loginCardStyle}
-			>
-				<div
-					style={{
-						...styles.loginCardContainerStyle
-					}}
-				>
-					<div
-						className="col m12 l4"
-						style={{ paddingTop: 6, paddingLeft: 18 }}
-					>
+		<div className="row" style={styles.optionsContainerPadding}>
+			<Card className="col s12 m6 offset-m3" style={styles.loginCardStyle}>
+				<div style={styles.loginCardContainerStyle}>
+					<div className="col m12 l4">
 						<h4>Options</h4>
 						<p style={{ paddingLeft: 3 }}>Language</p>
 					</div>
@@ -46,26 +36,22 @@ const OptionsFormFirstPage = props => {
 									/>
 								</Field>
 							</div>
-							<div className="col s7 m7" style={{ paddingTop: '9%' }}>
-								<div className="col s12 ">
-									<RaisedButton
-										type="submit"
-										primary={true}
-										fullWidth={true}
-										style={buttonStyle}
-										icon={
-											<i className="material-icons">keyboard_arrow_right</i>
-										}
-									/>
-									<RaisedButton
-										href="/api/logout"
-										type="button"
-										secondary={true}
-										fullWidth={true}
-										style={buttonStyle}
-										icon={<i className="material-icons">keyboard_arrow_left</i>}
-									/>
-								</div>
+							<div className="col s7 m7" style={styles.optionsButtonStyle}>
+								<RaisedButton
+									type="submit"
+									primary={true}
+									fullWidth={true}
+									style={buttonStyle}
+									icon={<i className="material-icons">keyboard_arrow_right</i>}
+								/>
+								<RaisedButton
+									href="/api/logout"
+									type="button"
+									secondary={true}
+									fullWidth={true}
+									style={buttonStyle}
+									icon={<i className="material-icons">keyboard_arrow_left</i>}
+								/>
 							</div>
 						</form>
 					</div>
@@ -76,9 +62,9 @@ const OptionsFormFirstPage = props => {
 						</CardActions>
 					</div>
 				</div>
-				<p style={{ textAlign: 'center', fontSize: 10 }}>
+				{/* <p style={{ textAlign: 'center', fontSize: 10 }}>
 					*Chinese language option coming soon.
-				</p>
+				</p> */}
 			</Card>
 		</div>
 	);

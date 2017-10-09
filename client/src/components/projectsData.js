@@ -17,12 +17,12 @@ export default [
 			'nodejs',
 			'featured'
 		],
-		link: 'http://herokuexample.com',
+		link: 'https://davidjwall.herokuapp.com/',
 		githubLink: 'https://github.com/DavidWallJ/davidjwall-profile',
 		icon: 'play_arrow'
 	},
 	{
-		name: 'React Fullstack Feedback Collection App',
+		name: 'Full-stack Feedback Collection App',
 		technologies: [
 			'html',
 			'css',
@@ -39,11 +39,12 @@ export default [
 			'nodejs',
 			'featured'
 		],
+		link: 'https://react-fullstack-emailer.herokuapp.com/',
 		githubLink: 'https://github.com/DavidWallJ/udemy-node-react-fullstack',
-		icon: 'code'
+		icon: 'play_arrow'
 	},
 	{
-		name: 'React Native Employee Manager App',
+		name: 'Mobile Employee Manager App',
 		technologies: [
 			'html',
 			'css',
@@ -59,7 +60,7 @@ export default [
 		icon: 'code'
 	},
 	{
-		name: 'Music Albums App',
+		name: 'Mobile Music Albums App',
 		technologies: [
 			'html',
 			'css',
@@ -74,7 +75,7 @@ export default [
 		icon: 'code'
 	},
 	{
-		name: 'React Authentication Service',
+		name: 'Authentication Service',
 		technologies: [
 			'html',
 			'css',
@@ -94,7 +95,7 @@ export default [
 		icon: 'code'
 	},
 	{
-		name: 'React Song Writing App',
+		name: 'Song Writing App',
 		technologies: [
 			'html',
 			'css',
@@ -125,7 +126,7 @@ export default [
 		icon: 'code'
 	},
 	{
-		name: 'React Fullstack Authentication App (Frontend)',
+		name: 'Fullstack Authentication App (Frontend)',
 		technologies: [
 			'html',
 			'css',
@@ -141,7 +142,7 @@ export default [
 		icon: 'code'
 	},
 	{
-		name: 'React Fullstack Authentication App (Backend)',
+		name: 'Fullstack Authentication App (Backend)',
 		technologies: [
 			'html',
 			'css',
@@ -159,7 +160,7 @@ export default [
 		icon: 'code'
 	},
 	{
-		name: 'React Weather App',
+		name: 'Line Graph Weather App',
 		technologies: [
 			'html',
 			'css',
@@ -176,7 +177,7 @@ export default [
 		icon: 'code'
 	},
 	{
-		name: 'React/Redux Todo App',
+		name: 'Todo App',
 		technologies: [
 			'html',
 			'css',
@@ -195,7 +196,7 @@ export default [
 		icon: 'play_arrow'
 	},
 	{
-		name: 'React Timer App',
+		name: 'Timer App',
 		technologies: [
 			'html',
 			'css',
@@ -212,7 +213,7 @@ export default [
 		icon: 'play_arrow'
 	},
 	{
-		name: 'React Weather App',
+		name: 'Simple Weather App',
 		technologies: [
 			'html',
 			'css',
@@ -232,7 +233,7 @@ export default [
 	{
 		name: 'Random Quote Generator',
 		technologies: ['html', 'css', 'javascript', 'jquery'],
-		link: 'https://codepen.io/DavidJWall/pen/Npvqjv'
+		link: 'https://codepen.io/DavidJWall/full/Npvqjv/'
 	},
 	{
 		name: 'File Metadata Microservice',
@@ -293,7 +294,7 @@ export default [
 	},
 	{
 		name: 'Simon Game 2.0',
-		technologies: ['html', 'css', 'javascript', 'jquery'],
+		technologies: ['html', 'css', 'javascript', 'jquery', 'featured'],
 		link: 'https://codepen.io/DavidJWall/pen/aWOmKd',
 		icon: 'play_arrow'
 	},
@@ -317,8 +318,8 @@ export default [
 	},
 	{
 		name: 'Tic Tac Toe for Cheaters',
-		technologies: ['html', 'css', 'javascript', 'jquery'],
-		link: 'https://codepen.io/DavidJWall/pen/VbwNGQ?editors=1010',
+		technologies: ['html', 'css', 'javascript', 'jquery', 'featured'],
+		link: 'https://codepen.io/DavidJWall/full/VbwNGQ/',
 		icon: 'play_arrow'
 	}
 ];

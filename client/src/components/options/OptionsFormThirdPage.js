@@ -16,46 +16,40 @@ const OptionsFormFirstPage = props => {
 	};
 
 	return (
-		<div className="row">
-			<Card
-				className="col s8 m6 offset-s2 offset-m3"
-				style={styles.loginCardStyle}
-			>
+		<div className="row" style={styles.optionsContainerPadding}>
+			<Card className="col s12 m6 offset-m3" style={styles.loginCardStyle}>
 				<div style={styles.loginCardContainerStyle}>
 					<div className="col m12 l4">
 						<h4>Options</h4>
-						<p>Genre</p>
+						<p style={{ paddingLeft: 3 }}>Genre</p>
 					</div>
-					<div className="col s12 m12 l8" style={{ paddingTop: 23 }}>
+					<div className="col s12 m12 l8">
 						<form onSubmit={handleSubmit}>
-							<div className="col s12 m5" style={{ paddingBottom: 18 }}>
+							<div className="col s5 m5" style={{ paddingTop: '9%' }}>
 								<Field name="genre" component={renderRadioGroup}>
 									<RadioButton value="dance" label="Dance" />
 									<RadioButton value="rock" label="Rock" />
-									<RadioButton value="hipHop" label="Hip Hop" />
+									<RadioButton value="hipHop" label="HipHop" />
 									<RadioButton value="classical" label="Classical" />
 									<RadioButton value="silence" label="Silence" />
 								</Field>
-								{/* <button type="submit">Submit</button> */}
 							</div>
-							<div className="col s12 m7 center-align">
-								<div className="col s12 ">
-									<RaisedButton
-										type="submit"
-										primary={true}
-										fullWidth={true}
-										style={buttonStyle}
-										icon={<i className="material-icons">done</i>}
-									/>
-									<RaisedButton
-										type="button"
-										secondary={true}
-										fullWidth={true}
-										style={buttonStyle}
-										icon={<i className="material-icons">keyboard_arrow_left</i>}
-										onClick={previousPage}
-									/>
-								</div>
+							<div className="col s7 m7" style={styles.optionsButtonStyle}>
+								<RaisedButton
+									type="submit"
+									primary={true}
+									fullWidth={true}
+									style={buttonStyle}
+									icon={<i className="material-icons">done</i>}
+								/>
+								<RaisedButton
+									type="button"
+									secondary={true}
+									fullWidth={true}
+									style={buttonStyle}
+									icon={<i className="material-icons">keyboard_arrow_left</i>}
+									onClick={previousPage}
+								/>
 							</div>
 						</form>
 					</div>

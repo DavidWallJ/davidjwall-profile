@@ -11,6 +11,7 @@ const technologies = [
 	{ name: 'css', label: 'CSS' },
 	{ name: 'html', label: 'HTML' },
 	{ name: 'mongodb', label: 'MongoDB' },
+	{ name: 'stripe', label: 'Stripe' },
 	{ name: 'heroku', label: 'Heroku' },
 	{ name: 'nodejs', label: 'NodeJS' },
 	{ name: 'passport', label: 'Passport' },
@@ -31,8 +32,8 @@ const TechnologiesForm = props => {
 				paddingBottom: 50
 			}}
 		>
-			<div className="col s12 m6">
-				{technologies.slice(0, 8).map((technology, i) => {
+			<div className="col s6">
+				{technologies.slice(0, 9).map((technology, i) => {
 					return (
 						<Field
 							key={i}
@@ -44,8 +45,8 @@ const TechnologiesForm = props => {
 					);
 				})}
 			</div>
-			<div className="col s12 m6">
-				{technologies.slice(8, 17).map((technology, i) => {
+			<div className="col s6">
+				{technologies.slice(9, 18).map((technology, i) => {
 					return (
 						<Field
 							key={i}

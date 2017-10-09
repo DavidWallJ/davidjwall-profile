@@ -28,22 +28,23 @@ class WithCare extends Component {
 					>
 						<h5>In addition to all this... </h5>
 						<p>
-							Projects developed with the future in mind. On the front-end,
-							reusable, <span className="highlight">modular code </span> and on
+							I'm able to develop projects with the future in mind. On the
+							front-end,{' '}
+							<span className="highlight">reusable, modular code </span> and on
 							the back-end
 							<span className="highlight"> testing frameworks </span> like{' '}
 							<span className="highlight">Mocha </span> and{' '}
-							<span className="highlight">Chai</span>. The integration of which
-							help to ensure that your project not only behaves exactly as you
-							would like it to now but also as you would like it to in the
-							future.
+							<span className="highlight">Chai</span> to ensure that your
+							project not only behaves exactly as you would like it to now but
+							also as you would like it to in the future.
 						</p>
 						<p>
 							I also know my way around{' '}
 							<span className="highlight">collaboration</span> and version
 							control software like <span className="highlight">Git </span> and{' '}
 							<span className="highlight">GitHub </span> which allow for
-							efficient and reliable individual or{' '}
+							efficient and {' '}
+							<span className="highlight">reliable individual</span> or{' '}
 							<span className="highlight">team web development</span>.
 						</p>
 					</div>

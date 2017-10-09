@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './componentsStyles';
 import Sound from 'react-sound';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import scrollToComponent from 'react-scroll-to-component';
@@ -123,7 +124,11 @@ class Landing extends Component {
 			}
 		}
 
-		return <Login />;
+		return (
+			<div style={styles.optionsContainerPadding}>
+				<Login />
+			</div>
+		);
 	}
 
 	renderAudio() {
@@ -132,19 +137,19 @@ class Landing extends Component {
 		switch (this.props.audioOptions.genre) {
 			case 'dance':
 				audioURL =
-					'https://s3-ap-northeast-1.amazonaws.com/profileaudio/dance.mp3';
+					'https://s3-ap-northeast-1.amazonaws.com/profileaudio/danceCROP.mp3';
 				break;
 			case 'rock':
 				audioURL =
-					'https://s3-ap-northeast-1.amazonaws.com/profileaudio/rock.mp3';
+					'https://s3-ap-northeast-1.amazonaws.com/profileaudio/rockCROP.mp3';
 				break;
 			case 'hipHop':
 				audioURL =
-					'https://s3-ap-northeast-1.amazonaws.com/profileaudio/hiphop.mp3';
+					'https://s3-ap-northeast-1.amazonaws.com/profileaudio/hiphopCROP.mp3';
 				break;
 			case 'classical':
 				audioURL =
-					'https://s3-ap-northeast-1.amazonaws.com/profileaudio/classical.mp3';
+					'https://s3-ap-northeast-1.amazonaws.com/profileaudio/classicalCROP.mp3';
 				break;
 			default:
 				audioURL = '';

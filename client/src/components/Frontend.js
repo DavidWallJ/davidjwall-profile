@@ -43,7 +43,7 @@ class Frontend extends Component {
 								functionality
 							</span>{' '}
 							and <span className="highlight">interactivity </span>
-							into your your website or application using{' '}
+							into your website or application using{' '}
 							<span className="highlight">JavaScript </span>based libraries such
 							as
 							<span className="highlight"> React</span> and{' '}

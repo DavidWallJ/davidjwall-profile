@@ -71,7 +71,7 @@ class Education extends Component {
 				</div>
 				<div style={{ position: 'absolute', bottom: 0, right: 0 }}>
 					<InfoModal
-						title="Front-end, back-end and everything inbetween."
+						title="Front-end, back-end and everything in between."
 						description="The certificates displayed in this section represent a portion of the content I've covered on my path to becoming a competent, well rounded full-stack web developer. Web development is an ever changing industry and I look forward to continuing my education as new and better libraries, frameworks, and languages emerge."
 						iconName="fa fa-info"
 					/>

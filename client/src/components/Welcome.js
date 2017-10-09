@@ -96,7 +96,7 @@ transformGrow"
 				</div>
 				<InfoModal
 					title="My most recent project is this site."
-					description="This site showcases much of what a good full-stack developer is capable of. Getting you the user authenticated and to this point by way of Google, Linkedin or Facebook has already required the use of many of today's most innovative front-end and back-end web technologies.  To see the relevant code for any particular component click the  >_  icon of the corresponding section.  To see the full github repository for this project click the  >_  icon for this section.
+					description="This site showcases much of what a good full-stack developer is capable of. Getting you the user authenticated and to this point by way of Google, LinkedIn or Facebook has already required the use of many of today's most innovative front-end and back-end web technologies.  To see the relevant code for any particular component click the  >_  icon of the corresponding section.  To see the full GitHub repository for this project click the  >_  icon for this section.
 					"
 					iconName="fa fa-info"
 				/>
