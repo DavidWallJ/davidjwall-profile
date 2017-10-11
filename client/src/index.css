@@ -47,8 +47,8 @@ h2 {
 	color: #ff80ab;
 }
 
-/*temperatory fix*/
-button {
+/*login anonymousButton fix;*/
+.anonymousButton button {
 	top: 1px;
 }
 

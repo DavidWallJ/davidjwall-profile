@@ -62,6 +62,7 @@ class Login extends Component {
 
 						<RaisedButton
 							onClick={this.anonymousHandler.bind(this)}
+							className="anonymousButton"
 							primary={true}
 							style={styles.loginButtonStyle}
 							icon={
