@@ -7,7 +7,7 @@ import IconButton from 'material-ui/IconButton';
 import Typist from 'react-typist';
 
 import InfoModal from './common/InfoModal';
-import GetCode from './common/GetCode';
+import GetCode from './common/getCode';
 
 class Welcome extends Component {
 	constructor(props) {

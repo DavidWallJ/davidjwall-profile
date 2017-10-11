@@ -22,7 +22,7 @@ export default [
 		icon: 'play_arrow'
 	},
 	{
-		name: 'Full-stack Feedback Collection App',
+		name: 'Full-stack Feedback App (beta)',
 		technologies: [
 			'html',
 			'css',

@@ -6,7 +6,7 @@ import { Card } from 'material-ui/Card';
 
 import IconHalfPanel from './common/IconHalfPanel';
 import InfoModal from './common/InfoModal';
-import GetCode from './common/GetCode';
+import GetCode from './common/getCode';
 
 class Frontend extends Component {
 	render() {
