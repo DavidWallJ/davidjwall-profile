@@ -16,14 +16,14 @@ class Header extends Component {
 		];
 
 		const rightIcons = (
-			<div style={{ marginTop: 0 }}>
+			<div style={{ marginTop: 0 }} className="heading">
 				{iconFields.map((icon, i) => {
 					return (
 						<IconButton key={i}>
 							<FontIcon
 								color={this.props.muiTheme.palette.alternateTextColor}
 								hoverColor="#ff80ab"
-								className="material-icons"
+								className="material-icons headingIcons"
 								onClick={() => this.props.scrollCallback(icon.component)}
 							>
 								{icon.icon}

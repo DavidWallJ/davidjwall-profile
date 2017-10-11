@@ -59,6 +59,7 @@ class Login extends Component {
 								/>
 							);
 						})}
+
 						<RaisedButton
 							onClick={this.anonymousHandler.bind(this)}
 							primary={true}

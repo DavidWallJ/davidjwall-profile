@@ -14,40 +14,39 @@ class WithCare extends Component {
 		const { textColor, color } = this.props.muiTheme.appBar;
 
 		return (
-			<Card className="row" style={{ ...styles.halfPanelCard }}>
-				<div className="col s12" style={{ padding: 0, position: 'relative' }}>
-					<IconHalfPanel iconName="favorite" panelTitle="With Care" />
-					<div
-						className="col s12 m6"
-						style={{
-							...styles.flexCenterColumn,
-							...styles.contentContainer,
-							backgroundColor: textColor,
-							color: color
-						}}
-					>
-						<h5>In addition to all this... </h5>
-						<p>
-							I'm able to develop projects with the future in mind. On the
-							front-end,{' '}
-							<span className="highlight">reusable, modular code </span> and on
-							the back-end
-							<span className="highlight"> testing frameworks </span> like{' '}
-							<span className="highlight">Mocha </span> and{' '}
-							<span className="highlight">Chai</span> to ensure that your
-							project not only behaves exactly as you would like it to now but
-							also as you would like it to in the future.
-						</p>
-						<p>
-							I also know my way around{' '}
-							<span className="highlight">collaboration</span> and version
-							control software like <span className="highlight">Git </span> and{' '}
-							<span className="highlight">GitHub </span> which allow for
-							efficient and {' '}
-							<span className="highlight">reliable individual</span> or{' '}
-							<span className="highlight">team web development</span>.
-						</p>
-					</div>
+			<div className="row" style={{ ...styles.halfPanelCard }}>
+				<IconHalfPanel iconName="favorite" panelTitle="With Care" />
+				<div
+					className="col s12 m6 "
+					style={{
+						...styles.flexCenterColumn,
+						...styles.contentContainer,
+						backgroundColor: textColor,
+						color: color,
+						height: '100%'
+					}}
+				>
+					<h5>In addition to all this... </h5>
+					<p>
+						I'm able to develop projects with the future in mind. On the
+						front-end,{' '}
+						<span className="highlight">reusable, modular code </span> and on
+						the back-end
+						<span className="highlight"> testing frameworks </span> like{' '}
+						<span className="highlight">Mocha </span> and{' '}
+						<span className="highlight">Chai</span> to ensure that your project
+						not only behaves exactly as you would like it to now but also as you
+						would like it to in the future.
+					</p>
+					<p>
+						I also know my way around{' '}
+						<span className="highlight">collaboration</span> and version control
+						software like <span className="highlight">Git </span> and{' '}
+						<span className="highlight">GitHub </span> which allow for efficient
+						and <span className="highlight">reliable individual</span> or{' '}
+						<span className="highlight">team web development</span>.
+					</p>
+
 					<div style={{ position: 'absolute', bottom: 0, right: 0 }}>
 						<GetCode codeURL="https://github.com/DavidWallJ/davidjwall-profile/blob/master/client/src/components/common/IconHalfPanel.js" />
 
@@ -58,7 +57,7 @@ class WithCare extends Component {
 						/>
 					</div>
 				</div>
-			</Card>
+			</div>
 		);
 	}
 }

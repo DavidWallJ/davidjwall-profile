@@ -47,6 +47,11 @@ h2 {
 	color: #ff80ab;
 }
 
+/*temperatory fix*/
+button {
+	top: 1px;
+}
+
 /*icon grow transform for all icons*/
 .transformGrow,
 .fa-home,
@@ -56,7 +61,7 @@ h2 {
 .fa-linkedin-square,
 .fa-facebook-square,
 .fa-google {
-	transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out !important;
 }
 
 .transformGrow:hover,

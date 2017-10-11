@@ -38,11 +38,11 @@ export default {
 
 	//
 	halfPanelCard: {
-		margin: 0
+		margin: 0,
+		position: 'relative'
 	},
 	contentContainer: {
 		padding: '5%',
-		height: '58vh',
 		fontSize: '1.2em',
 		minHeight: 600
 	},

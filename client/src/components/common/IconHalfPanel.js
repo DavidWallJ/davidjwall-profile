@@ -13,9 +13,10 @@ class IconHalfPanel extends Component {
 				className="col s12 m6"
 				style={{
 					...styles.flexCenterColumn,
-					height: '63vh',
 					backgroundColor: color,
-					color: textColor
+					color: textColor,
+					minHeight: 600,
+					height: '100%'
 				}}
 			>
 				<FontIcon
