@@ -53,7 +53,7 @@ class Landing extends Component {
 			switch (theme) {
 				case 'darkTheme':
 					this.props.setBackgroundURL(
-						'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/caspar-rubin-224229.jpg'
+						'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/caspar-rubin-224229-shrunk.jpg'
 					);
 					break;
 				default:
