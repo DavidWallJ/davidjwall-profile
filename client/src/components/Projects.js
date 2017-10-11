@@ -9,7 +9,7 @@ import TechnologiesForm from './ProjectsTechnologiesForm';
 import LinkList from './ProjectsLinkList';
 import IconFullPanel from './common/IconFullPanel';
 import InfoModal from './common/InfoModal';
-import GetCode from './common/getCode';
+import GetCode from './common/GetCode';
 
 class Projects extends Component {
 	render() {

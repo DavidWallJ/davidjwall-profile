@@ -9,7 +9,7 @@ import FontAwesome from 'react-fontawesome';
 import IconFullPanel from './common/IconFullPanel';
 import ContactPanel from './common/contactPanel';
 import InfoModal from './common/InfoModal';
-import GetCode from './common/getCode';
+import GetCode from './common/GetCode';
 
 class Contact extends Component {
 	nameRenderHelper(color) {

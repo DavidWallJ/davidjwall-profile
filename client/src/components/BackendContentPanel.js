@@ -3,7 +3,7 @@ import styles from './componentsStyles';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 
 import InfoModal from './common/InfoModal';
-import GetCode from './common/getCode';
+import GetCode from './common/GetCode';
 
 class backendContentPanel extends Component {
 	render() {

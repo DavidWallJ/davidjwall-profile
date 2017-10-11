@@ -7,7 +7,7 @@ import { Card } from 'material-ui/Card';
 
 import InfoModal from './common/InfoModal';
 import IconHalfPanel from './common/IconHalfPanel';
-import GetCode from './common/getCode';
+import GetCode from './common/GetCode';
 
 class WithCare extends Component {
 	render() {
