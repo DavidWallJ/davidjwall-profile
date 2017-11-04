@@ -15,16 +15,12 @@ class ProjectsLinkList extends Component {
 			technologies = Object.keys(values);
 		}
 
-		console.log('technologies: ', technologies);
-
 		const results = projects.filter(project => {
 			console.log(
 				!technologies.some(s => project.technologies.indexOf(s) === -1)
 			);
 			return !technologies.some(s => project.technologies.indexOf(s) === -1);
 		});
-
-		console.log('results: ', results);
 
 		return (
 			<ShadowScrollbars style={{ height: 380, width: '98%', fontSize: 14 }}>
