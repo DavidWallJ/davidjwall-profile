@@ -9,15 +9,22 @@ import FontIcon from 'material-ui/FontIcon';
 class ProjectsLinkList extends Component {
 	render() {
 		// put form technologies in to an array called results
-		let keys = [];
+		let technologies = [];
 		const { values } = this.props.form.technologies;
 		if (values) {
-			keys = Object.keys(values);
+			technologies = Object.keys(values);
 		}
 
+		console.log('technologies: ', technologies);
+
 		const results = projects.filter(project => {
-			return !keys.some(s => project.technologies.indexOf(s) === -1);
+			console.log(
+				!technologies.some(s => project.technologies.indexOf(s) === -1)
+			);
+			return !technologies.some(s => project.technologies.indexOf(s) === -1);
 		});
+
+		console.log('results: ', results);
 
 		return (
 			<ShadowScrollbars style={{ height: 380, width: '98%', fontSize: 14 }}>

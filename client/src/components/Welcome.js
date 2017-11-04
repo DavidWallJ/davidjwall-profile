@@ -34,7 +34,6 @@ class Welcome extends Component {
 		const theme = this.props.currentTheme.theme;
 		switch (theme) {
 			case 'darkTheme':
-				console.log('this ran');
 				this.props.setBackgroundURL(
 					'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/caspar-rubin-224229.jpg'
 				);
