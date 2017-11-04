@@ -5,7 +5,6 @@ import projects from './projectsData';
 import ShadowScrollbars from './ShadowScrollbars';
 import FontIcon from 'material-ui/FontIcon';
 
-// you are here.  you still need to add some of your graphql projects
 class ProjectsLinkList extends Component {
 	render() {
 		// put form technologies in to an array called results
@@ -16,9 +15,6 @@ class ProjectsLinkList extends Component {
 		}
 
 		const results = projects.filter(project => {
-			console.log(
-				!technologies.some(s => project.technologies.indexOf(s) === -1)
-			);
 			return !technologies.some(s => project.technologies.indexOf(s) === -1);
 		});
 
