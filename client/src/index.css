@@ -61,6 +61,7 @@ h2 {
 .fa-linkedin-square,
 .fa-facebook-square,
 .fa-google {
+	-webkit-transition: all .2s ease-in-out !important;
 	transition: all .2s ease-in-out !important;
 }
 
@@ -72,6 +73,7 @@ h2 {
 .material-icons:hover,
 .fa-facebook-square:hover,
 .fa-google:hover {
+	-webkit-transform: scale(1.2) translateY(-2%);
 	transform: scale(1.2) translateY(-2%);
 }
 
@@ -79,46 +81,11 @@ h2 {
 .fa-terminal,
 .fa-address-card-o {
 	display: inline-block;
-	-moz-animation: pulse 4s infinite linear;
-	-o-animation: pulse 4s infinite linear;
 	-webkit-animation: pulse 4s infinite linear;
 	animation: pulse 4s infinite linear;
 }
 
 @-webkit-keyframes pulse {
-	15% {
-		opacity: 1;
-	}
-	45% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-@-moz-keyframes pulse {
-	15% {
-		opacity: 1;
-	}
-	45% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-@-o-keyframes pulse {
-	15% {
-		opacity: 1;
-	}
-	45% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-@-ms-keyframes pulse {
 	15% {
 		opacity: 1;
 	}
