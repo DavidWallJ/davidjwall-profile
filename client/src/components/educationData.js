@@ -1,5 +1,10 @@
 export default [
 	{
+		name: 'Mastering Test and Behavior Driven Development',
+		URL:
+			'https://s3-ap-northeast-1.amazonaws.com/davidjwall-dev-images/MasterTestandBehaviorDrivenDevelopment.jpg'
+	},
+	{
 		name: 'Advanced React and Redux',
 		URL:
 			'https://s3-ap-northeast-1.amazonaws.com/davidjwall-dev-images/AdvancedReactAndRedux.jpg'

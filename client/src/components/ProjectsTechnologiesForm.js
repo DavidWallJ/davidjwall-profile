@@ -20,6 +20,7 @@ const technologies = [
 	{ name: 'express', label: 'Express' },
 	{ name: 'axios', label: 'Axios' },
 	{ name: 'mocha', label: 'Mocha' },
+	{ name: 'jest', label: 'Jest' },
 	{ name: 'featured', label: 'Featured' }
 ];
 

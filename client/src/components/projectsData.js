@@ -22,6 +22,23 @@ export default [
 		icon: 'play_arrow'
 	},
 	{
+		name: 'Mini Wallet: Fully Jest Tested',
+		technologies: [
+			'html',
+			'css',
+			'javascript',
+			'react',
+			'redux',
+			'jest',
+			'heroku',
+			'nodejs',
+			'featured'
+		],
+		link: 'https://davidjwall-wallet.herokuapp.com/',
+		githubLink: 'https://github.com/DavidWallJ/jest-react-redux-checkloot',
+		icon: 'play_arrow'
+	},
+	{
 		name: 'Full-stack Feedback App (beta)',
 		technologies: [
 			'html',
