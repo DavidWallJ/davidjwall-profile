@@ -5,14 +5,14 @@ export default [
 			'https://s3-ap-northeast-1.amazonaws.com/davidjwall-dev-images/MasterTestandBehaviorDrivenDevelopment.jpg'
 	},
 	{
-		name: 'Advanced React and Redux',
-		URL:
-			'https://s3-ap-northeast-1.amazonaws.com/davidjwall-dev-images/AdvancedReactAndRedux.jpg'
-	},
-	{
 		name: 'Free Code Camp Front End Development Program',
 		URL:
 			'https://s3-ap-northeast-1.amazonaws.com/davidjwall-dev-images/CodeCampFrontEndDevProgram.jpg'
+	},
+	{
+		name: 'Advanced React and Redux',
+		URL:
+			'https://s3-ap-northeast-1.amazonaws.com/davidjwall-dev-images/AdvancedReactAndRedux.jpg'
 	},
 	{
 		name: 'The Complete Developers Guide to MongoDB',
