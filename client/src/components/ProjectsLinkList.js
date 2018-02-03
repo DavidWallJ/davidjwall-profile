@@ -19,7 +19,7 @@ class ProjectsLinkList extends Component {
 		});
 
 		return (
-			<ShadowScrollbars style={{ height: 380, width: '98%', fontSize: 14 }}>
+			<ShadowScrollbars style={{ height: 439, width: '98%', fontSize: 14 }}>
 				<List>
 					{results.map((result, i) => {
 						const demoRenderHelper = function(props) {

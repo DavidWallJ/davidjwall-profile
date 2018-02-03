@@ -9,7 +9,6 @@ import FontAwesome from 'react-fontawesome';
 import IconFullPanel from './common/IconFullPanel';
 import ContactPanel from './common/contactPanel';
 import InfoModal from './common/InfoModal';
-import GetCode from './common/GetCode';
 
 class Contact extends Component {
 	nameRenderHelper(color) {
@@ -45,8 +44,9 @@ class Contact extends Component {
 	}
 
 	renderInfoModal() {
-		const description = `No need to leave your contact information.  The following email address along with the setup options you choose at login have already been stored in our database.  Your email address: ${this
-			.props.email}.`;
+		const description = `No need to leave your contact information.  The following email address along with the setup options you choose at login have already been stored in our database.  Your email address: ${
+			this.props.email
+		}.`;
 		if (!this.props.anonymous.auth) {
 			return (
 				<InfoModal

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import styles from './componentsStyles';
 import { connect } from 'react-redux';
 import muiThemeable from 'material-ui/styles/muiThemeable';
-import { Card } from 'material-ui/Card';
 
 import IconHalfPanel from './common/IconHalfPanel';
 import InfoModal from './common/InfoModal';
@@ -33,9 +32,7 @@ class Frontend extends Component {
 						<span className="highlight">desktop computers</span>.
 					</p>
 					<p>
-						I can incorporate <span className="highlight">
-							functionality
-						</span>{' '}
+						I can incorporate <span className="highlight">functionality</span>{' '}
 						and <span className="highlight">interactivity </span>
 						into your website or application using{' '}
 						<span className="highlight">JavaScript </span>based libraries such

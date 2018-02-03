@@ -18,8 +18,7 @@ export default [
 			'featured'
 		],
 		link: 'https://davidjwall.herokuapp.com/',
-		githubLink: 'https://github.com/DavidWallJ/davidjwall-profile',
-		icon: 'play_arrow'
+		githubLink: 'https://github.com/DavidWallJ/davidjwall-profile'
 	},
 	{
 		name: 'Mini Wallet: Fully Jest Tested',
@@ -35,8 +34,56 @@ export default [
 			'featured'
 		],
 		link: 'https://davidjwall-wallet.herokuapp.com/',
-		githubLink: 'https://github.com/DavidWallJ/jest-react-redux-checkloot',
-		icon: 'play_arrow'
+		githubLink: 'https://github.com/DavidWallJ/jest-react-redux-checkloot'
+	},
+	{
+		name: 'Dcard Todo App',
+		technologies: [
+			'html',
+			'css',
+			'javascript',
+			'react',
+			'redux',
+			'express',
+			'nodejs',
+			'featured'
+		],
+		link: 'https://dcardtodo.herokuapp.com/',
+		githubLink: 'https://github.com/DavidWallJ/dcardtodo'
+	},
+	{
+		name: 'Star Citizen RWD',
+		technologies: ['html', 'css', 'bootstrap', 'featured'],
+		link: 'https://codepen.io/DavidJWall/full/KZOzeE/',
+		githubLink: 'https://codepen.io/DavidJWall/pen/KZOzeE/?editors=1100'
+	},
+	{
+		name: 'Vue.js Cinema',
+		technologies: [
+			'html',
+			'css',
+			'express',
+			'vue',
+			'javascript',
+			'nodejs',
+			'featured'
+		],
+		link: 'https://davidjwall-vue-js-cinema.herokuapp.com',
+		githubLink: 'https://github.com/DavidWallJ/vuejs-cinema'
+	},
+	{
+		name: 'Simple Vue Poster Shop and API',
+		technologies: [
+			'html',
+			'css',
+			'express',
+			'vue',
+			'javascript',
+			'nodejs',
+			'featured'
+		],
+		link: 'https://vue-poster-shop.herokuapp.com/',
+		githubLink: 'https://github.com/DavidWallJ/davidjwall-vue-poster-shop'
 	},
 	{
 		name: 'Full-stack Feedback App (beta)',
@@ -57,8 +104,7 @@ export default [
 			'featured'
 		],
 		link: 'https://react-fullstack-emailer.herokuapp.com/',
-		githubLink: 'https://github.com/DavidWallJ/udemy-node-react-fullstack',
-		icon: 'play_arrow'
+		githubLink: 'https://github.com/DavidWallJ/udemy-node-react-fullstack'
 	},
 	{
 		name: 'Mobile Employee Manager App',
@@ -73,8 +119,7 @@ export default [
 			'nodejs',
 			'featured'
 		],
-		githubLink: 'https://github.com/DavidWallJ/udemy-redux-native-manager',
-		icon: 'code'
+		githubLink: 'https://github.com/DavidWallJ/udemy-redux-native-manager'
 	},
 	{
 		name: 'Mobile Music Albums App',
@@ -88,8 +133,7 @@ export default [
 			'nodejs'
 		],
 		githubLink:
-			'https://github.com/DavidWallJ/udemy-react-native-albums/blob/master/package.json',
-		icon: 'code'
+			'https://github.com/DavidWallJ/udemy-react-native-albums/blob/master/package.json'
 	},
 	{
 		name: 'Authentication Service',
@@ -107,9 +151,7 @@ export default [
 			'mongodb',
 			'featured'
 		],
-		githubLink:
-			'https://github.com/DavidWallJ/udemy-graphql-client-and-backend',
-		icon: 'code'
+		githubLink: 'https://github.com/DavidWallJ/udemy-graphql-client-and-backend'
 	},
 	{
 		name: 'Song Writing App',
@@ -125,8 +167,7 @@ export default [
 			'passport',
 			'nodejs'
 		],
-		githubLink: 'https://github.com/DavidWallJ/udemy-graphql-client',
-		icon: 'code'
+		githubLink: 'https://github.com/DavidWallJ/udemy-graphql-client'
 	},
 	{
 		name: 'Simple Backend GraphQL App',
@@ -139,8 +180,7 @@ export default [
 			'graphql',
 			'nodejs'
 		],
-		githubLink: 'https://github.com/DavidWallJ/udemy-adv-react-auth-clientside',
-		icon: 'code'
+		githubLink: 'https://github.com/DavidWallJ/udemy-adv-react-auth-clientside'
 	},
 	{
 		name: 'Fullstack Authentication App (Frontend)',
@@ -155,8 +195,7 @@ export default [
 			'chai',
 			'nodejs'
 		],
-		githubLink: 'https://github.com/DavidWallJ/udemy-adv-react-auth-clientside',
-		icon: 'code'
+		githubLink: 'https://github.com/DavidWallJ/udemy-adv-react-auth-clientside'
 	},
 	{
 		name: 'Fullstack Authentication App (Backend)',
@@ -173,8 +212,7 @@ export default [
 			'mongodb'
 		],
 		githubLink:
-			'https://github.com/DavidWallJ/udemy-adv-react-auth-pro/blob/master/server/index.js',
-		icon: 'code'
+			'https://github.com/DavidWallJ/udemy-adv-react-auth-pro/blob/master/server/index.js'
 	},
 	{
 		name: 'Line Graph Weather App',
@@ -190,8 +228,7 @@ export default [
 			'nodejs'
 		],
 		githubLink:
-			'https://github.com/DavidWallJ/udemy-modern-react-with-redux-davidjwall/tree/master/weather',
-		icon: 'code'
+			'https://github.com/DavidWallJ/udemy-modern-react-with-redux-davidjwall/tree/master/weather'
 	},
 	{
 		name: 'Todo App',
@@ -208,9 +245,8 @@ export default [
 			'nodejs',
 			'featured'
 		],
-		link: 'http://react-todo-app-davidjwall.herokuapp.com/#/todos?_k=0k3c1g',
-		githubLink: 'https://github.com/DavidWallJ/react-todo-app',
-		icon: 'play_arrow'
+		link: 'http://react-todo-app-davidjwall.herokuapp.com',
+		githubLink: 'https://github.com/DavidWallJ/react-todo-app'
 	},
 	{
 		name: 'Timer App',
@@ -226,8 +262,7 @@ export default [
 			'nodejs'
 		],
 		link: 'http://react-timer-davidjwall.herokuapp.com/#/countdown?_k=7ksrzp',
-		githubLink: 'https://github.com/DavidWallJ/react-timer',
-		icon: 'play_arrow'
+		githubLink: 'https://github.com/DavidWallJ/react-timer'
 	},
 	{
 		name: 'Simple Weather App',
@@ -244,8 +279,7 @@ export default [
 			'featured'
 		],
 		link: 'http://openweathermap-react-api.herokuapp.com/#/?_k=upuizf',
-		githubLink: 'https://github.com/DavidWallJ/react-redux-graph-weather-api',
-		icon: 'play_arrow'
+		githubLink: 'https://github.com/DavidWallJ/react-redux-graph-weather-api'
 	},
 	{
 		name: 'Random Quote Generator',
@@ -263,8 +297,7 @@ export default [
 			'heroku',
 			'jquery'
 		],
-		link: 'https://codepen.io/DavidJWall/pen/BRxgew',
-		icon: 'play_arrow'
+		link: 'https://codepen.io/DavidJWall/pen/BRxgew'
 	},
 	{
 		name: 'URL Shortener Microservice',
@@ -278,8 +311,7 @@ export default [
 			'jquery',
 			'mongodb'
 		],
-		link: 'https://codepen.io/DavidJWall/pen/MmOvQE',
-		icon: 'play_arrow'
+		link: 'https://codepen.io/DavidJWall/pen/MmOvQE'
 	},
 	{
 		name: 'Request Header Parser Microservice',
@@ -292,8 +324,7 @@ export default [
 			'heroku',
 			'jquery'
 		],
-		link: 'https://codepen.io/DavidJWall/pen/ZKyyEe',
-		icon: 'play_arrow'
+		link: 'https://codepen.io/DavidJWall/pen/ZKyyEe'
 	},
 	{
 		name: 'Timestamp Microservice',
@@ -306,37 +337,31 @@ export default [
 			'heroku',
 			'jquery'
 		],
-		link: 'https://codepen.io/DavidJWall/pen/GmEgvm',
-		icon: 'play_arrow'
+		link: 'https://codepen.io/DavidJWall/pen/GmEgvm'
 	},
 	{
 		name: 'Simon Game 2.0',
 		technologies: ['html', 'css', 'javascript', 'jquery', 'featured'],
-		link: 'https://codepen.io/DavidJWall/pen/aWOmKd',
-		icon: 'play_arrow'
+		link: 'https://codepen.io/DavidJWall/pen/aWOmKd'
 	},
 	{
 		name: 'Promodoro Clock',
 		technologies: ['html', 'css', 'javascript', 'jquery'],
-		link: 'https://codepen.io/DavidJWall/pen/YZbZEK',
-		icon: 'play_arrow'
+		link: 'https://codepen.io/DavidJWall/pen/YZbZEK'
 	},
 	{
 		name: 'JavaScript Calculator',
 		technologies: ['html', 'css', 'javascript', 'jquery'],
-		link: 'https://codepen.io/DavidJWall/pen/BWbxBQ',
-		icon: 'play_arrow'
+		link: 'https://codepen.io/DavidJWall/pen/BWbxBQ'
 	},
 	{
 		name: 'Wiki Quicky',
 		technologies: ['html', 'css', 'javascript', 'jquery'],
-		link: 'https://codepen.io/DavidJWall/pen/oZELdK',
-		icon: 'play_arrow'
+		link: 'https://codepen.io/DavidJWall/pen/oZELdK'
 	},
 	{
 		name: 'Tic Tac Toe for Cheaters',
 		technologies: ['html', 'css', 'javascript', 'jquery', 'featured'],
-		link: 'https://codepen.io/DavidJWall/full/VbwNGQ/',
-		icon: 'play_arrow'
+		link: 'https://codepen.io/DavidJWall/full/VbwNGQ/'
 	}
 ];

@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import styles from './componentsStyles';
 import { connect } from 'react-redux';
 import muiThemeable from 'material-ui/styles/muiThemeable';
-import FontAwesome from 'react-fontawesome';
-import { Card } from 'material-ui/Card';
 
 import InfoModal from './common/InfoModal';
 import IconHalfPanel from './common/IconHalfPanel';
@@ -33,18 +31,20 @@ class WithCare extends Component {
 						<span className="highlight">reusable, modular code </span> and on
 						the back-end
 						<span className="highlight"> testing frameworks </span> like{' '}
-						<span className="highlight">Mocha </span> and{' '}
-						<span className="highlight">Chai</span> to ensure that your project
-						not only behaves exactly as you would like it to now but also as you
-						would like it to in the future.
+						<span className="highlight">Mocha </span>
+						<span className="highlight">Chai</span> and{' '}
+						<span className="highlight">Jest </span>
+						to ensure that your project not only behaves exactly as you would
+						like it to now but also as you would like it to in the future.
 					</p>
 					<p>
 						I also know my way around{' '}
 						<span className="highlight">collaboration</span> and version control
 						software like <span className="highlight">Git </span> and{' '}
-						<span className="highlight">GitHub </span> which allow for efficient
-						and <span className="highlight">reliable individual</span> or{' '}
-						<span className="highlight">team web development</span>.
+						<span className="highlight">GitHub </span> which allow for{' '}
+						<span className="highlight"> efficient and reliable</span>{' '}
+						individual or team
+						<span className="highlight"> web development</span>.
 					</p>
 
 					<div style={{ position: 'absolute', bottom: 0, right: 0 }}>

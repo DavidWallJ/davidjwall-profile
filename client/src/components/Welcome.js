@@ -3,7 +3,6 @@ import styles from './componentsStyles';
 import * as actions from '../actions';
 import { connect } from 'react-redux';
 import FontAwesome from 'react-fontawesome';
-import IconButton from 'material-ui/IconButton';
 import Typist from 'react-typist';
 
 import InfoModal from './common/InfoModal';
