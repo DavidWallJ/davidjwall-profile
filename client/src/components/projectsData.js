@@ -52,10 +52,22 @@ export default [
 		githubLink: 'https://github.com/DavidWallJ/dcardtodo'
 	},
 	{
+		name: 'Budget App',
+		technologies: ['html', 'css', 'javascript', 'jQuery', 'featured'],
+		link: 'https://codepen.io/DavidJWall/full/jZqwLy/',
+		githubLink: 'https://codepen.io/DavidJWall/pen/jZqwLy'
+	},
+	{
 		name: 'Star Citizen RWD',
 		technologies: ['html', 'css', 'bootstrap', 'featured'],
 		link: 'https://codepen.io/DavidJWall/full/KZOzeE/',
 		githubLink: 'https://codepen.io/DavidJWall/pen/KZOzeE/?editors=1100'
+	},
+	{
+		name: 'Looplabs RWD',
+		technologies: ['html', 'css', 'bootstrap', 'featured'],
+		link: 'https://codepen.io/DavidJWall/full/RQaVxJ/',
+		githubLink: 'https://codepen.io/DavidJWall/pen/RQaVxJ'
 	},
 	{
 		name: 'Vue.js Cinema',
