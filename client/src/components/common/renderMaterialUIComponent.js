@@ -4,8 +4,8 @@ import Checkbox from 'material-ui/Checkbox';
 
 export const renderRadioGroup = ({
 	input,
-	...rest,
-	meta: { touched, error }
+	meta: { touched, error },
+	...rest
 }) => {
 	return (
 		<RadioButtonGroup

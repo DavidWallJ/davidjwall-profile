@@ -53,13 +53,14 @@ class Welcome extends Component {
 				}}
 			>
 				<div
-					style={{
+					style={{ 
 						...styles.flexCenterColumn,
 						height: 600
 					}}
 				>
-					<h5 style={{ textAlign: 'center' }}>Welcome</h5>
+					<h5 className="welcome" style={{ textAlign: 'center' }}>Welcome Home</h5>
 					<h2
+
 						style={{ color: '#ff80ab', textAlign: 'center', paddingBottom: 10 }}
 					>
 						{this.nameRenderHelper()}

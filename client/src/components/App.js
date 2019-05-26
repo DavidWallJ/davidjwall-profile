@@ -21,7 +21,7 @@ class App extends Component {
 		return (
 			<MuiThemeProvider muiTheme={theme}>
 				<BrowserRouter>
-					<div>
+					<div className="container">
 						<Route exact path="/" component={Landing} />
 					</div>
 				</BrowserRouter>

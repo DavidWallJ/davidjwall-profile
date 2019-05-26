@@ -76,6 +76,7 @@ class Landing extends Component {
 	};
 
 	renderOptions() {
+		// if user is authenticated
 		if (this.props.auth) {
 			const {
 				options,
@@ -94,8 +95,9 @@ class Landing extends Component {
 				'Anonymous';
 
 			const email = linkedinEmail || googleEmail || facebookEmail || 'unknown';
-
+			
 			switch (options.length > 0 || this.props.anonymous.auth === true) {
+				// if anonymous authentication has been selected
 				case true:
 					return (
 						<div>
@@ -119,11 +121,12 @@ class Landing extends Component {
 							<Footer scrollCallback={this.scrollCallbackHandler} />
 						</div>
 					);
+				// if onymous authentication has been selected
 				default:
 					return <OptionsForm onChange={this.onChangeForm.bind(this)} />;
 			}
 		}
-
+		// if user has not been authenticated or choosen an authentication option
 		return (
 			<div style={styles.optionsContainerPadding}>
 				<Login />
