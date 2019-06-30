@@ -1,0 +1,7 @@
+@mixin background-color($arguments...) {
+  @include themify('background-color', $arguments...);
+}
+
+@mixin color($arguments...) {
+  @include themify('color', $arguments...);
+}

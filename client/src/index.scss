@@ -15,6 +15,7 @@
 // @import "sass/components/form";
 // @import "sass/components/popup";
 // @import "sass/components/story";
+@import "sass/components/_login";
 
 // @import "sass/layout/footer";
 // @import "sass/layout/grid";
@@ -83,29 +84,29 @@ h2 {
 }
 
 /*icon grow transform for all icons*/
-.transformGrow,
-.fa-home,
-.fa-sign-out,
-.material-icons,
-.fa-user-secret,
-.fa-linkedin-square,
-.fa-facebook-square,
-.fa-google {
-	-webkit-transition: all .2s ease-in-out !important;
-	transition: all .2s ease-in-out !important;
-}
+// .transformGrow,
+// .fa-home,
+// .fa-sign-out,
+// .material-icons,
+// .fa-user-secret,
+// .fa-linkedin-square,
+// .fa-facebook-square,
+// .fa-google {
+// 	-webkit-transition: all .2s ease-in-out !important;
+// 	transition: all .2s ease-in-out !important;
+// }
 
-.transformGrow:hover,
-.fa-user-secret:hover,
-.fa-linkedin-square:hover,
-.fa-home:hover,
-.fa-sign-out:hover,
-.material-icons:hover,
-.fa-facebook-square:hover,
-.fa-google:hover {
-	-webkit-transform: scale(1.2) translateY(-2%);
-	transform: scale(1.2) translateY(-2%);
-}
+// .transformGrow:hover,
+// .fa-user-secret:hover,
+// .fa-linkedin-square:hover,
+// .fa-home:hover,
+// .fa-sign-out:hover,
+// .material-icons:hover,
+// .fa-facebook-square:hover,
+// .fa-google:hover {
+// 	-webkit-transform: scale(1.2) translateY(-2%);
+// 	transform: scale(1.2) translateY(-2%);
+// }
 
 .fa-info,
 .fa-terminal,

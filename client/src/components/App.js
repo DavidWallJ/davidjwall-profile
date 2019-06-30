@@ -6,7 +6,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import Landing from './Landing';
-import { muiThemeLight, muiThemeDark } from './themes';
+// import { muiThemeLight, muiThemeDark } from './themes';
 
 class App extends Component {
 	componentDidMount() {
@@ -14,18 +14,16 @@ class App extends Component {
 	}
 
 	render() {
-		const theme =
-			this.props.currentTheme.theme === 'darkTheme'
-				? muiThemeDark
-				: muiThemeLight;
+		// const theme =
+		// 	this.props.currentTheme.theme === 'darkTheme'
+		// 		? muiThemeDark
+		// 		: muiThemeLight;
 		return (
-			<MuiThemeProvider muiTheme={theme}>
-				<BrowserRouter>
-					<div className="container">
-						<Route exact path="/" component={Landing} />
-					</div>
-				</BrowserRouter>
-			</MuiThemeProvider>
+			<BrowserRouter>
+				<div className="theme-light">
+					<Route exact path="/" component={Landing} />
+				</div>
+			</BrowserRouter>
 		);
 	}
 }

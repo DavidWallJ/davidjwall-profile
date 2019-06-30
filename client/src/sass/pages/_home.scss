@@ -1,0 +1,8 @@
+.login {
+    display: grid;
+    grid-column: col-start 2 / col-end 7;
+    grid-template-rows: 48rem;
+    grid-template-columns: minmax(max-content, 1fr) minmax(5rem, 50%);
+    margin-top: calc(50vh - 20rem);
+    @include background-color('primary');
+}
