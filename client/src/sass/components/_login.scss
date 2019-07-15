@@ -1,55 +1,66 @@
 .login {
-    @include color('color');
-    // background-image: linear-gradient(105deg, 
-    //         rgba($color-white, .9) 0%,
-    //         rgba($color-white, .9) 50%,
-    //         transparent 50%) ,
-    //     url(../img/nat-10.jpg);
-    // this is where you are
-    // how are we going to get a dynamic var in here
-    // https://stackoverflow.com/questions/8533432/creating-or-referencing-variables-dynamically-in-sass
-    // theming https://www.sitepoint.com/sass-theming-neverending-story/
-    // background-size: 100%;
-    // border-radius: 3px;
-    // box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
-    .form {
-        display: grid;
-        // grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-        // grid-template-columns: 1fr minmax(min-content, 50%);
-        // grid-auto-rows: 1fr min-content minmax(6rem, min-content) 1fr;
-        grid-template-rows: 1fr min-content 1fr;
-        grid-row-gap: 1.5rem;
-        padding: 3rem;
+  @include color('color');
+  background-image: linear-gradient(
+      101deg,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(255, 255, 255, 0.8) 50%,
+      transparent 50%
+    ),
+    url('https://davidjwall-profileimages.s3-ap-northeast-1.amazonaws.com/maccomputer_darkened3_flipped.jpg');
+    background-position: 10% 20%;
+  // background-image: linear-gradient(105deg,
+  //         rgba($color-white, .9) 0%,
+  //         rgba($color-white, .9) 50%,
+  //         transparent 50%) ,
+  //     url(../img/nat-10.jpg);
+  // this is where you are
+  // how are we going to get a dynamic var in here
+  // https://stackoverflow.com/questions/8533432/creating-or-referencing-variables-dynamically-in-sass
+  // theming https://www.sitepoint.com/sass-theming-neverending-story/
+  // background-size: 100%;
+  // border-radius: 3px;
+  // box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+  .form {
+    display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    // grid-template-columns: 1fr minmax(min-content, 50%);
+    // grid-auto-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+    grid-template-rows: 1fr min-content 1fr;
+    grid-row-gap: 1.5rem;
+    padding: 3rem;
 
-        &__title {
-            display: flex;
-            justify-self: center;
-            align-self: center;
+    &__title {
+      display: flex;
+      justify-self: center;
+      align-self: center;
 
-            .fa {
-                padding-left: 1rem;
-            }
-        }
-        &__buttons {
-            margin: 0 2rem;
-            .button {
-                display: grid;
-                grid-template-columns: min-content 1fr;
-                grid-column-gap: 1.5rem;
-                color: #fff;
-                align-items: center;
-                padding: 1rem 1.5rem;
-                
-                &:not(:last-child) {
-                    margin-bottom: 10px;
-                }
-            }
-        }
-        &__instructions {
-            display: grid;
-            font-size: 1.2rem;
-            justify-content: center;
-            align-content: center;
-        }
+      .fa {
+        padding-left: 1rem;
+      }
     }
+    &__buttons {
+      margin: 0 3rem;
+      .button {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-column-gap: 1.5rem;
+        color: #fff;
+        align-items: center;
+        padding: 1rem 1.5rem;
+
+        &__label {
+          font-size: 2rem
+        }
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    &__instructions {
+      display: grid;
+      font-size: 1.2rem;
+      justify-content: center;
+      align-content: center;
+    }
+  }
 }

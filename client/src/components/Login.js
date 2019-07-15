@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from "react-router-dom";
 import * as actions from '../actions';
 import { connect } from 'react-redux';
 import FontAwesome from 'react-fontawesome';
@@ -6,24 +7,14 @@ import FontAwesome from 'react-fontawesome';
 
 class Login extends Component {
 	// you are here.  how do you redirect in react from within a function
-	onButtonClick(index) {
-		switch (index) {
-			case 0: {
-				//statements; 
-				break;
-			}
-			case 1: {
-				//statements;
-				break;
-			}
-			default: {
-				console.log('this', this)
-				this.props.setAnonymous({ auth: false, options: [] });
-				break;
-			} 
+	onButtonClick(loginOption) {
+		if (loginOption.index) {
+			this.props.history.push(loginOption.href);
+		} else {
+			this.props.setAnonymous({ auth: false, options: [] });
 		}
 	}
-
+ 
 	render() {
 		const loginOptionFields = [
 			{
@@ -59,20 +50,20 @@ class Login extends Component {
 					</h2>
 
 					<div className="form__buttons">
-						{loginOptionFields.map((icon, i) => {
+						{loginOptionFields.map((loginOption, i) => {
 							return (
 								<div
 									key={i}
 									className="button"
-									style={{ backgroundColor: icon.backgroundColor }}
-									onClick={this.onButtonClick.bind(this, i)}
+									style={{ backgroundColor: loginOption.backgroundColor }}
+									onClick={this.onButtonClick.bind(this, loginOption)}
 								>
 									<FontAwesome
-										name={icon.fontAwesomeIconName}
+										name={loginOption.fontAwesomeIconName}
 										size="4x"
 										style={{ color: 'white' }}
 									/>
-									<h4 className="button__label" >Login {icon.label} </h4>
+									<span className="button__label" >Login {loginOption.label} </span>
 								</div>
 							);
 						})}
@@ -82,7 +73,7 @@ class Login extends Component {
 							Your setup choices will be stored for you next visit.
 						</p>
 						<b>
-							If you prefer to be anonymous, choose the{' '}
+							If you prefer remain to unknown, choose the{' '}
 							<FontAwesome
 								name="user-secret"
 								style={{ color: '#aaa' }}
@@ -101,4 +92,5 @@ function mapStateToProps({ auth, form }) {
 	return { auth, form };
 }
 
-export default connect(mapStateToProps, actions)(Login);
+export default connect(mapStateToProps, actions)(withRouter(Login));
+// export default connect(mapStateToProps, actions)(muiThemeable()(Landing));

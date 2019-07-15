@@ -17,7 +17,15 @@ const OptionsFormFirstPage = props => {
 
 	return (
 		<div className="row" style={styles.optionsContainerPadding}>
-			<Card className="col s12 m6 offset-m3" style={styles.loginCardStyle}>
+			<div className="col s12 m6 offset-m3" style={styles.loginCardStyle}>
+				<div style={styles.loginCardContainerStyle}>
+					<div className="col m12 l4">
+						<h4>Options</h4>
+						<p style={{ paddingLeft: 3 }}>Language</p>
+					</div>
+				</div>
+			</div>
+			{/* <Card className="col s12 m6 offset-m3" style={styles.loginCardStyle}>
 				<div style={styles.loginCardContainerStyle}>
 					<div className="col m12 l4">
 						<h4>Options</h4>
@@ -62,10 +70,7 @@ const OptionsFormFirstPage = props => {
 						</CardActions>
 					</div>
 				</div>
-				{/* <p style={{ textAlign: 'center', fontSize: 10 }}>
-					*Chinese language option coming soon.
-				</p> */}
-			</Card>
+			</Card> */}
 		</div>
 	);
 };

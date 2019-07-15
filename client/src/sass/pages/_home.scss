@@ -2,7 +2,12 @@
     display: grid;
     grid-column: col-start 2 / col-end 7;
     grid-template-rows: 48rem;
-    grid-template-columns: minmax(max-content, 1fr) minmax(5rem, 50%);
+    grid-template-columns: max-content;
     margin-top: calc(50vh - 20rem);
     @include background-color('primary');
+
+    @include respond(tab-port) {
+        background-image: none;
+        grid-column: col-start 4 / col-end 5;
+    }
 }
