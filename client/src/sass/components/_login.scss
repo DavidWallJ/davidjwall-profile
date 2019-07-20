@@ -1,13 +1,4 @@
 .login {
-  @include color('color');
-  background-image: linear-gradient(
-      101deg,
-      rgba(255, 255, 255, 0.8) 0%,
-      rgba(255, 255, 255, 0.8) 50%,
-      transparent 50%
-    ),
-    url('https://davidjwall-profileimages.s3-ap-northeast-1.amazonaws.com/maccomputer_darkened3_flipped.jpg');
-    background-position: 10% 20%;
   // background-image: linear-gradient(105deg,
   //         rgba($color-white, .9) 0%,
   //         rgba($color-white, .9) 50%,
@@ -28,6 +19,7 @@
     grid-template-rows: 1fr min-content 1fr;
     grid-row-gap: 1.5rem;
     padding: 3rem;
+    z-index: 10;
 
     &__title {
       display: flex;

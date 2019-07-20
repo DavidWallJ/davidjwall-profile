@@ -93,4 +93,3 @@ function mapStateToProps({ auth, form }) {
 }
 
 export default connect(mapStateToProps, actions)(withRouter(Login));
-// export default connect(mapStateToProps, actions)(muiThemeable()(Landing));

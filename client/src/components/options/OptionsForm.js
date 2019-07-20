@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import { reduxForm } from 'redux-form';
 
-import OptionsFormFirstPage from './OptionsFormFirstPage';
+// import OptionsFormFirstPage from './OptionsFormFirstPage';
 import OptionsFormSecondPage from './OptionsFormSecondPage';
 import OptionsFormThirdPage from './OptionsFormThirdPage';
 
@@ -28,13 +28,13 @@ class OptionsForm extends Component {
 		const { page } = this.state;
 		return (
 			<div>
-				{page === 1 && <OptionsFormFirstPage onSubmit={this.nextPage} />}
-				{page === 2 &&
+				{/* {page === 1 && <OptionsFormFirstPage onSubmit={this.nextPage} />} */}
+				{page === 1 &&
 					<OptionsFormSecondPage
 						previousPage={this.previousPage}
 						onSubmit={this.nextPage}
 					/>}
-				{page === 3 &&
+				{page === 2 &&
 					<OptionsFormThirdPage
 						previousPage={this.previousPage}
 						onSubmit={values => {
