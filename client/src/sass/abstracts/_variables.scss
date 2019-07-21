@@ -3,11 +3,22 @@ $themes: (
   'light': (
     'primary': white,
     'color': #aaaaaa,
-    'background-image': url('https://davidjwall-profileimages.s3-ap-northeast-1.amazonaws.com/maccomputer_darkened3_flipped.jpg')
+    'background-image': url('https://davidjwall-profileimages.s3-ap-northeast-1.amazonaws.com/maccomputer_darkened3_flipped.jpg'),
+    'linear-gradient': (
+        103deg,
+        rgba(255, 255, 255, 0.8) 0%,
+        rgba(255, 255, 255, 0.8) 52%, transparent 52%
+      )
   ),
   'dark': (
     'primary': #303030,
-    'color': white
+    'color': white,
+    'background-image': url('https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/caspar-rubin-224229.jpg'),
+    'linear-gradient': (
+        103deg,
+        rgba(48, 48, 48, 0.8) 0%,
+        rgba(48, 48, 48, 0.8) 52%, transparent 52%
+      )
   )
 ) !default;
 

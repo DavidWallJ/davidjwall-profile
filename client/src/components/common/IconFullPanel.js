@@ -32,4 +32,4 @@ class IconFullPanel extends Component {
 	}
 }
 
-export default muiThemeable()(IconFullPanel);
+export default IconFullPanel;

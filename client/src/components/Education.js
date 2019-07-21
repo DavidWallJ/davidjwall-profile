@@ -26,56 +26,57 @@ class Education extends Component {
 				className: 'slides'
 			};
 		}
-		const { color, textColor } = this.props.muiTheme.appBar;
+		// const { color, textColor } = this.props.muiTheme.appBar;
 
 		return (
-			<Card
-				className="row"
-				style={{
-					...styles.fullPanelCard,
-					backgroundColor: color,
-					color: textColor,
-					position: 'relative'
-				}}
-			>
-				<IconFullPanel
-					iconName="school"
-					panelTitle="Education"
-					color={textColor}
-				/>
+			<div></div>
+			// <Card
+			// 	className="row"
+			// 	style={{
+			// 		...styles.fullPanelCard,
+			// 		backgroundColor: color,
+			// 		color: textColor,
+			// 		position: 'relative'
+			// 	}}
+			// >
+			// 	<IconFullPanel
+			// 		iconName="school"
+			// 		panelTitle="Education"
+			// 		color={textColor}
+			// 	/>
 
-				<div className="col s12" style={{ paddingLeft: 46, paddingRight: 46 }}>
-					<Slider {...settings} style={{ padding: '10%' }}>
-						{certificates.map((certificate, i) => {
-							return (
-								<div key={i}>
-									<img
-										src={certificate.URL}
-										alt={certificate.name}
-										className="img-responsive"
-									/>
-									<p
-										className="textCenter"
-										style={{
-											fontSize: '1.1em',
-											marginTop: -10
-										}}
-									>
-										{certificate.name}
-									</p>
-								</div>
-							);
-						})}
-					</Slider>
-				</div>
-				<div style={{ position: 'absolute', bottom: 0, right: 0 }}>
-					<InfoModal
-						title="Front-end, back-end and everything in between."
-						description="The certificates displayed in this section represent a portion of the content I've covered on my path to becoming a competent, well rounded full-stack web developer. Web development is an ever changing industry and I look forward to continuing my education as new and better libraries, frameworks, and languages emerge."
-						iconName="fa fa-info"
-					/>
-				</div>
-			</Card>
+			// 	<div className="col s12" style={{ paddingLeft: 46, paddingRight: 46 }}>
+			// 		<Slider {...settings} style={{ padding: '10%' }}>
+			// 			{certificates.map((certificate, i) => {
+			// 				return (
+			// 					<div key={i}>
+			// 						<img
+			// 							src={certificate.URL}
+			// 							alt={certificate.name}
+			// 							className="img-responsive"
+			// 						/>
+			// 						<p
+			// 							className="textCenter"
+			// 							style={{
+			// 								fontSize: '1.1em',
+			// 								marginTop: -10
+			// 							}}
+			// 						>
+			// 							{certificate.name}
+			// 						</p>
+			// 					</div>
+			// 				);
+			// 			})}
+			// 		</Slider>
+			// 	</div>
+			// 	<div style={{ position: 'absolute', bottom: 0, right: 0 }}>
+			// 		<InfoModal
+			// 			title="Front-end, back-end and everything in between."
+			// 			description="The certificates displayed in this section represent a portion of the content I've covered on my path to becoming a competent, well rounded full-stack web developer. Web development is an ever changing industry and I look forward to continuing my education as new and better libraries, frameworks, and languages emerge."
+			// 			iconName="fa fa-info"
+			// 		/>
+			// 	</div>
+			// </Card>
 		);
 	}
 }
@@ -83,4 +84,4 @@ class Education extends Component {
 function mapStateToProps({ auth }) {
 	return { auth };
 }
-export default connect(mapStateToProps)(muiThemeable()(Education));
+export default connect(mapStateToProps)(Education);

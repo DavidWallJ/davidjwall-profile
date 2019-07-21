@@ -19,11 +19,13 @@ class App extends Component {
 		// 		? muiThemeDark
 		// 		: muiThemeLight;
 		return (
-			<BrowserRouter>
-				<div className="theme-light">
-					<Route exact path="/" component={Landing} />
-				</div>
-			</BrowserRouter>
+			<MuiThemeProvider>
+				<BrowserRouter>
+					<div className="theme-light">
+						<Route exact path="/" component={Landing} />
+					</div>
+				</BrowserRouter>
+			</MuiThemeProvider>
 		);
 	}
 }

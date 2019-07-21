@@ -40,4 +40,4 @@ class Backend extends Component {
 function mapStateToProps({ auth }) {
 	return { auth };
 }
-export default connect(mapStateToProps)(muiThemeable()(Backend));
+export default connect(mapStateToProps)(Backend);

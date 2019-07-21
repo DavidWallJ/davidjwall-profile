@@ -59,57 +59,58 @@ class Contact extends Component {
 	}
 
 	render() {
-		const { color } = this.props.muiTheme.appBar;
+		// const { color } = this.props.muiTheme.appBar;
 
 		return (
-			<Card
-				className="row"
-				style={{ ...styles.fullPanelCard, position: 'relative' }}
-			>
-				<IconFullPanel iconName="face" panelTitle="Contact" color={color} />
+			<div></div>
+			// <Card
+			// 	className="row"
+			// 	style={{ ...styles.fullPanelCard, position: 'relative' }}
+			// >
+			// 	<IconFullPanel iconName="face" panelTitle="Contact" color={color} />
 
-				<div className="row textCenter" style={{ color: color, fontSize: 20 }}>
-					{this.renderFarewellSentence(color)}
-					<p>
-						Feel free to contact me by any of the methods listed below. Let's
-						build something together!
-					</p>
-				</div>
+			// 	<div className="row textCenter" style={{ color: color, fontSize: 20 }}>
+			// 		{this.renderFarewellSentence(color)}
+			// 		<p>
+			// 			Feel free to contact me by any of the methods listed below. Let's
+			// 			build something together!
+			// 		</p>
+			// 	</div>
 
-				<div className="row" style={{ marginTop: 52 }}>
-					<ContactPanel
-						iconName="mail_outline"
-						contactData="davidjwall@protonmail.com"
-						color={color}
-						href="mailto:davidjwall@protonmail.com"
-					/>
-					<ContactPanel
-						iconName="call"
-						contactData="+886 975667693"
-						color={color}
-						href="tel:+886975667693"
-					/>
-					<div className="col s12 m4 center-align">
-						<a
-							href="https://www.linkedin.com/in/david-j-wall"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<FontAwesome
-								name="linkedin-square"
-								size="5x"
-								style={{ color: color, paddingBottom: 6, paddingTop: 22 }}
-							/>
-							<p style={{ ...styles.contactIconData, color: color }}>
-								David J. Wall @ Linkedin
-							</p>
-						</a>
-					</div>
-				</div>
-				<div style={{ position: 'absolute', bottom: 0, left: 0 }}>
-					{this.renderInfoModal()}
-				</div>
-			</Card>
+			// 	<div className="row" style={{ marginTop: 52 }}>
+			// 		<ContactPanel
+			// 			iconName="mail_outline"
+			// 			contactData="davidjwall@protonmail.com"
+			// 			color={color}
+			// 			href="mailto:davidjwall@protonmail.com"
+			// 		/>
+			// 		<ContactPanel
+			// 			iconName="call"
+			// 			contactData="+886 975667693"
+			// 			color={color}
+			// 			href="tel:+886975667693"
+			// 		/>
+			// 		<div className="col s12 m4 center-align">
+			// 			<a
+			// 				href="https://www.linkedin.com/in/david-j-wall"
+			// 				target="_blank"
+			// 				rel="noopener noreferrer"
+			// 			>
+			// 				<FontAwesome
+			// 					name="linkedin-square"
+			// 					size="5x"
+			// 					style={{ color: color, paddingBottom: 6, paddingTop: 22 }}
+			// 				/>
+			// 				<p style={{ ...styles.contactIconData, color: color }}>
+			// 					David J. Wall @ Linkedin
+			// 				</p>
+			// 			</a>
+			// 		</div>
+			// 	</div>
+			// 	<div style={{ position: 'absolute', bottom: 0, left: 0 }}>
+			// 		{this.renderInfoModal()}
+			// 	</div>
+			// </Card>
 		);
 	}
 }
@@ -117,4 +118,4 @@ class Contact extends Component {
 function mapStateToProps({ auth, anonymous }) {
 	return { auth, anonymous };
 }
-export default connect(mapStateToProps, actions)(muiThemeable()(Contact));
+export default connect(mapStateToProps, actions)(Contact);

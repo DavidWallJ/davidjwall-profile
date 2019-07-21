@@ -15,26 +15,27 @@ class Header extends Component {
 			{ icon: 'face', component: 'contact' }
 		];
 
-		const rightIcons = (
-			<div style={{ marginTop: 0 }} className="heading">
-				{iconFields.map((icon, i) => {
-					return (
-						<IconButton key={i}>
-							<FontIcon
-								color={this.props.muiTheme.palette.alternateTextColor}
-								hoverColor="#ff80ab"
-								className="material-icons headingIcons"
-								onClick={() => this.props.scrollCallback(icon.component)}
-							>
-								{icon.icon}
-							</FontIcon>
-						</IconButton>
-					);
-				})}
-			</div>
-		);
-		return <AppBar showMenuIconButton={false} iconElementRight={rightIcons} />;
+		// const rightIcons = (
+		// 	<div style={{ marginTop: 0 }} className="heading">
+		// 		{iconFields.map((icon, i) => {
+		// 			return (
+		// 				<IconButton key={i}>
+		// 					<FontIcon
+		// 						color={this.props.muiTheme.palette.alternateTextColor}
+		// 						hoverColor="#ff80ab"
+		// 						className="material-icons headingIcons"
+		// 						onClick={() => this.props.scrollCallback(icon.component)}
+		// 					>
+		// 						{icon.icon}
+		// 					</FontIcon>
+		// 				</IconButton>
+		// 			);
+		// 		})}
+		// 	</div>
+		// );
+		return <AppBar showMenuIconButton={false} />;
+		// return <AppBar showMenuIconButton={false} iconElementRight={rightIcons} />;
 	}
 }
 
-export default muiThemeable()(Header);
+export default Header;

@@ -21,37 +21,38 @@ class InfoModal extends Component {
 	};
 
 	render() {
-		const actions = [
-			<FlatButton label="Continue" primary={true} onClick={this.handleClose} />
-		];
-		const { textColor } = this.props.muiTheme.appBar;
+		// const actions = [
+		// 	<FlatButton label="Continue" primary={true} onClick={this.handleClose} />
+		// ];
+		// const { textColor } = this.props.muiTheme.appBar;
 		return (
-			<div style={{ display: 'inline-block' }}>
-				<RaisedButton
-					onClick={this.handleOpen}
-					style={{
-						boxShadow: 'none',
-						color: textColor,
-						backgroundColor: 'transparent',
-						fontSize: 'initial'
-					}}
-					secondary={true}
-				>
-					<i className={this.props.iconName} aria-hidden="true" />
-				</RaisedButton>
-				<Dialog
-					title={this.props.title}
-					actions={actions}
-					modal={false}
-					open={this.state.open}
-					onRequestClose={this.handleClose}
-					style={{ fontWeight: 400 }}
-				>
-					{this.props.description}
-				</Dialog>
-			</div>
+			<div></div>
+			// <div style={{ display: 'inline-block' }}>
+			// 	<RaisedButton
+			// 		onClick={this.handleOpen}
+			// 		style={{
+			// 			boxShadow: 'none',
+			// 			color: textColor,
+			// 			backgroundColor: 'transparent',
+			// 			fontSize: 'initial'
+			// 		}}
+			// 		secondary={true}
+			// 	>
+			// 		<i className={this.props.iconName} aria-hidden="true" />
+			// 	</RaisedButton>
+			// 	<Dialog
+			// 		title={this.props.title}
+			// 		actions={actions}
+			// 		modal={false}
+			// 		open={this.state.open}
+			// 		onRequestClose={this.handleClose}
+			// 		style={{ fontWeight: 400 }}
+			// 	>
+			// 		{this.props.description}
+			// 	</Dialog>
+			// </div>
 		);
 	}
 }
 
-export default muiThemeable()(InfoModal);
+export default InfoModal;

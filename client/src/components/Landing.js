@@ -175,9 +175,10 @@ class Landing extends Component {
 	}
 
 	render() {
-		const altColor = this.props.muiTheme.slider.trackColorSelected;
+		// const altColor = this.props.muiTheme.slider.trackColorSelected;
+		// backgroundColor: altColor, 
 		return (
-			<div style={{ backgroundColor: altColor, height: window.innerHeight }}>
+			<div style={{ height: window.innerHeight }}>
 				{this.renderAudio()}
 				{this.renderOptions()}
 			</div>
@@ -189,4 +190,4 @@ function mapStateToProps({ auth, audioOptions, anonymous }) {
 	return { auth, audioOptions, anonymous };
 }
 
-export default connect(mapStateToProps, actions)(muiThemeable()(Landing));
+export default connect(mapStateToProps, actions)(Landing);

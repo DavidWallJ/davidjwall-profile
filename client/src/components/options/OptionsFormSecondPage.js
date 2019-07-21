@@ -24,33 +24,31 @@ const OptionsFormSecondPage = props => {
 					<h2 className="form__title heading-2">
 						Options <FontAwesome name="gear" />
 					</h2>
+					<form onSubmit={handleSubmit}>
+						<div>
+							<Field name="theme" component={renderRadioGroup}>
+								<RadioButton value="lightTheme" label="Light" />
+								<RadioButton value="darkTheme" label="Dark" />
+							</Field>
+						</div>
+						<div>
+							<RaisedButton
+								type="submit"
+								fullWidth={true}
+								style={buttonStyle}
+								icon={<i className="material-icons">keyboard_arrow_right</i>}
+							/>
+							<RaisedButton
+								href="/api/logout"
+								type="button"
+								fullWidth={true}
+								style={buttonStyle}
+								icon={<i className="material-icons">keyboard_arrow_left</i>}
+							/>
+						</div>
+					</form>
 				</div>	
 			</div>
-			<form onSubmit={handleSubmit}>
-				<div className="col s5 m5" style={{ paddingTop: '9%' }}>
-					<Field name="theme" component={renderRadioGroup}>
-						<RadioButton value="lightTheme" label="Light" />
-						<RadioButton value="darkTheme" label="Dark" />
-					</Field>
-				</div>
-				<div className="col s7 m7" style={styles.optionsButtonStyle}>
-					<RaisedButton
-						type="submit"
-						primary={true}
-						fullWidth={true}
-						style={buttonStyle}
-						icon={<i className="material-icons">keyboard_arrow_right</i>}
-					/>
-					<RaisedButton
-						type="button"
-						secondary={true}
-						fullWidth={true}
-						onClick={previousPage}
-						style={buttonStyle}
-						icon={<i className="material-icons">keyboard_arrow_left</i>}
-					/>
-				</div>
-			</form>
 		</div>
 		// <div className="row" style={styles.optionsContainerPadding}>
 		// 	<div className="col s12 m6 offset-m3" style={styles.loginCardStyle}>
