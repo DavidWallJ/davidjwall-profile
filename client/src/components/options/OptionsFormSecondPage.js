@@ -11,41 +11,33 @@ import { renderRadioGroup } from '../common/renderMaterialUIComponent';
 import { renderError } from './RenderError';
 
 const OptionsFormSecondPage = props => {
-	const { handleSubmit, previousPage } = props;
-
-	const buttonStyle = {
-		marginBottom: 5
-	};
-
+	const { handleSubmit } = props;
 	return (
 		<div className="container-fluid enter">
 			<div className="login">
-				<div className="form">
-					<h2 className="form__title heading-2">
+				<div className="form-container">
+					<h2 className="form-container__title heading-2">
 						Options <FontAwesome name="gear" />
 					</h2>
 					<form onSubmit={handleSubmit}>
-						<div>
+						<div className="radio-group">
 							<Field name="theme" component={renderRadioGroup}>
-								<RadioButton value="lightTheme" label="Light" />
-								<RadioButton value="darkTheme" label="Dark" />
+								<RadioButton value="theme-light" label="Light"/>
+								<RadioButton value="theme-dark" label="Dark" />
 							</Field>
 						</div>
-						<div>
-							<RaisedButton
-								type="submit"
-								fullWidth={true}
-								style={buttonStyle}
-								icon={<i className="material-icons">keyboard_arrow_right</i>}
-							/>
-							<RaisedButton
-								href="/api/logout"
-								type="button"
-								fullWidth={true}
-								style={buttonStyle}
-								icon={<i className="material-icons">keyboard_arrow_left</i>}
-							/>
-						</div>
+							<button type="submit" className="buttons__next">
+								next
+							</button>
+							<button
+								onClick={e => {
+									e.preventDefault();
+									window.location = "/api/logout";
+								}}
+								className="buttons__prev"
+							>
+								prev
+							</button>
 					</form>
 				</div>	
 			</div>

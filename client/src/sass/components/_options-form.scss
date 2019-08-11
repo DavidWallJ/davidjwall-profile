@@ -1,0 +1,24 @@
+div.radio-group div:first-child {
+  display: flex;
+  label {
+    color: $font-color-multi-theme !important;
+    font-size: 1.3rem;
+  }
+  svg:first-of-type {
+    fill: $font-color-multi-theme !important;
+  }
+  svg:nth-of-type(2) {
+    fill: $pink-color-multi-theme !important;
+  }
+}
+
+.login {
+  // form {
+  //   .buttons {
+  //     display: flex;
+  //     &__ {
+  //       width: 100%;
+  //     }
+  //   }
+  // }
+}

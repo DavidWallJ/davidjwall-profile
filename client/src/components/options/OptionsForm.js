@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
 import { reduxForm } from 'redux-form';
-
 // import OptionsFormFirstPage from './OptionsFormFirstPage';
 import OptionsFormSecondPage from './OptionsFormSecondPage';
 import OptionsFormThirdPage from './OptionsFormThirdPage';
@@ -12,16 +11,23 @@ class OptionsForm extends Component {
 		super(props);
 		this.nextPage = this.nextPage.bind(this);
 		this.previousPage = this.previousPage.bind(this);
+		this.logoutRedirect = this.logoutRedirect.bind(this);
 		this.state = {
 			page: 1
 		};
 	}
+	
 	nextPage() {
 		this.setState({ page: this.state.page + 1 });
 	}
 
 	previousPage() {
 		this.setState({ page: this.state.page - 1 });
+	}
+
+	logoutRedirect(e) {
+		e.preventDefault();
+		window.location = "/api/logout";
 	}
 
 	render() {
@@ -31,6 +37,7 @@ class OptionsForm extends Component {
 				{/* {page === 1 && <OptionsFormFirstPage onSubmit={this.nextPage} />} */}
 				{page === 1 &&
 					<OptionsFormSecondPage
+						logoutRedirect={this.logoutRedirect}
 						previousPage={this.previousPage}
 						onSubmit={this.nextPage}
 					/>}
@@ -63,5 +70,11 @@ function mapStateToProps({ auth, anonymous }) {
 }
 
 export default connect(mapStateToProps, actions)(
-	reduxForm({ form: 'wizard' })(OptionsForm)
+	reduxForm({ 
+		form: 'wizard',
+		initialValues: {
+			theme: 'theme-light',
+			genre: 'silence'
+		} 
+	})(OptionsForm)
 );

@@ -44,12 +44,12 @@ class Login extends Component {
 
 		return (
 			<div className="login">
-				<div className="form">
-					<h2 className="form__title heading-2">
+				<div className="form-container">
+					<h2 className="form-container__title heading-2">
 						Enter <FontAwesome name="sign-in" />
 					</h2>
 
-					<div className="form__buttons">
+					<div className="form-container__buttons">
 						{loginOptionFields.map((loginOption, i) => {
 							return (
 								<div
@@ -68,7 +68,7 @@ class Login extends Component {
 							);
 						})}
 					</div>
-					<div className="form__instructions">
+					<div className="form-container__instructions">
 						<p>
 							Your setup choices will be stored for you next visit.
 						</p>

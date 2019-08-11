@@ -1,48 +1,40 @@
+.theme-light {
+  .login::after {
+    background: linear-gradient(
+      103deg,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(255, 255, 255, 0.8) 52%,
+      transparent 52%
+    );
+  }
+}
+.theme-dark {
+  .login::after {
+    background: linear-gradient(
+      103deg,
+      rgba(48, 48, 48, 0.8) 0%,
+      rgba(48, 48, 48, 0.8) 52%,
+      transparent 52%
+    );
+  }
+}
+
 .login {
-  // background-image: linear-gradient(105deg,
-  //         rgba($color-white, .9) 0%,
-  //         rgba($color-white, .9) 50%,
-  //         transparent 50%) ,
-  //     url(../img/nat-10.jpg);
-  // this is where you are
-  // how are we going to get a dynamic var in here
-  // https://stackoverflow.com/questions/8533432/creating-or-referencing-variables-dynamically-in-sass
-  // theming https://www.sitepoint.com/sass-theming-neverending-story/
-  // background-size: 100%;
-  // border-radius: 3px;
-  // box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
-  background-size: cover;
-  .form {
-    display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    // grid-template-columns: 1fr minmax(min-content, 50%);
-    // grid-auto-rows: 1fr min-content minmax(6rem, min-content) 1fr;
-    grid-template-rows: 1fr min-content 1fr;
-    grid-row-gap: 1.5rem;
-    padding: 3rem;
-    z-index: 10;
-
-    &__title {
-      display: flex;
-      justify-self: center;
-      align-self: center;
-
-      .fa {
-        padding-left: 1rem;
-      }
-    }
+    @include loginCard;
+    .form-container {
     &__buttons {
       margin: 0 3rem;
       .button {
         display: grid;
         grid-template-columns: min-content 1fr;
         grid-column-gap: 1.5rem;
-        color: #fff;
         align-items: center;
-        padding: 1rem 1.5rem;
+        padding: 1rem 3rem;
+        border-radius: 30px;
 
         &__label {
-          font-size: 2rem
+          font-size: 2rem;
+          color: #ffffff;
         }
         &:not(:last-child) {
           margin-bottom: 10px;
