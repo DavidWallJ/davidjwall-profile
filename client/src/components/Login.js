@@ -45,7 +45,7 @@ class Login extends Component {
 		return (
 			<div className="login">
 				<div className="form-container">
-					<h2 className="form-container__title heading-2">
+					<h2 className="form-container__title heading-1">
 						Enter <FontAwesome name="sign-in" />
 					</h2>
 
@@ -70,7 +70,7 @@ class Login extends Component {
 					</div>
 					<div className="form-container__instructions">
 						<p>
-							Your setup choices will be stored for you next visit.
+							Your setup choices will be stored for your next visit.
 						</p>
 						<b>
 							If you prefer remain to unknown, choose the{' '}

@@ -11,7 +11,6 @@ class OptionsForm extends Component {
 		super(props);
 		this.nextPage = this.nextPage.bind(this);
 		this.previousPage = this.previousPage.bind(this);
-		this.logoutRedirect = this.logoutRedirect.bind(this);
 		this.state = {
 			page: 1
 		};
@@ -25,15 +24,10 @@ class OptionsForm extends Component {
 		this.setState({ page: this.state.page - 1 });
 	}
 
-	logoutRedirect(e) {
-		e.preventDefault();
-		window.location = "/api/logout";
-	}
-
 	render() {
 		const { page } = this.state;
 		return (
-			<div>
+			<div className="container-fluid">
 				{/* {page === 1 && <OptionsFormFirstPage onSubmit={this.nextPage} />} */}
 				{page === 1 &&
 					<OptionsFormSecondPage

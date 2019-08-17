@@ -1,24 +1,72 @@
 div.radio-group div:first-child {
-  display: flex;
-  label {
-    color: $font-color-multi-theme !important;
-    font-size: 1.3rem;
-  }
-  svg:first-of-type {
-    fill: $font-color-multi-theme !important;
-  }
-  svg:nth-of-type(2) {
-    fill: $pink-color-multi-theme !important;
-  }
+    display: flex;
+    label {
+        color: $font-color-multi-theme !important;
+        font-size: 1.3rem;
+    }
+    svg:first-of-type {
+        fill: $font-color-multi-theme !important;
+    }
+    svg:nth-of-type(2) {
+        fill: $pink-color-multi-theme !important;
+    }
 }
 
-.login {
-  // form {
-  //   .buttons {
-  //     display: flex;
-  //     &__ {
-  //       width: 100%;
-  //     }
-  //   }
-  // }
+.login-form {
+    @include loginCard;
+    .form-container {
+        @include loginCardContainer;
+        grid-template-rows: 33% 1fr;
+        grid-template-columns: minmax(20rem, 24.5rem);
+        justify-content: center;
+        padding-left: 3rem;
+        &__title {
+            @include flexCenterSelf;
+            span {
+                padding-left: 1rem;
+            }
+        }
+        form {
+            display: grid;
+            align-content: end;
+            .radio-group {
+                display: grid;
+                grid-template-columns: min-content;
+                justify-content: center;
+                margin-bottom: 4rem;
+                div {
+                    display: block;
+                }
+            }
+            .buttons {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                        flex-direction: column;
+                margin-bottom: 2rem;
+
+                &__next,
+                &__prev {
+                    padding: 1rem 2rem;
+                    border-radius: 50px;
+                    border: solid  $font-color-multi-theme 2px;
+                    background-color: transparent;
+                    text-transform: uppercase;
+                    font-size: 1.5rem;
+                    margin-bottom: 2rem;
+                    &:hover {
+                        border: solid $blue-color-multi-theme 2px;
+                        color: $blue-color-multi-theme;
+                    }  
+                }
+            }
+        }
+    }
+    @include respond(tab-port) {
+        grid-template-columns: 1fr;
+        padding-left: 0;
+    }
 }

@@ -1,51 +1,72 @@
 .theme-light {
-  .login::after {
-    background: linear-gradient(
-      103deg,
-      rgba(255, 255, 255, 0.8) 0%,
-      rgba(255, 255, 255, 0.8) 52%,
-      transparent 52%
-    );
-  }
+    .login::after,
+    .login-form::after {
+        background: linear-gradient(
+            103deg,
+            rgba(255, 255, 255, 0.8) 0%,
+            rgba(255, 255, 255, 0.8) 52%,
+            transparent 52%
+        );
+    }
 }
 .theme-dark {
-  .login::after {
-    background: linear-gradient(
-      103deg,
-      rgba(48, 48, 48, 0.8) 0%,
-      rgba(48, 48, 48, 0.8) 52%,
-      transparent 52%
-    );
-  }
+    .login::after,
+    .login-form::after {
+        background: linear-gradient(
+            103deg,
+            rgba(48, 48, 48, 0.8) 0%,
+            rgba(48, 48, 48, 0.8) 52%,
+            transparent 52%
+        );
+    }
 }
 
 .login {
     @include loginCard;
     .form-container {
-    &__buttons {
-      margin: 0 3rem;
-      .button {
-        display: grid;
-        grid-template-columns: min-content 1fr;
-        grid-column-gap: 1.5rem;
-        align-items: center;
-        padding: 1rem 3rem;
-        border-radius: 30px;
+        @include loginCardContainer;
+        grid-template-rows: 1fr min-content 1fr;
+        padding-left: 2rem;
+        &__title {
+            @include flexCenterSelf;
+            .fa {
+                padding-left: 1rem;
+            }
+        }
+        &__buttons {
+            @include gridCenterSelf;
+            .button {
+                display: grid;
+                grid-template-columns: min-content 1fr;
+                grid-column-gap: 1.5rem;
+                align-items: center;
+                padding: 1rem 3rem;
+                border-radius: 30px;
 
-        &__label {
-          font-size: 2rem;
-          color: #ffffff;
+                &__label {
+                    font-size: 2rem;
+                    color: #ffffff;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 1rem;
+                }
+
+                @include respond(phone) {
+                    width: 225px;
+                    &:not(:last-child) {
+                        margin-bottom: 3rem;
+                    }
+                }  
+            }
         }
-        &:not(:last-child) {
-          margin-bottom: 10px;
+        &__instructions {
+            @include gridCenterContent;
+            font-size: 1.2rem;
         }
-      }
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+            padding-left: 0;
+        }
     }
-    &__instructions {
-      display: grid;
-      font-size: 1.2rem;
-      justify-content: center;
-      align-content: center;
-    }
-  }
+
 }

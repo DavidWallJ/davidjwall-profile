@@ -14,18 +14,18 @@
     display: grid;
     grid-column: col-start 2 / col-end 7;
     grid-template-rows: 48rem;
+    grid-template-columns: -webkit-max-content;
     grid-template-columns: max-content;
+    // grid-row-gap: 1.5rem;
     margin-top: calc(50vh - 25rem);
     background-position: 10% 20%;
     background-size: cover;
     position: relative;
     color: $font-color-multi-theme;
+    padding: 3rem;
+    z-index: 10;
     @include background-color('background-color');
     @include background-image-url('background-image');
-    @include respond(tab-port) {
-        background-image: none !important;
-        grid-column: col-start 4 / col-end 5;
-    }
     &::after {
         content: "";
         position: absolute;
@@ -35,24 +35,49 @@
         height: 100%;
         z-index: 1;
     }
-    .form-container {
-        display: grid;
-        grid-template-rows: 1fr min-content 1fr;
-        grid-row-gap: 1.5rem;
-        padding: 3rem;
-        z-index: 10;
-        color: $font-color-multi-theme;
-        &__title {
-            display: flex;
-            justify-self: center;
-            align-self: center;
+    @include respond(tab-port) {
+        grid-column: col-start 4 / col-end 5;
+        background-image: none !important;
+    }
 
-            .fa {
-                padding-left: 1rem;
-            }
-        }
+    @include respond(phone) {
+        grid-column: full-start / full-end;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        height: 100vh;
+        margin-top: 0;
+        background-image: none !important;
     }
 }
+
+@mixin loginCardContainer {
+    display: grid;
+    // grid-row-gap: 1.5rem;
+    z-index: 10;
+    color: $font-color-multi-theme;
+}
+
+@mixin flexCenterSelf {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+}
+
+@mixin gridCenterSelf {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+}
+
+@mixin gridCenterContent {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:      Phone

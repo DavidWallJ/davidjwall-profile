@@ -13,19 +13,19 @@ import { renderError } from './RenderError';
 const OptionsFormSecondPage = props => {
 	const { handleSubmit } = props;
 	return (
-		<div className="container-fluid enter">
-			<div className="login">
+			<div className="login-form">
 				<div className="form-container">
-					<h2 className="form-container__title heading-2">
+					<h2 className="form-container__title heading-1">
 						Options <FontAwesome name="gear" />
 					</h2>
 					<form onSubmit={handleSubmit}>
 						<div className="radio-group">
 							<Field name="theme" component={renderRadioGroup}>
-								<RadioButton value="theme-light" label="Light"/>
+								<RadioButton value="theme-light" label="Light" labelStyle={{ width: 50 }}/>
 								<RadioButton value="theme-dark" label="Dark" />
 							</Field>
 						</div>
+						<div className="buttons">
 							<button type="submit" className="buttons__next">
 								next
 							</button>
@@ -38,10 +38,10 @@ const OptionsFormSecondPage = props => {
 							>
 								prev
 							</button>
+						</div>
 					</form>
 				</div>	
 			</div>
-		</div>
 		// <div className="row" style={styles.optionsContainerPadding}>
 		// 	<div className="col s12 m6 offset-m3" style={styles.loginCardStyle}>
 		// 		<div style={styles.loginCardContainerStyle}>

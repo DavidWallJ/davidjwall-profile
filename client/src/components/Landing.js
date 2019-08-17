@@ -128,7 +128,7 @@ class Landing extends Component {
 		}
 		// if user has not been authenticated or choosen an authentication option
 		return (
-			<div className="container-fluid enter">
+			<div className="container-fluid">
 				<Login />
 			</div>
 		);
