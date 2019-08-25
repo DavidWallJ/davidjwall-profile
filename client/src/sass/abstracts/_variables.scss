@@ -31,6 +31,7 @@ $bp-small: 37.5em;    // 600px;
 
 $themes: (
   'light': (
+    'dialog-box-font-color': $grey-color-dark-theme !important,
     'secondary-color': $blue-color-multi-theme !important,
     'panel-blue': #00BCD4,
     'background-color': $color-white-multi-theme !important,
@@ -42,6 +43,7 @@ $themes: (
       )
   ),
   'dark': (
+    'dialog-box-font-color': $color-white-multi-theme !important,
     'secondary-color': $pink-color-multi-theme !important,
     'panel-blue': #0097a7,
     'background-color': $grey-color-dark-theme !important,

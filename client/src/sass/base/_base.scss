@@ -33,6 +33,7 @@ html {
     body {
         padding: 20px;
         font-weight: 100;
+        background-color: $font-color-multi-theme;
     }
 
     body.theme-light {
@@ -41,7 +42,7 @@ html {
 
     
     body.theme-dark {
-        background-color: #303030;
+        background-color: $grey-color-dark-theme;
     }
 
     @include respond(phone) {
@@ -68,6 +69,21 @@ a {
     // @media only screen and (max-width: $bp-medium) {
     //     grid-template-rows: 6rem calc(100vh - 6rem);
     // }
+}
+
+.dialog-content {
+    div {
+         @include background-color('background-color');
+    }
+    .dialog-body,
+    .dialog-title {
+        @include color('dialog-box-font-color');
+    }
+    .dialog-actions-container {
+        button {
+            @include color('secondary-color');
+        }
+    }
 }
 
 .info-block button {

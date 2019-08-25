@@ -45,7 +45,11 @@ class InfoModal extends Component {
 					modal={false}
 					open={this.state.open}
 					onRequestClose={this.handleClose}
-					style={{ fontWeight: 400 }}
+					bodyStyle={{ color: this.props.fontColor }}
+					bodyClassName='dialog-body'
+					actionsContainerClassName='dialog-actions-container'
+					contentClassName="dialog-content"
+					titleClassName="dialog-title"
 				>
 					{this.props.description}
 				</Dialog>

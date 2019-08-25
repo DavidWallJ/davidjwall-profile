@@ -62,13 +62,13 @@
     }
 
     &__background {
+        @include background-color('secondary-color');
         height: 6rem;
         width: 6rem;
         border-radius: 50%;
         position: fixed;
         top: 6.5rem;
         right: 6.5rem;
-        @include background-color('secondary-color');
         // background-image: radial-gradient($blue-color-multi-theme, $blue-color-multi-theme);
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
@@ -104,6 +104,7 @@
         list-style: none;
         text-align: center;
         width: 100%;
+        pointer-events: none;
     }
 
     &__item {

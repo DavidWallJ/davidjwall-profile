@@ -6,6 +6,16 @@ import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
 
 class Header extends Component {
+	onNaviClick() {
+		let navList = document.getElementsByClassName('navigation__list')[0];
+		if (navList) {
+			const style = window.getComputedStyle(navList),
+				pointerIsAll = style.getPropertyValue('pointer-events') === 'all';
+		
+			pointerIsAll ? navList.style.pointerEvents = 'none' : navList.style.pointerEvents = 'all';
+		}
+	}
+
 	render() {
 		const iconFields = [
 			{ icon: 'tv', component: 'frontend' },
@@ -55,7 +65,7 @@ class Header extends Component {
 				<input type="checkbox" className="navigation__checkbox" id="navi-toggle"/>
 
 					<label htmlFor="navi-toggle" className="navigation__button">
-						<span className="navigation__icon">&nbsp;</span>
+					<span className="navigation__icon" onClick={this.onNaviClick}>&nbsp;</span>
 					</label>
 
 					<div className="navigation__background">&nbsp;</div>

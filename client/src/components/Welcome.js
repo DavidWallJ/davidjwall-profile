@@ -16,6 +16,16 @@ class Welcome extends Component {
 		};
 	}
 
+	componentDidMount() {
+		if (
+			this.props.auth && 
+			document.getElementsByClassName('welcome').length >= 1
+		) {
+			document.body.classList.remove(...document.body.classList);
+			document.body.classList.add(this.props.currentTheme);
+		}
+	}
+
 	nameRenderHelper() {
 		if (this.props.name === 'Anonymous') {
 			return 'Anonymous User'
@@ -81,7 +91,7 @@ class Welcome extends Component {
 	}
 }
 
-function mapStateToProps({ auth, backgroundURL }) {
-	return { auth, backgroundURL };
+function mapStateToProps({ auth, currentTheme, backgroundURL }) {	
+	return { auth, currentTheme, backgroundURL };
 }
 export default connect(mapStateToProps, actions)(Welcome);

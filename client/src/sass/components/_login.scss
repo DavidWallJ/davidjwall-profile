@@ -52,7 +52,7 @@
                 }
 
                 @include respond(phone) {
-                    width: 225px;
+                    width: 235px;
                     &:not(:last-child) {
                         margin-bottom: 3rem;
                     }
