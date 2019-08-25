@@ -6,6 +6,15 @@
   @include themify('color', $arguments...);
 }
 
+@mixin fill($arguments...) {
+  @include themify('fill', $arguments...);
+}
+
+@mixin border-color($arguments...) {
+  @include themify('border-color', $arguments...);
+}
+
+
 @mixin background-image-url($arguments...) {
   @include themify('background-image', $arguments...);
 }
@@ -16,7 +25,8 @@
     grid-template-rows: 48rem;
     grid-template-columns: -webkit-max-content;
     grid-template-columns: max-content;
-    // grid-row-gap: 1.5rem;
+    border: solid $font-color-multi-theme 2px;
+    border-radius: 25px;
     margin-top: calc(50vh - 25rem);
     background-position: 10% 20%;
     background-size: cover;
@@ -24,7 +34,7 @@
     color: $font-color-multi-theme;
     padding: 3rem;
     z-index: 10;
-    @include background-color('background-color');
+    // @include background-color('background-color');
     @include background-image-url('background-image');
     &::after {
         content: "";
@@ -34,10 +44,12 @@
         width: 100%;
         height: 100%;
         z-index: 1;
+        border-radius: 25px;
     }
     @include respond(tab-port) {
         grid-column: col-start 4 / col-end 5;
         background-image: none !important;
+
     }
 
     @include respond(phone) {
@@ -47,12 +59,12 @@
         height: 100vh;
         margin-top: 0;
         background-image: none !important;
+        border: none;
     }
 }
 
 @mixin loginCardContainer {
     display: grid;
-    // grid-row-gap: 1.5rem;
     z-index: 10;
     color: $font-color-multi-theme;
 }

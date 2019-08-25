@@ -17,7 +17,7 @@ h5 {
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
-
+    font-family: $font-primary;
     // @media only screen and (max-width: $bp-largest) {
     //     font-size: 50%;
     // }
@@ -30,7 +30,29 @@ html {
         font-size: 50%;
     }
 
+    body {
+        padding: 20px;
+        font-weight: 100;
+    }
 
+    body.theme-light {
+        background-color: $color-white-multi-theme;
+    }
+
+    
+    body.theme-dark {
+        background-color: #303030;
+    }
+
+    @include respond(phone) {
+        body {
+            padding: 0;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
 }
 
 .container-fluid {
@@ -46,4 +68,15 @@ html {
     // @media only screen and (max-width: $bp-medium) {
     //     grid-template-rows: 6rem calc(100vh - 6rem);
     // }
+}
+
+.info-block button {
+    @include background-color('secondary-color');
+}
+
+.get-code span {
+    @include color('secondary-color');
+}
+.fa-info {
+    @include color('background-color');
 }

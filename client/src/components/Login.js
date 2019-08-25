@@ -6,10 +6,11 @@ import FontAwesome from 'react-fontawesome';
 
 
 class Login extends Component {
-	// you are here.  how do you redirect in react from within a function
 	onButtonClick(loginOption) {
-		if (loginOption.index) {
-			this.props.history.push(loginOption.href);
+		console.log(loginOption);
+
+		if (loginOption.href) {
+			window.location = loginOption.href;
 		} else {
 			this.props.setAnonymous({ auth: false, options: [] });
 		}
@@ -35,7 +36,6 @@ class Login extends Component {
 				label: 'with Google'
 			},
 			{
-				onclick: 'this.onButtonClick.bind(this)',
 				backgroundColor: '#00BCD4',
 				fontAwesomeIconName: 'user-secret',
 				label: 'Anonymously'
@@ -45,9 +45,9 @@ class Login extends Component {
 		return (
 			<div className="login">
 				<div className="form-container">
-					<h2 className="form-container__title heading-1">
+					<h1 className="form-container__title heading-1">
 						Enter <FontAwesome name="sign-in" />
-					</h2>
+					</h1>
 
 					<div className="form-container__buttons">
 						{loginOptionFields.map((loginOption, i) => {
@@ -56,7 +56,10 @@ class Login extends Component {
 									key={i}
 									className="button"
 									style={{ backgroundColor: loginOption.backgroundColor }}
-									onClick={this.onButtonClick.bind(this, loginOption)}
+									onClick={() => {
+											this.onButtonClick(loginOption);
+										}
+									}
 								>
 									<FontAwesome
 										name={loginOption.fontAwesomeIconName}

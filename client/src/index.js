@@ -1,4 +1,4 @@
-import 'materialize-css/dist/css/materialize.min.css';
+// import 'materialize-css/dist/css/materialize.min.css';
 import './index.scss';
 // TO DO: change this to index.css on production build
 

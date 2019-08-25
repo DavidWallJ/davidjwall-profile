@@ -4,7 +4,7 @@ import FontAwesome from 'react-fontawesome';
 class GetCode extends Component {
 	render() {
 		return (
-			<a href={this.props.codeURL} target="_blank">
+			<a href={this.props.codeURL} className="get-code" target="_blank">
 				<FontAwesome
 					name="terminal"
 					style={{

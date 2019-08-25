@@ -11,6 +11,12 @@ import Landing from './Landing';
 class App extends Component {
 	componentDidMount() {
 		this.props.fetchUser();
+		document.body.classList.add(this.props.currentTheme);
+	}
+
+	componentWillReceiveProps(nextProps) {
+		document.body.classList.remove(...document.body.classList);
+		document.body.classList.add(nextProps.currentTheme);
 	}
 
 	render() {

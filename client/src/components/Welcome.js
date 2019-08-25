@@ -18,95 +18,70 @@ class Welcome extends Component {
 
 	nameRenderHelper() {
 		if (this.props.name === 'Anonymous') {
-			return (
-				<FontAwesome
-					name="user-secret"
-					style={{ color: '#ff80ab', paddingLeft: 7 }}
-				/>
-			);
+			return 'Anonymous User'
 		} else {
 			return this.props.name;
 		}
 	}
 
-	componentDidMount() {
-		const theme = this.props.currentTheme.theme;
-		switch (theme) {
-			case 'darkTheme':
-				this.props.setBackgroundURL(
-					'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/caspar-rubin-224229.jpg'
-				);
-				break;
-			default:
-				return;
-		}
-	}
+	// componentDidMount() {
+	// 	const theme = this.props.currentTheme.theme;
+	// 	switch (theme) {
+	// 		case 'darkTheme':
+	// 			this.props.setBackgroundURL(
+	// 				'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/caspar-rubin-224229.jpg'
+	// 			);
+	// 			break;
+	// 		default:
+	// 			return;
+	// 	}
+	// }
 
 	render() {
 		return (
-			<div
-				style={{
-					backgroundImage: `url(${this.props.backgroundURL})`,
-					color: 'white',
-					backgroundSize: 'cover',
-					backgroundPosition: 'center'
-				}}
-			>
-				<div
-					style={{ 
-						...styles.flexCenterColumn,
-						height: 600
-					}}
-				>
-					<h5 className="welcome" style={{ textAlign: 'center' }}>Welcome Home</h5>
-					<h2
-
-						style={{ color: '#ff80ab', textAlign: 'center', paddingBottom: 10 }}
-					>
-						{this.nameRenderHelper()}
-					</h2>
+			<div className="welcome">
+				<div className="greeting">
 					<Typist
 						cursor={{ show: false }}
-						startDelay={1500}
-						avgTypingDelay={100}
+						startDelay={500}
+						avgTypingDelay={90}
 					>
-						<h5 style={{ textAlign: 'center' }}>My name is David J. Wall.</h5>
-						<h4 style={{ textAlign: 'center' }}>
-							I'm a full-stack web developer.
+						<h4 className="greeting__title heading-4">Welcome</h4>
+						
+						<h2 className="greeting__user-name heading-2">
+							{this.nameRenderHelper()}
+						</h2>
+
+						<h3 className="heading-3">My name is David J. Wall</h3>
+						<h4 className="heading-4">
+							I'm a full-stack web developer
 						</h4>
-						<p style={{ textAlign: 'center' }}>
+						<p>
 							What exactly do i mean by that?
 						</p>
-						<p style={{ textAlign: 'center' }}>. . . . . . .</p>
-						<p style={{ textAlign: 'center' }}>( scroll down )</p>
+						<p>( scroll down )</p>
 					</Typist>
-					<a
-						href="/api/logout"
-						style={{ color: '#ff80ab', textDecoration: 'none' }}
-					>
-						<p
-							style={{ paddingTop: 22 }}
-							className="transformGrow
-transformGrow"
-						>
-							Logout <i className="fa fa-sign-out" aria-hidden="true" />
-						</p>
-					</a>
-				</div>
-				<InfoModal
-					title="My most recent project is this site."
-					description="This site showcases much of what a good full-stack developer is capable of. Getting you the user authenticated and to this point by way of Google, LinkedIn or Facebook has already required the use of many of today's most innovative front-end and back-end web technologies.  To see the relevant code for any particular component click the  >_  icon of the corresponding section.  To see the full GitHub repository for this project click the  >_  icon for this section.
-					"
-					iconName="fa fa-info"
-				/>
 
-				<GetCode codeURL="https://github.com/DavidWallJ/davidjwall-profile" />
+				</div>
+				<a className="logout" href="/api/logout">
+					<span>Logout </span> 
+					<i className="fa fa-sign-out" aria-hidden="true" />
+				</a>
+				<div className="info-block">
+					<InfoModal
+							title="My most recent project is this site."
+							description="This site showcases much of what a good full-stack developer is capable of. Getting you the user authenticated and to this point by way of Google, LinkedIn or Facebook has already required the use of many of today's most innovative front-end and back-end web technologies.  To see the relevant code for any particular component click the  >_  icon of the corresponding section.  To see the full GitHub repository for this project click the  >_  icon for this section.
+							"
+							iconName="fa fa-info"
+						/>
+					<GetCode codeURL="https://github.com/DavidWallJ/davidjwall-profile" />
+				</div>
 			</div>
 		);
 	}
 }
 
-function mapStateToProps({ auth, currentTheme, backgroundURL }) {
-	return { auth, currentTheme, backgroundURL };
+function mapStateToProps({ auth, backgroundURL }) {
+	return { auth, backgroundURL };
 }
 export default connect(mapStateToProps, actions)(Welcome);

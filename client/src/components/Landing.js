@@ -100,7 +100,7 @@ class Landing extends Component {
 				// if anonymous authentication has been selected
 				case true:
 					return (
-						<div className="container-fluid site">
+						<div className="container-fluid">
 							<Header scrollCallback={this.scrollCallbackHandler} />
 							<Welcome
 								ref="welcome"

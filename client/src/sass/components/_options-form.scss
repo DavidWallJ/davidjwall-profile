@@ -8,7 +8,7 @@ div.radio-group div:first-child {
         fill: $font-color-multi-theme !important;
     }
     svg:nth-of-type(2) {
-        fill: $pink-color-multi-theme !important;
+        @include fill('secondary-color');
     }
 }
 
@@ -57,9 +57,11 @@ div.radio-group div:first-child {
                     text-transform: uppercase;
                     font-size: 1.5rem;
                     margin-bottom: 2rem;
+                    color: $font-color-multi-theme;
                     &:hover {
-                        border: solid $blue-color-multi-theme 2px;
-                        color: $blue-color-multi-theme;
+                        @include color('secondary-color');
+                        @include border-color('secondary-color');
+                        border-width: 2px;
                     }  
                 }
             }
