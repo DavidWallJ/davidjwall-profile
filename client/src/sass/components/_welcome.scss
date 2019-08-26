@@ -8,29 +8,27 @@
     background-size: cover;
     background-position: center;
     color: $color-white-multi-theme;
-    &__user-name {
-        color: $light-pink-multi-theme;
-        text-shadow: 2px 3px 6px rgba(0,0,0,0.2)
-    }
-    &__logout {
-        color: $light-pink-multi-theme;
-        text-decoration: none;
-    }
-    .logout {
-        position: absolute;
-        top: 3rem;
-        left: 3rem;
-        color: $color-white-multi-theme;
-    }
     .greeting {
         align-self: center;
         justify-self: center;
         &__user-name {
             @include color('secondary-color');
+            text-shadow: 2px 3px 6px rgba(0,0,0,0.2)
         }
         .Typist {
             display: grid;
             grid-row-gap: 1rem;
+        }
+    }
+    .control-panel {
+        position: absolute;
+
+        .fa {
+            font-size: 3rem;
+            padding: 1rem 0 0 1.5rem;
+        }
+        &__logout {
+            color: $color-white-multi-theme;
         }
     }
     .info-block {

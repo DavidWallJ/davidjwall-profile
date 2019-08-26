@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import styles from './componentsStyles';
 import * as actions from '../actions';
 import { connect } from 'react-redux';
@@ -17,12 +18,26 @@ class Welcome extends Component {
 	}
 
 	componentDidMount() {
+		const themeSwitch = document.getElementById('theme-switch'),
+			mainContainer = document.getElementById('main-container');
+
 		if (
-			this.props.auth && 
+			this.props.auth &&
+			mainContainer && 
 			document.getElementsByClassName('welcome').length >= 1
 		) {
-			document.body.classList.remove(...document.body.classList);
-			document.body.classList.add(this.props.currentTheme);
+			mainContainer.classList.remove(...mainContainer.classList);
+			mainContainer.classList.add(this.props.currentTheme);
+		}
+
+		if (themeSwitch) {
+			if (this.props.currentTheme === 'theme-light') {
+				themeSwitch.classList.remove('fa-toggle-off');
+				themeSwitch.classList.add('fa-toggle-on');
+			} else {
+				themeSwitch.classList.remove('fa-toggle-on');
+				themeSwitch.classList.add('fa-toggle-off');
+			}
 		}
 	}
 
@@ -34,22 +49,31 @@ class Welcome extends Component {
 		}
 	}
 
-	// componentDidMount() {
-	// 	const theme = this.props.currentTheme.theme;
-	// 	switch (theme) {
-	// 		case 'darkTheme':
-	// 			this.props.setBackgroundURL(
-	// 				'https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/caspar-rubin-224229.jpg'
-	// 			);
-	// 			break;
-	// 		default:
-	// 			return;
-	// 	}
-	// }
+	themeSwitchHelper() {
+		let themeSwitch = document.getElementById('theme-switch');
+		if (this.props.currentTheme === 'theme-light') {
+			this.props.setTheme({ theme: 'theme-dark' });
+			themeSwitch.classList.remove('fa-toggle-on');
+			themeSwitch.classList.add('fa-toggle-off');
+		} else {
+			this.props.setTheme({ theme: 'theme-light' });
+			themeSwitch.classList.remove('fa-toggle-off');
+			themeSwitch.classList.add('fa-toggle-on');
+		}
+		
+		
+	}
 
 	render() {
 		return (
 			<div className="welcome">
+				<div className="control-panel">
+					<a className="control-panel__logout" href="/api/logout">
+						<FontAwesome name="sign-out" />
+					</a>
+					<FontAwesome id="theme-switch" name="toggle-on" onClick={this.themeSwitchHelper.bind(this)} />
+
+				</div>
 				<div className="greeting">
 					<Typist
 						cursor={{ show: false }}
@@ -73,10 +97,6 @@ class Welcome extends Component {
 					</Typist>
 
 				</div>
-				<a className="logout" href="/api/logout">
-					<span>Logout </span> 
-					<i className="fa fa-sign-out" aria-hidden="true" />
-				</a>
 				<div className="info-block">
 					<InfoModal
 							title="My most recent project is this site."

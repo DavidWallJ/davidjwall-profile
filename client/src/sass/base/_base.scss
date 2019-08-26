@@ -90,7 +90,7 @@ a {
     @include background-color('secondary-color');
 }
 
-.get-code span {
+.info-block__get-code span {
     @include color('secondary-color');
 }
 .fa-info {

@@ -46,7 +46,7 @@ class Login extends Component {
 			<div className="login">
 				<div className="form-container">
 					<h1 className="form-container__title heading-1">
-						Enter <FontAwesome name="sign-in" />
+						Login
 					</h1>
 
 					<div className="form-container__buttons">
