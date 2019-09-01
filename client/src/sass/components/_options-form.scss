@@ -1,11 +1,11 @@
 div.radio-group div:first-child {
     display: flex;
     label {
-        color: $font-color-multi-theme !important;
+        color: $light-grey-multi-theme !important;
         font-size: 1.3rem;
     }
     svg:first-of-type {
-        fill: $font-color-multi-theme !important;
+        fill: $light-grey-multi-theme !important;
     }
     svg:nth-of-type(2) {
         @include fill('secondary-color');
@@ -52,12 +52,12 @@ div.radio-group div:first-child {
                 &__prev {
                     padding: 1rem 2rem;
                     border-radius: 50px;
-                    border: solid  $font-color-multi-theme 2px;
+                    border: solid  $light-grey-multi-theme 2px;
                     background-color: transparent;
                     text-transform: uppercase;
                     font-size: 1.5rem;
                     margin-bottom: 2rem;
-                    color: $font-color-multi-theme;
+                    color: $light-grey-multi-theme;
                     &:hover {
                         @include color('secondary-color');
                         @include border-color('secondary-color');

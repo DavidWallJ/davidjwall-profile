@@ -14,8 +14,9 @@
 $light-pink-multi-theme: #ff80ab;
 $pink-color-multi-theme: #FF4081;
 $blue-color-multi-theme: #00BCD4;
+$blue-color-dark-theme: #0097a7;
 $grey-color-dark-theme: #303030;
-$font-color-multi-theme: #AAAAAA;
+$light-grey-multi-theme: #AAAAAA;
 $color-white-multi-theme: #fff;
 // $font-primary: #c69963;
 // $color-primary-dark: #B28451;
@@ -31,10 +32,13 @@ $bp-small: 37.5em;    // 600px;
 
 $themes: (
   'light': (
+    'skew-panel-phone-color': $light-grey-multi-theme !important,
     'dialog-box-font-color': $grey-color-dark-theme !important,
     'secondary-color': $blue-color-multi-theme !important,
-    'panel-blue': #00BCD4,
-    'background-color': $color-white-multi-theme !important,
+    'skewed-panel-icon-color': $light-grey-multi-theme,
+    'text-highlight': $blue-color-multi-theme,
+    'alt-text-hightlight': $grey-color-dark-theme,
+    'background-color': $color-white-multi-theme,
     'background-image': url('https://davidjwall-profileimages.s3-ap-northeast-1.amazonaws.com/maccomputer_darkened3_flipped.jpg'),
     'linear-gradient': (
         103deg,
@@ -43,10 +47,13 @@ $themes: (
       )
   ),
   'dark': (
+    'skew-panel-phone-color': $blue-color-dark-theme !important,
     'dialog-box-font-color': $color-white-multi-theme !important,
     'secondary-color': $pink-color-multi-theme !important,
-    'panel-blue': #0097a7,
-    'background-color': $grey-color-dark-theme !important,
+    'skewed-panel-icon-color': $blue-color-dark-theme,
+    'text-highlight': $pink-color-multi-theme,
+    'alt-text-hightlight': color-white-multi-theme,
+    'background-color': $grey-color-dark-theme,
     'background-image': url('https://s3-ap-northeast-1.amazonaws.com/davidjwall-profileimages/caspar-rubin-224229.jpg'),
     'linear-gradient': (
         103deg,

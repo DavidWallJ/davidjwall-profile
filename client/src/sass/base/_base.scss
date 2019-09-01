@@ -23,7 +23,7 @@ html {
     // }
     
     @include respond(tab-land) {
-        font-size: 57.5%;
+        font-size: 58.5%;
     }
 
     @include respond(tab-port) {
@@ -33,15 +33,14 @@ html {
     body {
         padding: 20px;
         font-weight: 100;
-        background-color: $font-color-multi-theme;
+        background-color: $light-grey-multi-theme;
     }
 
-    body.theme-light {
+    body.light {
         background-color: $color-white-multi-theme;
     }
 
-    
-    body.theme-dark {
+    body.dark {
         background-color: $grey-color-dark-theme;
     }
 
@@ -56,7 +55,13 @@ a {
     text-decoration: none;
 }
 
+.fa-5x {
+    font-size: 12em;
+}
+
+
 .container-fluid {
+    @include descending-z-index;
     display: grid;
     //grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];

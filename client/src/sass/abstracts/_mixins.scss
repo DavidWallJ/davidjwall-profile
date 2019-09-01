@@ -30,7 +30,7 @@
     background-position: 10% 20%;
     background-size: cover;
     position: relative;
-    color: $font-color-multi-theme;
+    color: $light-grey-multi-theme;
     padding: 3rem;
     z-index: 10;
     @include background-color('background-color');
@@ -66,7 +66,7 @@
 @mixin loginCardContainer {
     display: grid;
     z-index: 10;
-    color: $font-color-multi-theme;
+    color: $light-grey-multi-theme;
 }
 
 @mixin flexCenterSelf {
@@ -88,6 +88,18 @@
     display: grid;
     justify-content: center;
     align-content: center;
+}
+
+@mixin descending-z-index($count: 15){
+  // @include on UL class
+  section {
+    $target: 0;    $index: $count;
+    @while $index > 0 {
+      &:nth-child(#{$target}){ z-index: #{$index}; }
+      $target: $target + 1;
+      $index: $index - 1;
+      }
+    }
 }
 
 // MEDIA QUERY MANAGER

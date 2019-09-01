@@ -7,7 +7,7 @@ import IconHalfPanel from './common/IconHalfPanel';
 import InfoModal from './common/InfoModal';
 import GetCode from './common/GetCode';
 
-class Frontend extends Component {
+class Fullstack extends Component {
 	render() {
 		// const { textColor, color } = this.props.muiTheme.appBar;
 		return (
@@ -64,4 +64,4 @@ class Frontend extends Component {
 function mapStateToProps({ auth }) {
 	return { auth };
 }
-export default connect(mapStateToProps)(Frontend);
+export default connect(mapStateToProps)(Fullstack);

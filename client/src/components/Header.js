@@ -61,7 +61,7 @@ class Header extends Component {
 			// 		);
 			// 	})}
 			// </div>
-			<div className="navigation">
+			<section className="navigation">
 				<input type="checkbox" className="navigation__checkbox" id="navi-toggle"/>
 
 					<label htmlFor="navi-toggle" className="navigation__button">
@@ -79,7 +79,7 @@ class Header extends Component {
 							<li className="navigation__item"><a href="#" className="navigation__link"><span>05</span>Book now</a></li>
 						</ul>
 					</nav>
-        	</div>
+        	</section>
 		)
 	}
 }

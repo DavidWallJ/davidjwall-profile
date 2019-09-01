@@ -13,6 +13,7 @@ import Welcome from './Welcome';
 import Frontend from './Frontend';
 import Backend from './Backend';
 import WithCare from './WithCare';
+import Fullstack from './Fullstack';
 import Projects from './Projects';
 import Education from './Education';
 import Contact from './Contact';
@@ -107,9 +108,10 @@ class Landing extends Component {
 								name={name}
 								currentBackgroundURL={this.state.currentBackgroundURL}
 							/>
-							<Frontend ref="frontend" />
+							<Fullstack ref="fullstack" />
+							{/* <Frontend ref="frontend" />
 							<Backend ref="backend" />
-							<WithCare ref="withCare" />
+							<WithCare ref="withCare" /> */}
 							<Projects ref="projects" />
 							<Education ref="education" />
 							<Contact

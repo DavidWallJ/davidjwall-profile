@@ -1,0 +1,87 @@
+.fullstack {
+    @include background-color('skewed-panel-icon-color');
+    display: grid;
+    grid-column: full-start / full-end;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-gap: 6.5rem;
+    margin-top: -23rem;
+    padding: 25rem 0 13rem 0;
+    transform: skewY(-6deg);
+    @include respond(tab-port) {
+        grid-template-columns: 1fr;
+        grid-gap: .5rem;
+    }
+    .title {
+        @include color('background-color');
+        transform: skewY(6deg);
+        grid-column: 2 / 2;
+        justify-self: center;
+        @include respond(tab-port) {
+            grid-column: 1 / -1;
+        }
+    }
+    .story {
+        @include background-color('background-color');
+        @include color('skewed-panel-icon-color');
+        transform: skewY(6deg);
+        display: grid;
+        grid-column: 2 / 2;
+        grid-template-columns: min-content 1fr;
+        grid-gap: 3.5rem;
+        box-shadow: 0 3rem 6rem rgba(black, .1);
+        border-radius: 3px;
+        padding: 4rem 4rem 4rem 9rem;
+        transform: skew(-12deg, 6deg);
+
+        &__text {
+            transform: skewX(12deg);
+            p {
+                font-size: 1.4rem;
+                text-indent: 2rem;
+                @include respond(tab-port) {
+                    line-height: 3rem;
+                    font-size: 2rem;
+                }
+            }
+
+            
+            .highlight {
+                @include color('text-highlight');
+            }
+        }
+
+        .fa,
+        &__text {
+            @include gridCenterSelf;
+            transform: translateX(-3rem) skewX(12deg);
+
+            @include respond(tab-port) {
+                @include color('background-color');
+                transform: skewX(0);
+            }
+        }
+
+        @include respond(tab-port) {
+            @include background-color('skew-panel-phone-color');
+            grid-template-columns: 1fr;
+            transform: skewY(6deg);
+            grid-column: 1 / -1;
+            padding: 5rem;
+            box-shadow: none;
+        }
+
+    }
+}
+
+.theme-light .highlight {            
+    @include respond(tab-port) {
+        color: inherit !important;
+    }
+}
+
+.theme-dark .highlight {            
+    @include respond(tab-port) {
+        color: inherit !important;
+    }
+}       
+

@@ -16,6 +16,7 @@
 // @import "sass/components/popup";
 // @import "sass/components/story";
 @import "sass/components/login";
+@import "sass/components/fullstack";
 @import "sass/components/options-form";
 // @import "sass/layout/footer";
 // @import "sass/layout/grid";
@@ -44,41 +45,41 @@ h2 {
 	font-family: 'Cabin', sans-serif;
 }
 
-/*certificate slider*/
-.img-responsive {
-	width: 100%;
-	padding: 10%;
-}
+// /*certificate slider*/
+// .img-responsive {
+// 	width: 100%;
+// 	padding: 10%;
+// }
 
-.textCenter {
-	text-align: center;
-}
+// .textCenter {
+// 	text-align: center;
+// }
 
-.card {
-	margin: 0;
-}
+// .card {
+// 	margin: 0;
+// }
 
-.slick-prev:before {
-	opacity: 0.2;
-}
-.slick-next:before {
-	opacity: 0.2;
-}
+// .slick-prev:before {
+// 	opacity: 0.2;
+// }
+// .slick-next:before {
+// 	opacity: 0.2;
+// }
 
-/*certificate slider arrows*/
-.slick-prev:before,
-.slick-next:before {
-	font-size: 32px;
-}
+// /*certificate slider arrows*/
+// .slick-prev:before,
+// .slick-next:before {
+// 	font-size: 32px;
+// }
 
-.highlight {
-	color: #ff80ab;
-}
+// .highlight {
+// 	@include color('text-highlight');
+// }
 
 /*login anonymousButton fix;*/
-.anonymousButton button {
-	top: 1px;
-}
+// .anonymousButton button {
+// 	top: 1px;
+// }
 
 /*icon grow transform for all icons*/
 // .transformGrow,

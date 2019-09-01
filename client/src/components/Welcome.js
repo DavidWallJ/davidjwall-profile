@@ -34,10 +34,21 @@ class Welcome extends Component {
 			if (this.props.currentTheme === 'theme-light') {
 				themeSwitch.classList.remove('fa-toggle-off');
 				themeSwitch.classList.add('fa-toggle-on');
+				document.body.classList.toggle("light");
 			} else {
 				themeSwitch.classList.remove('fa-toggle-on');
 				themeSwitch.classList.add('fa-toggle-off');
+				document.body.classList.toggle("dark");
 			}
+		}
+	}
+
+	bodyThemeToggler() {
+		document.body.className = "";
+		if (this.props.currentTheme === 'theme-light') {
+			document.body.classList.toggle("dark");
+		} else {
+			document.body.classList.toggle("light");
 		}
 	}
 
@@ -55,10 +66,13 @@ class Welcome extends Component {
 			this.props.setTheme({ theme: 'theme-dark' });
 			themeSwitch.classList.remove('fa-toggle-on');
 			themeSwitch.classList.add('fa-toggle-off');
+			this.bodyThemeToggler();
 		} else {
 			this.props.setTheme({ theme: 'theme-light' });
 			themeSwitch.classList.remove('fa-toggle-off');
-			themeSwitch.classList.add('fa-toggle-on');
+			themeSwitch.classList.add('fa-toggle-on')
+			this.bodyThemeToggler();
+			
 		}
 		
 		
@@ -66,7 +80,7 @@ class Welcome extends Component {
 
 	render() {
 		return (
-			<div className="welcome">
+			<section className="welcome">
 				<div className="control-panel">
 					<a className="control-panel__logout" href="/api/logout">
 						<FontAwesome name="sign-out" />
@@ -80,19 +94,19 @@ class Welcome extends Component {
 						startDelay={500}
 						avgTypingDelay={90}
 					>
-						<h4 className="greeting__title heading-4">Welcome</h4>
+						<h3 className="greeting__title heading-3">Welcome</h3>
 						
-						<h2 className="greeting__user-name heading-2">
+						<p className="greeting__user-name">
 							{this.nameRenderHelper()}
-						</h2>
-
-						<h3 className="heading-3">My name is David J. Wall</h3>
-						<h4 className="heading-4">
-							I'm a full-stack web developer
-						</h4>
-						<p>
-							What exactly do i mean by that?
 						</p>
+
+						<h2 className="heading-2">My name is David J. Wall</h2>
+						<h3 className="heading-3">
+							I'm a full-stack web developer
+						</h3>
+						<h4 className="heading-4">
+							What exactly does that mean?
+						</h4>
 						<p>( scroll down )</p>
 					</Typist>
 
@@ -106,7 +120,7 @@ class Welcome extends Component {
 						/>
 					<GetCode codeURL="https://github.com/DavidWallJ/davidjwall-profile" />
 				</div>
-			</div>
+			</section>
 		);
 	}
 }
