@@ -94,6 +94,15 @@ class Fullstack extends Component {
 						/>
 					)
 				})};
+				<div className="info-block">
+					<InfoModal
+						title="This website is responsive, reactive, and interactive thanks to the utilization of just a few currently popular front-end libraries and frameworks."
+						description="The React components contained in this project are easily modified, repositioned and often entirely reusable. Click on the >_ icon to view the code for all of the components contained in this project."
+						iconName="fa fa-info"
+					/>
+					<GetCode codeURL="https://github.com/DavidWallJ/davidjwall-profile/tree/master/client/src/components" />
+					
+				</div>
 			</section>
 
 			// <div className="row" style={{ ...styles.halfPanelCard }}>

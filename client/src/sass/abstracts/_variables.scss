@@ -32,6 +32,7 @@ $bp-small: 37.5em;    // 600px;
 
 $themes: (
   'light': (
+    'blue': $blue-color-multi-theme,
     'skew-panel-phone-color': $light-grey-multi-theme !important,
     'dialog-box-font-color': $grey-color-dark-theme !important,
     'secondary-color': $blue-color-multi-theme !important,
@@ -47,6 +48,7 @@ $themes: (
       )
   ),
   'dark': (
+    'blue': $blue-color-dark-theme,
     'skew-panel-phone-color': $blue-color-dark-theme !important,
     'dialog-box-font-color': $color-white-multi-theme !important,
     'secondary-color': $pink-color-multi-theme !important,
