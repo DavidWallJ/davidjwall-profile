@@ -67,17 +67,17 @@ class Fullstack extends Component {
 						front-end, 
 							<span className="highlight"> reusable, modular code </span> and on
 							the back-end
-						<span className="highlight"> testing frameworks </span> like 
-							<span className="highlight"> Mocha </span>
-							<span className="highlight"> Chai </span> and 
-							<span className="highlight"> Jest </span>
-							to ensure that your project not only behaves exactly as you would
-							like it to now but also as you would like it to in the future. I also know my way around 
-							<span className="highlight"> collaboration</span> and version control software like <span className="highlight">Git </span> and 
-							<span className="highlight"> GitHub </span> which allow for 
-							<span className="highlight"> efficient and reliable</span> individual or team
-						<span className="highlight"> web development</span>.
-					</p>
+							<span className="highlight"> testing frameworks </span> like 
+								<span className="highlight"> Mocha </span>
+								<span className="highlight"> Chai </span> and 
+								<span className="highlight"> Jest </span>
+								to ensure that your project not only behaves exactly as you would
+								like it to now but also as you would like it to in the future. I also know my way around 
+								<span className="highlight"> collaboration</span> and version control software like <span className="highlight">Git </span> and 
+								<span className="highlight"> GitHub </span> which allow for 
+								<span className="highlight"> efficient and reliable</span> individual or team
+							<span className="highlight"> web development</span>.
+						</p>
 					</div>
 				)
 			},
@@ -89,6 +89,7 @@ class Fullstack extends Component {
 				{fullstackPanelFields.map((fullstackPanelField, i) => {
 					return (
 						<SkewedPanel
+							key={i}
 							description={fullstackPanelField.description}
 							iconName={fullstackPanelField.iconName}
 						/>

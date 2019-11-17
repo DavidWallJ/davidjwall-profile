@@ -19,9 +19,7 @@ class SkewedPanel extends Component {
 				/>
 				<div className="story__text">
 					{/* <h3 className="title heading-3">{this.props.title}</h3> */}
-					<p>
-						{this.props.description}
-					</p>
+					{this.props.description}
 				</div>
 			</div>
 		)		
